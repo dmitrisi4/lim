@@ -1,0 +1,1 @@
+import{_ as e}from"./q-BAMLJNcO.js";import{K as o}from"./q-Cbvs5ygx.js";import{o as t,e as r,U as s}from"./q-Dhsg9qQC.js";const _=o(s("s_0qA0vJUu0B8")),c=t(r(()=>e(()=>import("./q-CvE6my2P.js"),[]),"s_huE0Elh0KRk")),d={title:"Lim | Home",meta:[{name:"description",content:"Useful scroll with interactive cards"}]};export{c as default,d as head,_ as useHomeOverviewLoader};

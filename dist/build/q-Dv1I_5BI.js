@@ -1,0 +1,1 @@
+const s=[{code:"en",nativeName:"English"},{code:"es",nativeName:"Espanol"}];function o(a,t){const e=new URLSearchParams(a.search);e.set("lang",t);const n=e.toString();return n.length>0?`${a.pathname}?${n}`:a.pathname}export{s as L,o as b};

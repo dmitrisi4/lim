@@ -1,0 +1,127 @@
+.feed-swiper-wrap {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  overscroll-behavior: contain;
+  padding-right: 2.55rem;
+}
+
+.feed-swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.feed-slide {
+  height: 100%;
+  display: block;
+  user-select: text;
+  -webkit-user-select: text;
+  background:
+    radial-gradient(110% 120% at 12% -20%, rgba(255, 122, 24, 0.22), transparent 55%),
+    radial-gradient(130% 120% at 92% -10%, rgba(255, 47, 109, 0.24), transparent 58%),
+    radial-gradient(140% 140% at 50% 120%, rgba(125, 85, 255, 0.2), transparent 62%),
+    linear-gradient(180deg, #0f1422, #0b111d 62%, #0a0f19);
+}
+
+.slide-inner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0.5rem;
+  animation: slide-in 300ms ease both;
+}
+
+.feed-empty {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-2);
+  font-size: 0.9rem;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.feed-side-pagination {
+  position: absolute;
+  right: 0.32rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.14rem;
+  width: 1.9rem;
+  padding: 0.5rem 0.26rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: rgba(12, 18, 31, 0.74);
+  box-shadow: 0 16px 34px -24px rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.feed-side-current {
+  font-size: 0.86rem;
+  line-height: 1;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.feed-side-sep {
+  font-size: 0.74rem;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--text-3);
+}
+
+.feed-side-total {
+  font-size: 0.72rem;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--text-2);
+}
+
+@media (max-width: 700px) {
+  .feed-swiper-wrap {
+    padding-right: 2.15rem;
+  }
+
+  .feed-side-pagination {
+    width: 1.68rem;
+    right: 0.18rem;
+    padding: 0.42rem 0.2rem;
+  }
+
+  .feed-side-current {
+    font-size: 0.78rem;
+  }
+
+  .feed-side-total {
+    font-size: 0.66rem;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: scale(0.985);
+    opacity: 0.35;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

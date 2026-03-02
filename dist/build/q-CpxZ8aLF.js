@@ -1,0 +1,1 @@
+import{_}from"./q-BAMLJNcO.js";const t=()=>_(()=>import("./q-C9SoUaHy.js"),[]),r=[["/",[t,()=>_(()=>import("./q-DGgrr6uW.js"),[])]],["feed/",[t,()=>_(()=>import("./q-DT8MTis0.js"),[])]],["profile/",[t,()=>_(()=>import("./q-BnBKed86.js"),[])]],["vocabulary/",[t,()=>_(()=>import("./q-CUQjLBhd.js"),[])]]],e=[];const s=!0;export{s as c,e as m,r};

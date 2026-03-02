@@ -1,0 +1,1 @@
+import{_ as i}from"./q-BAMLJNcO.js";import{o as r,e as o}from"./q-Dhsg9qQC.js";function a(e){return e===null?"overview-quality":e>=80?"overview-quality overview-quality-good":e>=60?"overview-quality overview-quality-mid":"overview-quality overview-quality-low"}const u=r(o(()=>i(()=>import("./q-CsHhd0D-.js").then(e=>e.L),[]),"s_V8KMWYonO6M"));export{u as L,a as q};

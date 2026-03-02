@@ -1,0 +1,2440 @@
+{
+	"version": "1",
+	"manifestHash": "mxeg69",
+	"options": {
+		"target": "client",
+		"buildMode": "production",
+		"entryStrategy": {
+			"type": "smart"
+		}
+	},
+	"core": "q-Dhsg9qQC.js",
+	"preloader": "q-BAMLJNcO.js",
+	"bundleGraphAsset": "assets/O2snzNdQ-bundle-graph.json",
+	"injections": [
+		{
+			"tag": "style",
+			"location": "head",
+			"attributes": {
+				"data-src": "/assets/CSf8l9z_-style.css",
+				"dangerouslySetInnerHTML": ":root{color-scheme:dark;--bg-0: #080a11;--bg-1: #0d1019;--bg-2: #111624;--panel: #151b2a;--panel-soft: #101625;--border: #283149;--border-soft: #1e2638;--text-1: #f5f7ff;--text-2: #b6bfd5;--text-3: #8e98b2;--accent-1: #ff7a18;--accent-2: #ff2f6d;--accent-3: #7d55ff;--accent-4: #31c4ff;--shadow-lg: 0 28px 56px -38px rgba(0, 0, 0, .85);--shadow-sm: 0 12px 28px -22px rgba(0, 0, 0, .75)}html,body{margin:0;padding:0}body{min-height:100vh;color:var(--text-1);font-family:Space Grotesk,Avenir Next,Futura,sans-serif;background:radial-gradient(1200px 700px at -10% -15%,rgba(255,122,24,.3),transparent 58%),radial-gradient(1100px 740px at 110% -10%,rgba(255,47,109,.26),transparent 55%),radial-gradient(900px 640px at 50% 110%,rgba(125,85,255,.2),transparent 62%),linear-gradient(180deg,var(--bg-0) 0%,var(--bg-1) 46%,var(--bg-2) 100%)}body:before{content:\"\";position:fixed;top:0;right:0;bottom:0;left:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:radial-gradient(ellipse at center,rgba(0,0,0,.5) 35%,transparent 90%);mask-image:radial-gradient(ellipse at center,rgba(0,0,0,.5) 35%,transparent 90%)}a{color:inherit}::selection{background:#ff2f6d59;color:#fff}*{box-sizing:border-box}\n"
+			}
+		}
+	],
+	"mapping": {
+		"s_6LdbsrJr00I": "q-CKxxaYUm.js",
+		"s_8Oo6UyO5GBg": "q-D3N0pEGJ.js",
+		"s_9Q75tmBCZpw": "q-Br8KdOIx.js",
+		"s_AtVBj9BexC4": "q-Br8KdOIx.js",
+		"s_AukE9MYr0es": "q-Br8KdOIx.js",
+		"s_Ckfi04Pd7gw": "q-Br8KdOIx.js",
+		"s_DxbpKb13vDQ": "q-Br8KdOIx.js",
+		"s_KDh8JHOLUbM": "q-Br8KdOIx.js",
+		"s_KhLTwsowyAs": "q-CKxxaYUm.js",
+		"s_MVZmU2Tv8sw": "q-Br8KdOIx.js",
+		"s_OngugVTxSPU": "q-BEl_DDPV.js",
+		"s_PIDVZMvXLLY": "q-Br8KdOIx.js",
+		"s_STuAykHiivo": "q-Br8KdOIx.js",
+		"s_U50EH0Ii1m0": "q-qAmOxML6.js",
+		"s_YlgBunePf4I": "q-CKxxaYUm.js",
+		"s_dYhVhe06duk": "q-Br8KdOIx.js",
+		"s_kfgl1cP0NzA": "q-CKxxaYUm.js",
+		"s_nPKBswVzyvY": "q-Br8KdOIx.js",
+		"s_oI8yP4Ml7Do": "q-Br8KdOIx.js",
+		"s_pNyPotOT74E": "q-CKxxaYUm.js",
+		"s_qv15Lm9DXHc": "q-EWj6qaf6.js",
+		"s_wfmD5OYoAus": "q-CKxxaYUm.js",
+		"s_yH9C4MkVTZA": "q-Br8KdOIx.js",
+		"s_4ekJaGlXabk": "q-Br8KdOIx.js",
+		"s_hOvJLmeMCyk": "q-BEl_DDPV.js",
+		"s_IZp0I8YVtFg": "q-CKxxaYUm.js",
+		"s_0AO7ze0mz0U": "q-DCHLRVtJ.js",
+		"s_h0Z1avFs3Nc": "q-BvkMasbS.js",
+		"s_giGDhUD2M2Y": "q-DQcIOd3u.js",
+		"s_195xOxs6wI0": "q-CmeoqWtQ.js",
+		"s_7jdaF8Xc9Pg": "q-DG8gcsFn.js",
+		"s_HpnIBPGtAV8": "q-Cm-3xMhh.js",
+		"s_MXzZE0H2H0Q": "q-Di2MmU01.js",
+		"s_MaksY9ri834": "q-4UCInVmc.js",
+		"s_dBBEfSw4wm0": "q-DUig32UJ.js",
+		"s_iyo2gaS0E6s": "q-D1l4qjTd.js",
+		"s_35TrxcdTMLU": "q-fdBG51ef.js",
+		"s_4xh0Ok1kNRc": "q-DWoPAj2m.js",
+		"s_6JHmKbfZA6E": "q-Cp3Ivf5M.js",
+		"s_7WI0CtV36KI": "q-CKxxaYUm.js",
+		"s_8Pr1HiAqq44": "q-DeYDkmov.js",
+		"s_Gxi169gzmfg": "q-BvkMasbS.js",
+		"s_M1TM0E984eo": "q-BEl_DDPV.js",
+		"s_U2TM5t897TM": "q-DCHLRVtJ.js",
+		"s_V8KMWYonO6M": "q-CsHhd0D-.js",
+		"s_XrSAnJC6ZWo": "q-BwtPn1bf.js",
+		"s_act8mBLtA0U": "q-Br8KdOIx.js",
+		"s_bOqXB7horoI": "q-CndG7sJR.js",
+		"s_huE0Elh0KRk": "q-CvE6my2P.js",
+		"s_iqxsYKeuKj0": "q-DtlOd1FP.js",
+		"s_jPkkzZuAfLY": "q-_ekMi8sv.js",
+		"s_pYmAUO01Zl0": "q-BaaDS9eQ.js",
+		"s_ppOoFWsHICo": "q-frxNf2Qo.js",
+		"s_tLAP0o0v0Io": "q-dP35HHAq.js",
+		"s_yq2EIwGo5YU": "q-CrJ5BhsX.js",
+		"s_lBdrmkqIfHo": "q-BvkMasbS.js",
+		"s_00q5jnKbEBo": "q-CsHhd0D-.js",
+		"s_08f8o9tStiM": "q-CKxxaYUm.js",
+		"s_B7tMY4O9MNo": "q-CvE6my2P.js",
+		"s_Db3MLQWvnuQ": "q-_ekMi8sv.js",
+		"s_Hy0VqvEE0h0": "q-Cp3Ivf5M.js",
+		"s_a01kgaYJg0Y": "q-frxNf2Qo.js",
+		"s_eIPQZM6URVg": "q-DeYDkmov.js",
+		"s_g3A70RjkUIk": "q-CKxxaYUm.js",
+		"s_p9JqB4AScV4": "q-dP35HHAq.js",
+		"s_tj4JTRImQlM": "q-BwtPn1bf.js",
+		"s_vjHxFOIlgX4": "q-Br8KdOIx.js",
+		"s_xXHT1b0m8sg": "q-BEl_DDPV.js",
+		"s_NoQkLCnB10o": "q-Byk-Vkp1.js",
+		"s_QRX59I8Q02c": "q-DsPhEGT6.js",
+		"s_egvKclXdyy0": "q-BKs8fl1A.js",
+		"s_uXeawQL0Gic": "q-DBuVPYei.js",
+		"s_04ls3VPuS9o": "q-DCHLRVtJ.js",
+		"s_4JNoRrXrPJk": "q-Br8KdOIx.js",
+		"s_7RxZnlpVjM0": "q-DtlOd1FP.js",
+		"s_8VADAEwf0v0": "q-BEl_DDPV.js",
+		"s_9AcICxuI9tw": "q-CKxxaYUm.js",
+		"s_BYpw41FJ0as": "q-CKxxaYUm.js",
+		"s_INBGe26rqDI": "q-CndG7sJR.js",
+		"s_SM8fcmRxw04": "q-dP35HHAq.js",
+		"s_TX7J9gX18YM": "q-BvkMasbS.js",
+		"s_WQcAX0d0rHg": "q-DtlOd1FP.js",
+		"s_Y3UU8NflqMQ": "q-DWoPAj2m.js",
+		"s_YZ1rACO0MSk": "q-CKxxaYUm.js",
+		"s_bhE0Z4Oxf4o": "q-DtlOd1FP.js",
+		"s_hge0y0pYtQY": "q-BvkMasbS.js",
+		"s_iw4ZoTXpybA": "q-CndG7sJR.js",
+		"s_mbnwBuBK1sk": "q-BEl_DDPV.js",
+		"s_nxNAN6pq5NM": "q-frxNf2Qo.js"
+	},
+	"bundles": {
+		"q-0RhcCzsp.js": {
+			"size": 367,
+			"total": 54228,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-CsHhd0D-.js"
+			],
+			"origins": [
+				"src/features/home/ui/LearningOverview.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-4UCInVmc.js": {
+			"size": 683,
+			"total": 54544,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask_2_MaksY9ri834.js"
+			],
+			"symbols": [
+				"s_MaksY9ri834"
+			],
+			"interactivity": 3
+		},
+		"q-_ekMi8sv.js": {
+			"size": 1898,
+			"total": 228305,
+			"imports": [
+				"q-Bal6Z-F7.js",
+				"q-BnBKed86.js",
+				"q-Cj_50NtI.js",
+				"q-Dhsg9qQC.js",
+				"q-WLQ2Jooa.js"
+			],
+			"origins": [
+				"src/routes/profile/index.tsx_profile_component_jPkkzZuAfLY.js",
+				"src/routes/profile/index.tsx_profile_component_useStylesScoped_Db3MLQWvnuQ.js"
+			],
+			"symbols": [
+				"s_Db3MLQWvnuQ",
+				"s_jPkkzZuAfLY"
+			],
+			"interactivity": 2
+		},
+		"q-aNvqtWSM.js": {
+			"size": 1081,
+			"total": 1081,
+			"origins": [
+				"src/shared/ui/CardShell.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-B55slKQ-.js": {
+			"size": 606,
+			"total": 54467,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-dP35HHAq.js"
+			],
+			"origins": [
+				"src/features/feed/ui/FeedList.tsx",
+				"src/shared/lib/feed-filters.ts"
+			],
+			"interactivity": 0
+		},
+		"q-BaaDS9eQ.js": {
+			"size": 543,
+			"total": 117127,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"src/shared/ui/RouterHead.tsx_RouterHead_component_pYmAUO01Zl0.js"
+			],
+			"symbols": [
+				"s_pYmAUO01Zl0"
+			],
+			"interactivity": 2
+		},
+		"q-Bal6Z-F7.js": {
+			"size": 1547,
+			"total": 1547,
+			"origins": [
+				"src/routes/profile/index.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-BAMLJNcO.js": {
+			"size": 3782,
+			"total": 3782,
+			"origins": [
+				"@builder.io/qwik/build",
+				"node_modules/@builder.io/qwik/dist/preloader.mjs"
+			],
+			"interactivity": 0
+		},
+		"q-BEl_DDPV.js": {
+			"size": 11830,
+			"total": 366437,
+			"imports": [
+				"q-BKasXO_m.js",
+				"q-BlI4wp5J.js",
+				"q-BQfJyEdo.js",
+				"q-BZP8dWqq.js",
+				"q-Cbvs5ygx.js",
+				"q-Cj_50NtI.js",
+				"q-CUQjLBhd.js",
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-Cm-3xMhh.js"
+			],
+			"origins": [
+				"src/routes/vocabulary/index.tsx_vocabulary_component_M1TM0E984eo.js",
+				"src/routes/vocabulary/index.tsx_vocabulary_component_section_aside_button_onClick_OngugVTxSPU.js",
+				"src/routes/vocabulary/index.tsx_vocabulary_component_section_aside_div_form_input_onInput_hOvJLmeMCyk.js",
+				"src/routes/vocabulary/index.tsx_vocabulary_component_section_aside_div_form_onSubmit_mbnwBuBK1sk.js",
+				"src/routes/vocabulary/index.tsx_vocabulary_component_section_div_VocabularyDeck_onExplainWord_8VADAEwf0v0.js",
+				"src/routes/vocabulary/index.tsx_vocabulary_component_useStylesScoped_xXHT1b0m8sg.js"
+			],
+			"symbols": [
+				"s_8VADAEwf0v0",
+				"s_hOvJLmeMCyk",
+				"s_M1TM0E984eo",
+				"s_mbnwBuBK1sk",
+				"s_OngugVTxSPU",
+				"s_xXHT1b0m8sg"
+			],
+			"interactivity": 5
+		},
+		"q-BF7lMCvT.js": {
+			"size": 1901,
+			"total": 1901,
+			"origins": [
+				"src/features/home/ui/LearningOverview.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-BGaD_Dl1.js": {
+			"size": 171,
+			"total": 54032,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-CrJ5BhsX.js"
+			],
+			"origins": [
+				"src/global.css",
+				"src/root.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-BKasXO_m.js": {
+			"size": 1138,
+			"total": 1138,
+			"origins": [
+				"src/features/vocabulary/model/word-bank.ts"
+			],
+			"interactivity": 0
+		},
+		"q-BKs8fl1A.js": {
+			"size": 2296,
+			"total": 2296,
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_spaInit_event_egvKclXdyy0.js"
+			],
+			"symbols": [
+				"s_egvKclXdyy0"
+			],
+			"interactivity": 1
+		},
+		"q-BlI4wp5J.js": {
+			"size": 420,
+			"total": 420,
+			"origins": [
+				"src/shared/api/client.ts",
+				"src/shared/api/endpoints.ts",
+				"src/shared/config/env.ts"
+			],
+			"interactivity": 0
+		},
+		"q-BnBKed86.js": {
+			"size": 296,
+			"total": 116880,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-_ekMi8sv.js"
+			],
+			"origins": [
+				"src/routes/profile/index.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-BOAvJzEg.js": {
+			"size": 5242,
+			"total": 5242,
+			"origins": [
+				"src/routes/layout.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-BQfJyEdo.js": {
+			"size": 10963,
+			"total": 10963,
+			"origins": [
+				"src/routes/vocabulary/index.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-Br8KdOIx.js": {
+			"size": 11750,
+			"total": 94119,
+			"imports": [
+				"q-BKasXO_m.js",
+				"q-BrBn9Are.js",
+				"q-C_jQXHdT.js",
+				"q-CScGErWG.js",
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-4UCInVmc.js",
+				"q-DG8gcsFn.js",
+				"q-DUig32UJ.js",
+				"q-EWj6qaf6.js",
+				"q-qAmOxML6.js"
+			],
+			"origins": [
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_act8mBLtA0U.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_button_onClick_AukE9MYr0es.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_Fragment_button_onClick_1_nPKBswVzyvY.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_Fragment_button_onClick_PIDVZMvXLLY.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_button_onClick_1_9Q75tmBCZpw.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_button_onClick_STuAykHiivo.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_button_onClick_dYhVhe06duk.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_button_onClick_1_Ckfi04Pd7gw.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_button_onClick_AtVBj9BexC4.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_div_button_onClick_1_oI8yP4Ml7Do.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_div_button_onClick_KDh8JHOLUbM.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_section_header_button_onClick_yH9C4MkVTZA.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_onClick_MVZmU2Tv8sw.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_onClick_DxbpKb13vDQ.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_onContextMenu_4ekJaGlXabk.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_openCardContextMenu_4JNoRrXrPJk.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_useStylesScoped_vjHxFOIlgX4.js"
+			],
+			"symbols": [
+				"s_4ekJaGlXabk",
+				"s_4JNoRrXrPJk",
+				"s_9Q75tmBCZpw",
+				"s_act8mBLtA0U",
+				"s_AtVBj9BexC4",
+				"s_AukE9MYr0es",
+				"s_Ckfi04Pd7gw",
+				"s_DxbpKb13vDQ",
+				"s_dYhVhe06duk",
+				"s_KDh8JHOLUbM",
+				"s_MVZmU2Tv8sw",
+				"s_nPKBswVzyvY",
+				"s_oI8yP4Ml7Do",
+				"s_PIDVZMvXLLY",
+				"s_STuAykHiivo",
+				"s_vjHxFOIlgX4",
+				"s_yH9C4MkVTZA"
+			],
+			"interactivity": 5
+		},
+		"q-BrBn9Are.js": {
+			"size": 10822,
+			"total": 10822,
+			"origins": [
+				"src/features/vocabulary/ui/VocabularyDeck.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-BvkMasbS.js": {
+			"size": 7012,
+			"total": 123941,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-CpxZ8aLF.js",
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_Gxi169gzmfg.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_goto_TX7J9gX18YM.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_registerPreventNav_hge0y0pYtQY.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_useStyles_lBdrmkqIfHo.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_useTask_h0Z1avFs3Nc.js"
+			],
+			"symbols": [
+				"s_Gxi169gzmfg",
+				"s_h0Z1avFs3Nc",
+				"s_hge0y0pYtQY",
+				"s_lBdrmkqIfHo",
+				"s_TX7J9gX18YM"
+			],
+			"interactivity": 3
+		},
+		"q-BwtPn1bf.js": {
+			"size": 3781,
+			"total": 296889,
+			"imports": [
+				"q-BOAvJzEg.js",
+				"q-C9SoUaHy.js",
+				"q-Cbvs5ygx.js",
+				"q-Cj_50NtI.js",
+				"q-Dhsg9qQC.js",
+				"q-Dv1I_5BI.js"
+			],
+			"origins": [
+				"src/routes/layout.tsx_layout_component_XrSAnJC6ZWo.js",
+				"src/routes/layout.tsx_layout_component_useStylesScoped_tj4JTRImQlM.js"
+			],
+			"symbols": [
+				"s_tj4JTRImQlM",
+				"s_XrSAnJC6ZWo"
+			],
+			"interactivity": 2
+		},
+		"q-BXRqGgy4.js": {
+			"size": 1669,
+			"total": 1669,
+			"origins": [
+				"src/routes/index.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-BxZSo4WW.js": {
+			"size": 1956,
+			"total": 1956,
+			"origins": [
+				"src/features/feed/ui/FeedList.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-Byk-Vkp1.js": {
+			"size": 1318,
+			"total": 117902,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_serverQrl_rpc_NoQkLCnB10o.js"
+			],
+			"symbols": [
+				"s_NoQkLCnB10o"
+			],
+			"interactivity": 1
+		},
+		"q-BZP8dWqq.js": {
+			"size": 178,
+			"total": 54039,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-Br8KdOIx.js"
+			],
+			"origins": [
+				"src/features/vocabulary/ui/VocabularyDeck.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-C9SoUaHy.js": {
+			"size": 476,
+			"total": 117060,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-BwtPn1bf.js"
+			],
+			"origins": [
+				"src/routes/layout.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-C_jQXHdT.js": {
+			"size": 15888,
+			"total": 15888,
+			"origins": [
+				"src/features/vocabulary/model/verb-insights.ts"
+			],
+			"interactivity": 0
+		},
+		"q-Cbvs5ygx.js": {
+			"size": 8862,
+			"total": 62723,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-BKs8fl1A.js",
+				"q-BvkMasbS.js",
+				"q-DBuVPYei.js",
+				"q-DtlOd1FP.js",
+				"q-fdBG51ef.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs"
+			],
+			"interactivity": 0
+		},
+		"q-CdC6OKNJ.js": {
+			"size": 9883,
+			"total": 9883,
+			"origins": [
+				"src/entities/card/ui/CardRenderer.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-CEJRQkDd.js": {
+			"size": 302,
+			"total": 54163,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-Cp3Ivf5M.js",
+				"q-DeYDkmov.js"
+			],
+			"origins": [
+				"src/entities/card/model/guards.ts",
+				"src/shared/ui/Button.tsx",
+				"src/shared/ui/CardShell.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-Cj_50NtI.js": {
+			"size": 121,
+			"total": 53982,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"src/shared/i18n/context.ts"
+			],
+			"interactivity": 0
+		},
+		"q-CKuj-B7Q.js": {
+			"size": 799,
+			"total": 799,
+			"origins": [
+				"src/shared/ui/Button.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-CKxxaYUm.js": {
+			"size": 10047,
+			"total": 237107,
+			"imports": [
+				"q-CdC6OKNJ.js",
+				"q-CEJRQkDd.js",
+				"q-Cj_50NtI.js",
+				"q-Dhsg9qQC.js",
+				"q-iu_iGG7c.js"
+			],
+			"dynamicImports": [
+				"q-D3N0pEGJ.js"
+			],
+			"origins": [
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_7WI0CtV36KI.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_CardShell_div_div_Button_onClick_g3A70RjkUIk.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_button_onClick_1_kfgl1cP0NzA.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_button_onClick_6LdbsrJr00I.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_div_button_onClick_1_pNyPotOT74E.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_div_button_onClick_KhLTwsowyAs.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_CardShell_div_div_label_input_onChange_IZp0I8YVtFg.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_CardShell_div_onClick_wfmD5OYoAus.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_complete_BYpw41FJ0as.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_renderHintText_span_span_button_onClick_YlgBunePf4I.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_toggleHint_9AcICxuI9tw.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_toggleHintsMode_YZ1rACO0MSk.js",
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_useStylesScoped_08f8o9tStiM.js"
+			],
+			"symbols": [
+				"s_08f8o9tStiM",
+				"s_6LdbsrJr00I",
+				"s_7WI0CtV36KI",
+				"s_9AcICxuI9tw",
+				"s_BYpw41FJ0as",
+				"s_g3A70RjkUIk",
+				"s_IZp0I8YVtFg",
+				"s_kfgl1cP0NzA",
+				"s_KhLTwsowyAs",
+				"s_pNyPotOT74E",
+				"s_wfmD5OYoAus",
+				"s_YlgBunePf4I",
+				"s_YZ1rACO0MSk"
+			],
+			"interactivity": 5
+		},
+		"q-Cm-3xMhh.js": {
+			"size": 256,
+			"total": 54117,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"src/routes/vocabulary/index.tsx_vocabulary_component_useVisibleTask_HpnIBPGtAV8.js"
+			],
+			"symbols": [
+				"s_HpnIBPGtAV8"
+			],
+			"interactivity": 3
+		},
+		"q-CmeoqWtQ.js": {
+			"size": 643,
+			"total": 54504,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"src/features/feed/ui/FeedList.tsx_FeedList_component_useVisibleTask_1_195xOxs6wI0.js"
+			],
+			"symbols": [
+				"s_195xOxs6wI0"
+			],
+			"interactivity": 3
+		},
+		"q-CndG7sJR.js": {
+			"size": 1406,
+			"total": 117990,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_GetForm_component_bOqXB7horoI.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_GetForm_component_form_onSubmit_1_INBGe26rqDI.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_GetForm_component_form_onSubmit_iw4ZoTXpybA.js"
+			],
+			"symbols": [
+				"s_bOqXB7horoI",
+				"s_INBGe26rqDI",
+				"s_iw4ZoTXpybA"
+			],
+			"interactivity": 2
+		},
+		"q-Cp3Ivf5M.js": {
+			"size": 695,
+			"total": 55637,
+			"imports": [
+				"q-aNvqtWSM.js",
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"src/shared/ui/CardShell.tsx_CardShell_component_6JHmKbfZA6E.js",
+				"src/shared/ui/CardShell.tsx_CardShell_component_useStylesScoped_Hy0VqvEE0h0.js"
+			],
+			"symbols": [
+				"s_6JHmKbfZA6E",
+				"s_Hy0VqvEE0h0"
+			],
+			"interactivity": 2
+		},
+		"q-CpxZ8aLF.js": {
+			"size": 345,
+			"total": 345,
+			"dynamicImports": [
+				"q-BnBKed86.js",
+				"q-C9SoUaHy.js",
+				"q-CUQjLBhd.js",
+				"q-DGgrr6uW.js",
+				"q-DT8MTis0.js"
+			],
+			"origins": [
+				"@qwik-city-plan"
+			],
+			"interactivity": 0
+		},
+		"q-CrJ5BhsX.js": {
+			"size": 547,
+			"total": 171157,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js",
+				"q-oaGnz-dY.js"
+			],
+			"origins": [
+				"src/root.tsx_root_component_yq2EIwGo5YU.js"
+			],
+			"symbols": [
+				"s_yq2EIwGo5YU"
+			],
+			"interactivity": 2
+		},
+		"q-CScGErWG.js": {
+			"size": 660,
+			"total": 660,
+			"origins": [
+				"src/features/vocabulary/model/word-progress.ts"
+			],
+			"interactivity": 0
+		},
+		"q-CsHhd0D-.js": {
+			"size": 2400,
+			"total": 166372,
+			"imports": [
+				"q-0RhcCzsp.js",
+				"q-BF7lMCvT.js",
+				"q-Cj_50NtI.js",
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"src/features/home/ui/LearningOverview.tsx_LearningOverview_component_V8KMWYonO6M.js",
+				"src/features/home/ui/LearningOverview.tsx_LearningOverview_component_useStylesScoped_00q5jnKbEBo.js"
+			],
+			"symbols": [
+				"s_00q5jnKbEBo",
+				"s_V8KMWYonO6M"
+			],
+			"interactivity": 2
+		},
+		"q-CUQjLBhd.js": {
+			"size": 897,
+			"total": 117481,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-BEl_DDPV.js"
+			],
+			"origins": [
+				"src/routes/vocabulary/index.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-CvE6my2P.js": {
+			"size": 1307,
+			"total": 344727,
+			"imports": [
+				"q-0RhcCzsp.js",
+				"q-BXRqGgy4.js",
+				"q-Cbvs5ygx.js",
+				"q-Cj_50NtI.js",
+				"q-DGgrr6uW.js",
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"src/routes/index.tsx_routes_component_huE0Elh0KRk.js",
+				"src/routes/index.tsx_routes_component_useStylesScoped_B7tMY4O9MNo.js"
+			],
+			"symbols": [
+				"s_B7tMY4O9MNo",
+				"s_huE0Elh0KRk"
+			],
+			"interactivity": 2
+		},
+		"q-D1l4qjTd.js": {
+			"size": 365,
+			"total": 54226,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_useVisibleTask_iyo2gaS0E6s.js"
+			],
+			"symbols": [
+				"s_iyo2gaS0E6s"
+			],
+			"interactivity": 3
+		},
+		"q-D3N0pEGJ.js": {
+			"size": 61,
+			"total": 61,
+			"origins": [
+				"src/entities/card/ui/CardRenderer.tsx_CardRenderer_component_CardShell_div_div_onClick_8Oo6UyO5GBg.js"
+			],
+			"symbols": [
+				"s_8Oo6UyO5GBg"
+			],
+			"interactivity": 5
+		},
+		"q-DBuVPYei.js": {
+			"size": 811,
+			"total": 54672,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_routeActionQrl_action_submit_uXeawQL0Gic.js"
+			],
+			"symbols": [
+				"s_uXeawQL0Gic"
+			],
+			"interactivity": 1
+		},
+		"q-DCHLRVtJ.js": {
+			"size": 1370,
+			"total": 117954,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityMockProvider_component_U2TM5t897TM.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityMockProvider_component_goto_04ls3VPuS9o.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityMockProvider_component_useTask_0AO7ze0mz0U.js"
+			],
+			"symbols": [
+				"s_04ls3VPuS9o",
+				"s_0AO7ze0mz0U",
+				"s_U2TM5t897TM"
+			],
+			"interactivity": 3
+		},
+		"q-DeYDkmov.js": {
+			"size": 712,
+			"total": 55372,
+			"imports": [
+				"q-CKuj-B7Q.js",
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"src/shared/ui/Button.tsx_Button_component_8Pr1HiAqq44.js",
+				"src/shared/ui/Button.tsx_Button_component_useStylesScoped_eIPQZM6URVg.js"
+			],
+			"symbols": [
+				"s_8Pr1HiAqq44",
+				"s_eIPQZM6URVg"
+			],
+			"interactivity": 2
+		},
+		"q-DG8gcsFn.js": {
+			"size": 643,
+			"total": 54504,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask_1_7jdaF8Xc9Pg.js"
+			],
+			"symbols": [
+				"s_7jdaF8Xc9Pg"
+			],
+			"interactivity": 3
+		},
+		"q-DGgrr6uW.js": {
+			"size": 373,
+			"total": 116957,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-CvE6my2P.js"
+			],
+			"origins": [
+				"src/routes/index.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-Dhsg9qQC.js": {
+			"size": 53861,
+			"total": 53861,
+			"origins": [
+				"node_modules/@builder.io/qwik/dist/core.min.mjs"
+			],
+			"interactivity": 0
+		},
+		"q-Di2MmU01.js": {
+			"size": 357,
+			"total": 54884,
+			"imports": [
+				"q-Dhsg9qQC.js",
+				"q-DiMiLf0K.js"
+			],
+			"origins": [
+				"src/features/feed/ui/FeedList.tsx_FeedList_component_useVisibleTask_MXzZE0H2H0Q.js"
+			],
+			"symbols": [
+				"s_MXzZE0H2H0Q"
+			],
+			"interactivity": 3
+		},
+		"q-DiMiLf0K.js": {
+			"size": 666,
+			"total": 666,
+			"origins": [
+				"src/features/feed/model/card-answer-outcomes.ts"
+			],
+			"interactivity": 0
+		},
+		"q-dP35HHAq.js": {
+			"size": 2623,
+			"total": 114277,
+			"imports": [
+				"q-BxZSo4WW.js",
+				"q-Dhsg9qQC.js",
+				"q-DiMiLf0K.js",
+				"q-iu_iGG7c.js"
+			],
+			"dynamicImports": [
+				"q-CmeoqWtQ.js",
+				"q-Di2MmU01.js"
+			],
+			"origins": [
+				"src/features/feed/ui/FeedList.tsx_FeedList_component_handleComplete_SM8fcmRxw04.js",
+				"src/features/feed/ui/FeedList.tsx_FeedList_component_tLAP0o0v0Io.js",
+				"src/features/feed/ui/FeedList.tsx_FeedList_component_useStylesScoped_p9JqB4AScV4.js"
+			],
+			"symbols": [
+				"s_p9JqB4AScV4",
+				"s_SM8fcmRxw04",
+				"s_tLAP0o0v0Io"
+			],
+			"interactivity": 2
+		},
+		"q-DQcIOd3u.js": {
+			"size": 150,
+			"total": 54011,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_usePreventNavigateQrl_useVisibleTask_giGDhUD2M2Y.js"
+			],
+			"symbols": [
+				"s_giGDhUD2M2Y"
+			],
+			"interactivity": 3
+		},
+		"q-DsPhEGT6.js": {
+			"size": 170,
+			"total": 54031,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Form_form_onSubmit_QRX59I8Q02c.js"
+			],
+			"symbols": [
+				"s_QRX59I8Q02c"
+			],
+			"interactivity": 1
+		},
+		"q-DT8MTis0.js": {
+			"size": 353,
+			"total": 116937,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-frxNf2Qo.js"
+			],
+			"origins": [
+				"src/routes/feed/index.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-DtlOd1FP.js": {
+			"size": 2045,
+			"total": 118629,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-D1l4qjTd.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_handleClientSideNavigation_WQcAX0d0rHg.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_handlePrefetch_bhE0Z4Oxf4o.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_handlePreload_7RxZnlpVjM0.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_iqxsYKeuKj0.js"
+			],
+			"symbols": [
+				"s_7RxZnlpVjM0",
+				"s_bhE0Z4Oxf4o",
+				"s_iqxsYKeuKj0",
+				"s_WQcAX0d0rHg"
+			],
+			"interactivity": 2
+		},
+		"q-DUig32UJ.js": {
+			"size": 357,
+			"total": 54878,
+			"imports": [
+				"q-CScGErWG.js",
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask_dBBEfSw4wm0.js"
+			],
+			"symbols": [
+				"s_dBBEfSw4wm0"
+			],
+			"interactivity": 3
+		},
+		"q-Dv1I_5BI.js": {
+			"size": 240,
+			"total": 240,
+			"origins": [
+				"src/shared/i18n/ui.ts"
+			],
+			"interactivity": 0
+		},
+		"q-DWoPAj2m.js": {
+			"size": 542,
+			"total": 54403,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_ErrorBoundary_component_4xh0Ok1kNRc.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_ErrorBoundary_component_useOnWindow_Y3UU8NflqMQ.js"
+			],
+			"symbols": [
+				"s_4xh0Ok1kNRc",
+				"s_Y3UU8NflqMQ"
+			],
+			"interactivity": 2
+		},
+		"q-EWj6qaf6.js": {
+			"size": 61,
+			"total": 61,
+			"origins": [
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_onClick_qv15Lm9DXHc.js"
+			],
+			"symbols": [
+				"s_qv15Lm9DXHc"
+			],
+			"interactivity": 5
+		},
+		"q-fdBG51ef.js": {
+			"size": 982,
+			"total": 117566,
+			"imports": [
+				"q-Cbvs5ygx.js",
+				"q-Dhsg9qQC.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_RouterOutlet_component_35TrxcdTMLU.js"
+			],
+			"symbols": [
+				"s_35TrxcdTMLU"
+			],
+			"interactivity": 2
+		},
+		"q-frxNf2Qo.js": {
+			"size": 5070,
+			"total": 474547,
+			"imports": [
+				"q-B55slKQ-.js",
+				"q-Cbvs5ygx.js",
+				"q-Cj_50NtI.js",
+				"q-Dhsg9qQC.js",
+				"q-DT8MTis0.js",
+				"q-jW-1_gEr.js",
+				"q-Ms4haiBm.js"
+			],
+			"origins": [
+				"src/routes/feed/index.tsx_feed_component_onComplete_nxNAN6pq5NM.js",
+				"src/routes/feed/index.tsx_feed_component_ppOoFWsHICo.js",
+				"src/routes/feed/index.tsx_feed_component_useStylesScoped_a01kgaYJg0Y.js"
+			],
+			"symbols": [
+				"s_a01kgaYJg0Y",
+				"s_nxNAN6pq5NM",
+				"s_ppOoFWsHICo"
+			],
+			"interactivity": 2
+		},
+		"q-iu_iGG7c.js": {
+			"size": 1310,
+			"total": 55171,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-CKxxaYUm.js"
+			],
+			"origins": [
+				"src/entities/card/ui/CardRenderer.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-jW-1_gEr.js": {
+			"size": 4793,
+			"total": 4793,
+			"origins": [
+				"src/routes/feed/index.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-Ms4haiBm.js": {
+			"size": 122714,
+			"total": 122714,
+			"origins": [
+				"src/shared/api/mock-db.ts",
+				"src/slides/core/language-registry.ts",
+				"src/slides/core/registry.ts",
+				"src/slides/core/tracking.ts",
+				"src/slides/engine/select-slides.ts",
+				"src/slides/modules/a1/grammar/articles.module.ts",
+				"src/slides/modules/a1/grammar/flashcards-en-rules.module.ts",
+				"src/slides/modules/a1/grammar/present-simple.module.ts",
+				"src/slides/modules/a1/grammar/to-be-basics.module.ts",
+				"src/slides/modules/a1/listening/classroom.module.ts",
+				"src/slides/modules/a1/listening/numbers.module.ts",
+				"src/slides/modules/a1/reading/city-signs.module.ts",
+				"src/slides/modules/a1/speaking/introductions.module.ts",
+				"src/slides/modules/a1/speaking/small-talk.module.ts",
+				"src/slides/modules/a1/vocabulary/daily-routine.module.ts",
+				"src/slides/modules/a1/vocabulary/flashcards-en-words.module.ts",
+				"src/slides/modules/a1/vocabulary/travel.module.ts",
+				"src/slides/modules/b1/vocabulary/work.module.ts",
+				"src/slides/modules/es/a1/grammar/articulos-genero-numero.module.ts",
+				"src/slides/modules/es/a1/grammar/csv-flashcards.module.ts",
+				"src/slides/modules/es/a1/grammar/ir-a-infinitivo.module.ts",
+				"src/slides/modules/es/a1/grammar/presente-basico.module.ts",
+				"src/slides/modules/es/a1/grammar/presente-irregulares.module.ts",
+				"src/slides/modules/es/a1/grammar/ser-estar.module.ts",
+				"src/slides/modules/es/a1/grammar/tener-llamarse.module.ts",
+				"src/slides/modules/es/a1/listening/numeros-tiempo.module.ts",
+				"src/slides/modules/es/a1/reading/senales.module.ts",
+				"src/slides/modules/es/a1/speaking/presentaciones.module.ts",
+				"src/slides/modules/es/a1/vocabulary/colores-dias-tiempo.module.ts",
+				"src/slides/modules/es/a1/vocabulary/familia-comida.module.ts",
+				"src/slides/modules/es/a1/vocabulary/numeros-0-100.module.ts",
+				"src/slides/modules/es/a1/vocabulary/viajes.module.ts"
+			],
+			"interactivity": 0
+		},
+		"q-naDMFAHy.js": {
+			"size": 3100,
+			"total": 3100,
+			"origins": [
+				"node_modules/@builder.io/qwik/dist/qwikloader.js"
+			],
+			"interactivity": 0
+		},
+		"q-oaGnz-dY.js": {
+			"size": 165,
+			"total": 54026,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-BaaDS9eQ.js"
+			],
+			"origins": [
+				"src/shared/ui/RouterHead.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-qAmOxML6.js": {
+			"size": 61,
+			"total": 61,
+			"origins": [
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_onClick_U50EH0Ii1m0.js"
+			],
+			"symbols": [
+				"s_U50EH0Ii1m0"
+			],
+			"interactivity": 5
+		},
+		"q-WLQ2Jooa.js": {
+			"size": 137,
+			"total": 137,
+			"origins": [
+				"src/shared/lib/date.ts"
+			],
+			"interactivity": 0
+		}
+	},
+	"assets": {
+		"assets/CSf8l9z_-style.css": {
+			"name": "style.css",
+			"size": 1343
+		},
+		"assets/O2snzNdQ-bundle-graph.json": {
+			"name": "bundle-graph.json",
+			"size": 488
+		}
+	},
+	"symbols": {
+		"s_6LdbsrJr00I": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_button_onClick",
+			"hash": "6LdbsrJr00I",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_button_onClick_6LdbsrJr00I",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				9970,
+				10035
+			]
+		},
+		"s_8Oo6UyO5GBg": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_onClick",
+			"hash": "8Oo6UyO5GBg",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": false,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_onClick_8Oo6UyO5GBg",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				14333,
+				14398
+			]
+		},
+		"s_9Q75tmBCZpw": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_button_onClick_1",
+			"hash": "9Q75tmBCZpw",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_button_onClick_1_9Q75tmBCZpw",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				13933,
+				14162
+			]
+		},
+		"s_AtVBj9BexC4": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_button_onClick",
+			"hash": "AtVBj9BexC4",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_button_onClick_AtVBj9BexC4",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				10405,
+				10544
+			]
+		},
+		"s_AukE9MYr0es": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_button_onClick",
+			"hash": "AukE9MYr0es",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_button_onClick_AukE9MYr0es",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				11524,
+				11663
+			]
+		},
+		"s_Ckfi04Pd7gw": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_button_onClick_1",
+			"hash": "Ckfi04Pd7gw",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_button_onClick_1_Ckfi04Pd7gw",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				18920,
+				19674
+			]
+		},
+		"s_DxbpKb13vDQ": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_onClick",
+			"hash": "DxbpKb13vDQ",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_onClick_DxbpKb13vDQ",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				7820,
+				7924
+			]
+		},
+		"s_KDh8JHOLUbM": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_div_button_onClick",
+			"hash": "KDh8JHOLUbM",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_div_button_onClick_KDh8JHOLUbM",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				9437,
+				9618
+			]
+		},
+		"s_KhLTwsowyAs": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_div_button_onClick",
+			"hash": "KhLTwsowyAs",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_div_button_onClick_KhLTwsowyAs",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				9304,
+				9375
+			]
+		},
+		"s_MVZmU2Tv8sw": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_onClick",
+			"hash": "MVZmU2Tv8sw",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_onClick_MVZmU2Tv8sw",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				14830,
+				14911
+			]
+		},
+		"s_OngugVTxSPU": {
+			"displayName": "index.tsx_vocabulary_component_section_aside_button_onClick",
+			"hash": "OngugVTxSPU",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "index.tsx_vocabulary_component_section_aside_button_onClick_OngugVTxSPU",
+			"parent": "s_M1TM0E984eo",
+			"origin": "routes/vocabulary/index.tsx",
+			"loc": [
+				12102,
+				12177
+			]
+		},
+		"s_PIDVZMvXLLY": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_Fragment_button_onClick",
+			"hash": "PIDVZMvXLLY",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_Fragment_button_onClick_PIDVZMvXLLY",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				12431,
+				12618
+			]
+		},
+		"s_STuAykHiivo": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_button_onClick",
+			"hash": "STuAykHiivo",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_button_onClick_STuAykHiivo",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				13487,
+				13632
+			]
+		},
+		"s_U50EH0Ii1m0": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_onClick",
+			"hash": "U50EH0Ii1m0",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": false,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_onClick_U50EH0Ii1m0",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				15043,
+				15128
+			]
+		},
+		"s_YlgBunePf4I": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_renderHintText_span_span_button_onClick",
+			"hash": "YlgBunePf4I",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_renderHintText_span_span_button_onClick_YlgBunePf4I",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				8069,
+				8106
+			]
+		},
+		"s_dYhVhe06duk": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_button_onClick",
+			"hash": "dYhVhe06duk",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_button_onClick_dYhVhe06duk",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				10854,
+				11067
+			]
+		},
+		"s_kfgl1cP0NzA": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_button_onClick_1",
+			"hash": "kfgl1cP0NzA",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_button_onClick_1_kfgl1cP0NzA",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				14646,
+				14716
+			]
+		},
+		"s_nPKBswVzyvY": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_Fragment_button_onClick_1",
+			"hash": "nPKBswVzyvY",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_Fragment_button_onClick_1_nPKBswVzyvY",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				12917,
+				13107
+			]
+		},
+		"s_oI8yP4Ml7Do": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_div_button_onClick_1",
+			"hash": "oI8yP4Ml7Do",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_div_button_onClick_1_oI8yP4Ml7Do",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				9895,
+				10079
+			]
+		},
+		"s_pNyPotOT74E": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_div_button_onClick_1",
+			"hash": "pNyPotOT74E",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_div_div_button_onClick_1_pNyPotOT74E",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				9636,
+				9711
+			]
+		},
+		"s_qv15Lm9DXHc": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_onClick",
+			"hash": "qv15Lm9DXHc",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": false,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_onClick_qv15Lm9DXHc",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				12009,
+				12094
+			]
+		},
+		"s_wfmD5OYoAus": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_CardShell_div_onClick",
+			"hash": "wfmD5OYoAus",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_CardShell_div_onClick_wfmD5OYoAus",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				14187,
+				14245
+			]
+		},
+		"s_yH9C4MkVTZA": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_section_header_button_onClick",
+			"hash": "yH9C4MkVTZA",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_section_header_button_onClick_yH9C4MkVTZA",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				15593,
+				15690
+			]
+		},
+		"s_4ekJaGlXabk": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_onContextMenu",
+			"hash": "4ekJaGlXabk",
+			"ctxKind": "eventHandler",
+			"ctxName": "onContextMenu$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_onContextMenu_4ekJaGlXabk",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				7958,
+				8104
+			]
+		},
+		"s_hOvJLmeMCyk": {
+			"displayName": "index.tsx_vocabulary_component_section_aside_div_form_input_onInput",
+			"hash": "hOvJLmeMCyk",
+			"ctxKind": "eventHandler",
+			"ctxName": "onInput$",
+			"captures": true,
+			"canonicalFilename": "index.tsx_vocabulary_component_section_aside_div_form_input_onInput_hOvJLmeMCyk",
+			"parent": "s_M1TM0E984eo",
+			"origin": "routes/vocabulary/index.tsx",
+			"loc": [
+				17858,
+				17962
+			]
+		},
+		"s_IZp0I8YVtFg": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_label_input_onChange",
+			"hash": "IZp0I8YVtFg",
+			"ctxKind": "eventHandler",
+			"ctxName": "onChange$",
+			"captures": true,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_label_input_onChange_IZp0I8YVtFg",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				13241,
+				13354
+			]
+		},
+		"s_0AO7ze0mz0U": {
+			"displayName": "index.qwik.mjs_QwikCityMockProvider_component_useTask",
+			"hash": "0AO7ze0mz0U",
+			"ctxKind": "function",
+			"ctxName": "useTask$",
+			"captures": true,
+			"canonicalFilename": "index.qwik.mjs_QwikCityMockProvider_component_useTask_0AO7ze0mz0U",
+			"parent": "s_U2TM5t897TM",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				40221,
+				40488
+			]
+		},
+		"s_h0Z1avFs3Nc": {
+			"displayName": "index.qwik.mjs_QwikCityProvider_component_useTask",
+			"hash": "h0Z1avFs3Nc",
+			"ctxKind": "function",
+			"ctxName": "useTask$",
+			"captures": true,
+			"canonicalFilename": "index.qwik.mjs_QwikCityProvider_component_useTask_h0Z1avFs3Nc",
+			"parent": "s_Gxi169gzmfg",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				29132,
+				38636
+			]
+		},
+		"s_giGDhUD2M2Y": {
+			"displayName": "index.qwik.mjs_usePreventNavigateQrl_useVisibleTask",
+			"hash": "giGDhUD2M2Y",
+			"ctxKind": "function",
+			"ctxName": "useVisibleTask$",
+			"captures": true,
+			"canonicalFilename": "index.qwik.mjs_usePreventNavigateQrl_useVisibleTask_giGDhUD2M2Y",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				22417,
+				22445
+			]
+		},
+		"s_195xOxs6wI0": {
+			"displayName": "FeedList.tsx_FeedList_component_useVisibleTask_1",
+			"hash": "195xOxs6wI0",
+			"ctxKind": "function",
+			"ctxName": "useVisibleTask$",
+			"captures": true,
+			"canonicalFilename": "FeedList.tsx_FeedList_component_useVisibleTask_1_195xOxs6wI0",
+			"parent": "s_tLAP0o0v0Io",
+			"origin": "features/feed/ui/FeedList.tsx",
+			"loc": [
+				2787,
+				3840
+			]
+		},
+		"s_7jdaF8Xc9Pg": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask_1",
+			"hash": "7jdaF8Xc9Pg",
+			"ctxKind": "function",
+			"ctxName": "useVisibleTask$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask_1_7jdaF8Xc9Pg",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				3156,
+				4226
+			]
+		},
+		"s_HpnIBPGtAV8": {
+			"displayName": "index.tsx_vocabulary_component_useVisibleTask",
+			"hash": "HpnIBPGtAV8",
+			"ctxKind": "function",
+			"ctxName": "useVisibleTask$",
+			"captures": true,
+			"canonicalFilename": "index.tsx_vocabulary_component_useVisibleTask_HpnIBPGtAV8",
+			"parent": "s_M1TM0E984eo",
+			"origin": "routes/vocabulary/index.tsx",
+			"loc": [
+				4703,
+				4955
+			]
+		},
+		"s_MXzZE0H2H0Q": {
+			"displayName": "FeedList.tsx_FeedList_component_useVisibleTask",
+			"hash": "MXzZE0H2H0Q",
+			"ctxKind": "function",
+			"ctxName": "useVisibleTask$",
+			"captures": true,
+			"canonicalFilename": "FeedList.tsx_FeedList_component_useVisibleTask_MXzZE0H2H0Q",
+			"parent": "s_tLAP0o0v0Io",
+			"origin": "features/feed/ui/FeedList.tsx",
+			"loc": [
+				1987,
+				2475
+			]
+		},
+		"s_MaksY9ri834": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask_2",
+			"hash": "MaksY9ri834",
+			"ctxKind": "function",
+			"ctxName": "useVisibleTask$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask_2_MaksY9ri834",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				4248,
+				5249
+			]
+		},
+		"s_dBBEfSw4wm0": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask",
+			"hash": "dBBEfSw4wm0",
+			"ctxKind": "function",
+			"ctxName": "useVisibleTask$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask_dBBEfSw4wm0",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				2640,
+				3134
+			]
+		},
+		"s_iyo2gaS0E6s": {
+			"displayName": "index.qwik.mjs_Link_component_useVisibleTask",
+			"hash": "iyo2gaS0E6s",
+			"ctxKind": "function",
+			"ctxName": "useVisibleTask$",
+			"captures": true,
+			"canonicalFilename": "index.qwik.mjs_Link_component_useVisibleTask_iyo2gaS0E6s",
+			"parent": "s_iqxsYKeuKj0",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				42430,
+				42880
+			]
+		},
+		"s_35TrxcdTMLU": {
+			"displayName": "index.qwik.mjs_RouterOutlet_component",
+			"hash": "35TrxcdTMLU",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_RouterOutlet_component_35TrxcdTMLU",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				7025,
+				8179
+			]
+		},
+		"s_4xh0Ok1kNRc": {
+			"displayName": "index.qwik.mjs_ErrorBoundary_component",
+			"hash": "4xh0Ok1kNRc",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_ErrorBoundary_component_4xh0Ok1kNRc",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				58747,
+				59057
+			]
+		},
+		"s_6JHmKbfZA6E": {
+			"displayName": "CardShell.tsx_CardShell_component",
+			"hash": "6JHmKbfZA6E",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "CardShell.tsx_CardShell_component_6JHmKbfZA6E",
+			"origin": "shared/ui/CardShell.tsx",
+			"loc": [
+				267,
+				528
+			]
+		},
+		"s_7WI0CtV36KI": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component",
+			"hash": "7WI0CtV36KI",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				3329,
+				15362
+			]
+		},
+		"s_8Pr1HiAqq44": {
+			"displayName": "Button.tsx_Button_component",
+			"hash": "8Pr1HiAqq44",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "Button.tsx_Button_component_8Pr1HiAqq44",
+			"origin": "shared/ui/Button.tsx",
+			"loc": [
+				394,
+				725
+			]
+		},
+		"s_Gxi169gzmfg": {
+			"displayName": "index.qwik.mjs_QwikCityProvider_component",
+			"hash": "Gxi169gzmfg",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_QwikCityProvider_component_Gxi169gzmfg",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				23853,
+				38682
+			]
+		},
+		"s_M1TM0E984eo": {
+			"displayName": "index.tsx_vocabulary_component",
+			"hash": "M1TM0E984eo",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "index.tsx_vocabulary_component_M1TM0E984eo",
+			"origin": "routes/vocabulary/index.tsx",
+			"loc": [
+				2373,
+				18403
+			]
+		},
+		"s_U2TM5t897TM": {
+			"displayName": "index.qwik.mjs_QwikCityMockProvider_component",
+			"hash": "U2TM5t897TM",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_QwikCityMockProvider_component_U2TM5t897TM",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				38884,
+				40534
+			]
+		},
+		"s_V8KMWYonO6M": {
+			"displayName": "LearningOverview.tsx_LearningOverview_component",
+			"hash": "V8KMWYonO6M",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "LearningOverview.tsx_LearningOverview_component_V8KMWYonO6M",
+			"origin": "features/home/ui/LearningOverview.tsx",
+			"loc": [
+				783,
+				3109
+			]
+		},
+		"s_XrSAnJC6ZWo": {
+			"displayName": "layout.tsx_layout_component",
+			"hash": "XrSAnJC6ZWo",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "layout.tsx_layout_component_XrSAnJC6ZWo",
+			"origin": "routes/layout.tsx",
+			"loc": [
+				1145,
+				5381
+			]
+		},
+		"s_act8mBLtA0U": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component",
+			"hash": "act8mBLtA0U",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				1542,
+				20385
+			]
+		},
+		"s_bOqXB7horoI": {
+			"displayName": "index.qwik.mjs_GetForm_component",
+			"hash": "bOqXB7horoI",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_GetForm_component_bOqXB7horoI",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				60383,
+				61536
+			]
+		},
+		"s_huE0Elh0KRk": {
+			"displayName": "index.tsx_routes_component",
+			"hash": "huE0Elh0KRk",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "index.tsx_routes_component_huE0Elh0KRk",
+			"origin": "routes/index.tsx",
+			"loc": [
+				773,
+				1536
+			]
+		},
+		"s_iqxsYKeuKj0": {
+			"displayName": "index.qwik.mjs_Link_component",
+			"hash": "iqxsYKeuKj0",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_Link_component_iqxsYKeuKj0",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				40561,
+				43468
+			]
+		},
+		"s_jPkkzZuAfLY": {
+			"displayName": "index.tsx_profile_component",
+			"hash": "jPkkzZuAfLY",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "index.tsx_profile_component_jPkkzZuAfLY",
+			"origin": "routes/profile/index.tsx",
+			"loc": [
+				551,
+				2132
+			]
+		},
+		"s_pYmAUO01Zl0": {
+			"displayName": "RouterHead.tsx_RouterHead_component",
+			"hash": "pYmAUO01Zl0",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "RouterHead.tsx_RouterHead_component_pYmAUO01Zl0",
+			"origin": "shared/ui/RouterHead.tsx",
+			"loc": [
+				156,
+				661
+			]
+		},
+		"s_ppOoFWsHICo": {
+			"displayName": "index.tsx_feed_component",
+			"hash": "ppOoFWsHICo",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "index.tsx_feed_component_ppOoFWsHICo",
+			"origin": "routes/feed/index.tsx",
+			"loc": [
+				2407,
+				7967
+			]
+		},
+		"s_tLAP0o0v0Io": {
+			"displayName": "FeedList.tsx_FeedList_component",
+			"hash": "tLAP0o0v0Io",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "FeedList.tsx_FeedList_component_tLAP0o0v0Io",
+			"origin": "features/feed/ui/FeedList.tsx",
+			"loc": [
+				953,
+				5429
+			]
+		},
+		"s_yq2EIwGo5YU": {
+			"displayName": "root.tsx_root_component",
+			"hash": "yq2EIwGo5YU",
+			"ctxKind": "function",
+			"ctxName": "component$",
+			"captures": false,
+			"canonicalFilename": "root.tsx_root_component_yq2EIwGo5YU",
+			"origin": "root.tsx",
+			"loc": [
+				223,
+				628
+			]
+		},
+		"s_lBdrmkqIfHo": {
+			"displayName": "index.qwik.mjs_QwikCityProvider_component_useStyles",
+			"hash": "lBdrmkqIfHo",
+			"ctxKind": "function",
+			"ctxName": "useStyles$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_QwikCityProvider_component_useStyles_lBdrmkqIfHo",
+			"parent": "s_Gxi169gzmfg",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				23879,
+				23913
+			]
+		},
+		"s_00q5jnKbEBo": {
+			"displayName": "LearningOverview.tsx_LearningOverview_component_useStylesScoped",
+			"hash": "00q5jnKbEBo",
+			"ctxKind": "function",
+			"ctxName": "useStylesScoped$",
+			"captures": false,
+			"canonicalFilename": "LearningOverview.tsx_LearningOverview_component_useStylesScoped_00q5jnKbEBo",
+			"parent": "s_V8KMWYonO6M",
+			"origin": "features/home/ui/LearningOverview.tsx",
+			"loc": [
+				815,
+				821
+			]
+		},
+		"s_08f8o9tStiM": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_useStylesScoped",
+			"hash": "08f8o9tStiM",
+			"ctxKind": "function",
+			"ctxName": "useStylesScoped$",
+			"captures": false,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_useStylesScoped_08f8o9tStiM",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				3361,
+				3367
+			]
+		},
+		"s_B7tMY4O9MNo": {
+			"displayName": "index.tsx_routes_component_useStylesScoped",
+			"hash": "B7tMY4O9MNo",
+			"ctxKind": "function",
+			"ctxName": "useStylesScoped$",
+			"captures": false,
+			"canonicalFilename": "index.tsx_routes_component_useStylesScoped_B7tMY4O9MNo",
+			"parent": "s_huE0Elh0KRk",
+			"origin": "routes/index.tsx",
+			"loc": [
+				800,
+				806
+			]
+		},
+		"s_Db3MLQWvnuQ": {
+			"displayName": "index.tsx_profile_component_useStylesScoped",
+			"hash": "Db3MLQWvnuQ",
+			"ctxKind": "function",
+			"ctxName": "useStylesScoped$",
+			"captures": false,
+			"canonicalFilename": "index.tsx_profile_component_useStylesScoped_Db3MLQWvnuQ",
+			"parent": "s_jPkkzZuAfLY",
+			"origin": "routes/profile/index.tsx",
+			"loc": [
+				578,
+				584
+			]
+		},
+		"s_Hy0VqvEE0h0": {
+			"displayName": "CardShell.tsx_CardShell_component_useStylesScoped",
+			"hash": "Hy0VqvEE0h0",
+			"ctxKind": "function",
+			"ctxName": "useStylesScoped$",
+			"captures": false,
+			"canonicalFilename": "CardShell.tsx_CardShell_component_useStylesScoped_Hy0VqvEE0h0",
+			"parent": "s_6JHmKbfZA6E",
+			"origin": "shared/ui/CardShell.tsx",
+			"loc": [
+				299,
+				305
+			]
+		},
+		"s_a01kgaYJg0Y": {
+			"displayName": "index.tsx_feed_component_useStylesScoped",
+			"hash": "a01kgaYJg0Y",
+			"ctxKind": "function",
+			"ctxName": "useStylesScoped$",
+			"captures": false,
+			"canonicalFilename": "index.tsx_feed_component_useStylesScoped_a01kgaYJg0Y",
+			"parent": "s_ppOoFWsHICo",
+			"origin": "routes/feed/index.tsx",
+			"loc": [
+				2434,
+				2440
+			]
+		},
+		"s_eIPQZM6URVg": {
+			"displayName": "Button.tsx_Button_component_useStylesScoped",
+			"hash": "eIPQZM6URVg",
+			"ctxKind": "function",
+			"ctxName": "useStylesScoped$",
+			"captures": false,
+			"canonicalFilename": "Button.tsx_Button_component_useStylesScoped_eIPQZM6URVg",
+			"parent": "s_8Pr1HiAqq44",
+			"origin": "shared/ui/Button.tsx",
+			"loc": [
+				426,
+				432
+			]
+		},
+		"s_g3A70RjkUIk": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_Button_onClick",
+			"hash": "g3A70RjkUIk",
+			"ctxKind": "jSXProp",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_CardShell_div_div_Button_onClick_g3A70RjkUIk",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				13950,
+				14000
+			]
+		},
+		"s_p9JqB4AScV4": {
+			"displayName": "FeedList.tsx_FeedList_component_useStylesScoped",
+			"hash": "p9JqB4AScV4",
+			"ctxKind": "function",
+			"ctxName": "useStylesScoped$",
+			"captures": false,
+			"canonicalFilename": "FeedList.tsx_FeedList_component_useStylesScoped_p9JqB4AScV4",
+			"parent": "s_tLAP0o0v0Io",
+			"origin": "features/feed/ui/FeedList.tsx",
+			"loc": [
+				985,
+				991
+			]
+		},
+		"s_tj4JTRImQlM": {
+			"displayName": "layout.tsx_layout_component_useStylesScoped",
+			"hash": "tj4JTRImQlM",
+			"ctxKind": "function",
+			"ctxName": "useStylesScoped$",
+			"captures": false,
+			"canonicalFilename": "layout.tsx_layout_component_useStylesScoped_tj4JTRImQlM",
+			"parent": "s_XrSAnJC6ZWo",
+			"origin": "routes/layout.tsx",
+			"loc": [
+				1172,
+				1178
+			]
+		},
+		"s_vjHxFOIlgX4": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_useStylesScoped",
+			"hash": "vjHxFOIlgX4",
+			"ctxKind": "function",
+			"ctxName": "useStylesScoped$",
+			"captures": false,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_useStylesScoped_vjHxFOIlgX4",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				1574,
+				1580
+			]
+		},
+		"s_xXHT1b0m8sg": {
+			"displayName": "index.tsx_vocabulary_component_useStylesScoped",
+			"hash": "xXHT1b0m8sg",
+			"ctxKind": "function",
+			"ctxName": "useStylesScoped$",
+			"captures": false,
+			"canonicalFilename": "index.tsx_vocabulary_component_useStylesScoped_xXHT1b0m8sg",
+			"parent": "s_M1TM0E984eo",
+			"origin": "routes/vocabulary/index.tsx",
+			"loc": [
+				2400,
+				2406
+			]
+		},
+		"s_NoQkLCnB10o": {
+			"displayName": "index.qwik.mjs_serverQrl_rpc",
+			"hash": "NoQkLCnB10o",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "index.qwik.mjs_serverQrl_rpc_NoQkLCnB10o",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				54165,
+				57239
+			]
+		},
+		"s_QRX59I8Q02c": {
+			"displayName": "index.qwik.mjs_Form_form_onSubmit",
+			"hash": "QRX59I8Q02c",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "index.qwik.mjs_Form_form_onSubmit_QRX59I8Q02c",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				59514,
+				59628
+			]
+		},
+		"s_egvKclXdyy0": {
+			"displayName": "index.qwik.mjs_spaInit_event",
+			"hash": "egvKclXdyy0",
+			"ctxKind": "function",
+			"ctxName": "event$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_spaInit_event_egvKclXdyy0",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				1324,
+				6990
+			]
+		},
+		"s_uXeawQL0Gic": {
+			"displayName": "index.qwik.mjs_routeActionQrl_action_submit",
+			"hash": "uXeawQL0Gic",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "index.qwik.mjs_routeActionQrl_action_submit_uXeawQL0Gic",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				46053,
+				47698
+			]
+		},
+		"s_04ls3VPuS9o": {
+			"displayName": "index.qwik.mjs_QwikCityMockProvider_component_goto",
+			"hash": "04ls3VPuS9o",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_QwikCityMockProvider_component_goto_04ls3VPuS9o",
+			"parent": "s_U2TM5t897TM",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				39362,
+				39440
+			]
+		},
+		"s_4JNoRrXrPJk": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_openCardContextMenu",
+			"hash": "4JNoRrXrPJk",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_openCardContextMenu_4JNoRrXrPJk",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				5286,
+				6343
+			]
+		},
+		"s_7RxZnlpVjM0": {
+			"displayName": "index.qwik.mjs_Link_component_handlePreload",
+			"hash": "7RxZnlpVjM0",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_Link_component_handlePreload_7RxZnlpVjM0",
+			"parent": "s_iqxsYKeuKj0",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				42315,
+				42409
+			]
+		},
+		"s_8VADAEwf0v0": {
+			"displayName": "index.tsx_vocabulary_component_section_div_VocabularyDeck_onExplainWord",
+			"hash": "8VADAEwf0v0",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "index.tsx_vocabulary_component_section_div_VocabularyDeck_onExplainWord_8VADAEwf0v0",
+			"parent": "s_M1TM0E984eo",
+			"origin": "routes/vocabulary/index.tsx",
+			"loc": [
+				9311,
+				11703
+			]
+		},
+		"s_9AcICxuI9tw": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_toggleHint",
+			"hash": "9AcICxuI9tw",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_toggleHint_9AcICxuI9tw",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				4577,
+				4745
+			]
+		},
+		"s_BYpw41FJ0as": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_complete",
+			"hash": "BYpw41FJ0as",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_complete_BYpw41FJ0as",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				3659,
+				4075
+			]
+		},
+		"s_INBGe26rqDI": {
+			"displayName": "index.qwik.mjs_GetForm_component_form_onSubmit_1",
+			"hash": "INBGe26rqDI",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_GetForm_component_form_onSubmit_1_INBGe26rqDI",
+			"parent": "s_bOqXB7horoI",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				61138,
+				61474
+			]
+		},
+		"s_SM8fcmRxw04": {
+			"displayName": "FeedList.tsx_FeedList_component_handleComplete",
+			"hash": "SM8fcmRxw04",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "FeedList.tsx_FeedList_component_handleComplete_SM8fcmRxw04",
+			"parent": "s_tLAP0o0v0Io",
+			"origin": "features/feed/ui/FeedList.tsx",
+			"loc": [
+				2507,
+				2765
+			]
+		},
+		"s_TX7J9gX18YM": {
+			"displayName": "index.qwik.mjs_QwikCityProvider_component_goto",
+			"hash": "TX7J9gX18YM",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "index.qwik.mjs_QwikCityProvider_component_goto_TX7J9gX18YM",
+			"parent": "s_Gxi169gzmfg",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				26379,
+				28662
+			]
+		},
+		"s_WQcAX0d0rHg": {
+			"displayName": "index.qwik.mjs_Link_component_handleClientSideNavigation",
+			"hash": "WQcAX0d0rHg",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "index.qwik.mjs_Link_component_handleClientSideNavigation_WQcAX0d0rHg",
+			"parent": "s_iqxsYKeuKj0",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				41851,
+				42277
+			]
+		},
+		"s_Y3UU8NflqMQ": {
+			"displayName": "index.qwik.mjs_ErrorBoundary_component_useOnWindow",
+			"hash": "Y3UU8NflqMQ",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "index.qwik.mjs_ErrorBoundary_component_useOnWindow_Y3UU8NflqMQ",
+			"parent": "s_4xh0Ok1kNRc",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				58822,
+				58868
+			]
+		},
+		"s_YZ1rACO0MSk": {
+			"displayName": "CardRenderer.tsx_CardRenderer_component_toggleHintsMode",
+			"hash": "YZ1rACO0MSk",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "CardRenderer.tsx_CardRenderer_component_toggleHintsMode_YZ1rACO0MSk",
+			"parent": "s_7WI0CtV36KI",
+			"origin": "entities/card/ui/CardRenderer.tsx",
+			"loc": [
+				4778,
+				4905
+			]
+		},
+		"s_bhE0Z4Oxf4o": {
+			"displayName": "index.qwik.mjs_Link_component_handlePrefetch",
+			"hash": "bhE0Z4Oxf4o",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_Link_component_handlePrefetch_bhE0Z4Oxf4o",
+			"parent": "s_iqxsYKeuKj0",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				41229,
+				41586
+			]
+		},
+		"s_hge0y0pYtQY": {
+			"displayName": "index.qwik.mjs_QwikCityProvider_component_registerPreventNav",
+			"hash": "hge0y0pYtQY",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": false,
+			"canonicalFilename": "index.qwik.mjs_QwikCityProvider_component_registerPreventNav_hge0y0pYtQY",
+			"parent": "s_Gxi169gzmfg",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				25482,
+				26359
+			]
+		},
+		"s_iw4ZoTXpybA": {
+			"displayName": "index.qwik.mjs_GetForm_component_form_onSubmit",
+			"hash": "iw4ZoTXpybA",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "index.qwik.mjs_GetForm_component_form_onSubmit_iw4ZoTXpybA",
+			"parent": "s_bOqXB7horoI",
+			"origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
+			"loc": [
+				60747,
+				61127
+			]
+		},
+		"s_mbnwBuBK1sk": {
+			"displayName": "index.tsx_vocabulary_component_section_aside_div_form_onSubmit",
+			"hash": "mbnwBuBK1sk",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "index.tsx_vocabulary_component_section_aside_div_form_onSubmit_mbnwBuBK1sk",
+			"parent": "s_M1TM0E984eo",
+			"origin": "routes/vocabulary/index.tsx",
+			"loc": [
+				14519,
+				17639
+			]
+		},
+		"s_nxNAN6pq5NM": {
+			"displayName": "index.tsx_feed_component_onComplete",
+			"hash": "nxNAN6pq5NM",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "index.tsx_feed_component_onComplete_nxNAN6pq5NM",
+			"parent": "s_ppOoFWsHICo",
+			"origin": "routes/feed/index.tsx",
+			"loc": [
+				3012,
+				3240
+			]
+		}
+	},
+	"qwikLoader": "q-naDMFAHy.js",
+	"platform": {
+		"vite": "",
+		"rollup": "4.57.1",
+		"env": "node",
+		"os": "darwin",
+		"node": "20.19.0"
+	}
+}
