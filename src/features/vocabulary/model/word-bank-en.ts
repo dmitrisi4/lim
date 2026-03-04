@@ -1,4 +1,7 @@
-import type { VocabularySection, VocabularyWord } from "~/features/vocabulary/model/types";
+import type {
+  VocabularySection,
+  VocabularyWord,
+} from "~/features/vocabulary/model/types";
 
 const VOCABULARY_IMAGE_BASE_PATH = "/images/vocabulary/en";
 
@@ -8,7 +11,7 @@ function verb(
   translation: string,
   sections: VocabularySection[],
   imageUrl = "",
-  imageAlt = ""
+  imageAlt = "",
 ): VocabularyWord {
   return {
     id,
@@ -17,11 +20,17 @@ function verb(
     type: "verb",
     sections,
     imageUrl,
-    imageAlt
+    imageAlt,
   };
 }
 
-function other(id: string, term: string, translation: string, imageUrl = "", imageAlt = ""): VocabularyWord {
+function other(
+  id: string,
+  term: string,
+  translation: string,
+  imageUrl = "",
+  imageAlt = "",
+): VocabularyWord {
   return {
     id,
     term,
@@ -29,7 +38,7 @@ function other(id: string, term: string, translation: string, imageUrl = "", ima
     type: "other",
     sections: ["other_words"],
     imageUrl,
-    imageAlt
+    imageAlt,
   };
 }
 
@@ -39,12 +48,30 @@ const EN_VERB_BANK: VocabularyWord[] = [
     "do / does / did / done / doing",
     "Формы do: do/does/did/done/doing. Вспомогательный и смысловой глагол.",
     ["action_verbs", "modal_auxiliary_verbs"],
-    `${VOCABULARY_IMAGE_BASE_PATH}/do.png`
+    `${VOCABULARY_IMAGE_BASE_PATH}/do.jpg`,
   ),
-  verb("en-verb-be", "be", "Быть (am/is/are/was/were/been/being).", ["state_verbs", "modal_auxiliary_verbs"]),
-  verb("en-verb-have", "have", "Иметь (have/has/had), также вспомогательный глагол.", ["state_verbs", "modal_auxiliary_verbs"]),
-  verb("en-verb-know", "know", "знать", ["state_verbs", "thinking_decision_verbs"]),
-  verb("en-verb-think", "think", "думать", ["state_verbs", "thinking_decision_verbs"]),
+  verb(
+    "en-verb-be",
+    "be",
+    "Быть (am/is/are/was/were/been/being).",
+    ["state_verbs", "modal_auxiliary_verbs"],
+    `${VOCABULARY_IMAGE_BASE_PATH}/be.jpg`,
+  ),
+  verb(
+    "en-verb-have",
+    "have",
+    "Иметь (have/has/had), также вспомогательный глагол.",
+    ["state_verbs", "modal_auxiliary_verbs"],
+     `${VOCABULARY_IMAGE_BASE_PATH}/have.jpg`,
+  ),
+  verb("en-verb-know", "know", "знать", [
+    "state_verbs",
+    "thinking_decision_verbs",
+  ]),
+  verb("en-verb-think", "think", "думать", [
+    "state_verbs",
+    "thinking_decision_verbs",
+  ]),
   verb("en-verb-understand", "understand", "понимать", ["state_verbs"]),
   verb("en-verb-want", "want", "хотеть", ["state_verbs"]),
   verb("en-verb-need", "need", "нуждаться / нужно", ["state_verbs"]),
@@ -69,7 +96,10 @@ const EN_VERB_BANK: VocabularyWord[] = [
   verb("en-verb-use", "use", "использовать", ["action_verbs"]),
   verb("en-verb-try", "try", "пытаться", ["action_verbs"]),
   verb("en-verb-call", "call", "звонить / называть", ["action_verbs"]),
-  verb("en-verb-ask", "ask", "спрашивать", ["action_verbs", "communication_verbs"]),
+  verb("en-verb-ask", "ask", "спрашивать", [
+    "action_verbs",
+    "communication_verbs",
+  ]),
   verb("en-verb-help", "help", "помогать", ["action_verbs"]),
 
   verb("en-verb-walk", "walk", "ходить пешком", ["movement_verbs"]),
@@ -85,7 +115,9 @@ const EN_VERB_BANK: VocabularyWord[] = [
   verb("en-verb-fly", "fly", "летать", ["movement_verbs"]),
 
   verb("en-verb-say", "say", "говорить", ["communication_verbs"]),
-  verb("en-verb-tell", "tell", "рассказывать / сообщать", ["communication_verbs"]),
+  verb("en-verb-tell", "tell", "рассказывать / сообщать", [
+    "communication_verbs",
+  ]),
   verb("en-verb-speak", "speak", "говорить", ["communication_verbs"]),
   verb("en-verb-talk", "talk", "разговаривать", ["communication_verbs"]),
   verb("en-verb-answer", "answer", "отвечать", ["communication_verbs"]),
@@ -99,7 +131,9 @@ const EN_VERB_BANK: VocabularyWord[] = [
   verb("en-verb-choose", "choose", "выбирать", ["thinking_decision_verbs"]),
   verb("en-verb-plan", "plan", "планировать", ["thinking_decision_verbs"]),
   verb("en-verb-mean", "mean", "значить", ["thinking_decision_verbs"]),
-  verb("en-verb-consider", "consider", "рассматривать / учитывать", ["thinking_decision_verbs"]),
+  verb("en-verb-consider", "consider", "рассматривать / учитывать", [
+    "thinking_decision_verbs",
+  ]),
   verb("en-verb-expect", "expect", "ожидать", ["thinking_decision_verbs"]),
   verb("en-verb-hope", "hope", "надеяться", ["thinking_decision_verbs"]),
   verb("en-verb-guess", "guess", "догадываться", ["thinking_decision_verbs"]),
@@ -107,25 +141,39 @@ const EN_VERB_BANK: VocabularyWord[] = [
 
   verb("en-verb-can", "can", "мочь / уметь", ["modal_auxiliary_verbs"]),
   verb("en-verb-could", "could", "мог / мог бы", ["modal_auxiliary_verbs"]),
-  verb("en-verb-may", "may", "мочь (разрешение/вероятность)", ["modal_auxiliary_verbs"]),
-  verb("en-verb-might", "might", "мог бы / возможно", ["modal_auxiliary_verbs"]),
+  verb("en-verb-may", "may", "мочь (разрешение/вероятность)", [
+    "modal_auxiliary_verbs",
+  ]),
+  verb("en-verb-might", "might", "мог бы / возможно", [
+    "modal_auxiliary_verbs",
+  ]),
   verb("en-verb-must", "must", "должен", ["modal_auxiliary_verbs"]),
   verb("en-verb-should", "should", "следует", ["modal_auxiliary_verbs"]),
-  verb("en-verb-will", "will", "будущее время / воля", ["modal_auxiliary_verbs"]),
-  verb("en-verb-would", "would", "бы / вежливая форма will", ["modal_auxiliary_verbs"]),
-  verb("en-verb-shall", "shall", "должен / будем (формально)", ["modal_auxiliary_verbs"]),
+  verb("en-verb-will", "will", "будущее время / воля", [
+    "modal_auxiliary_verbs",
+  ]),
+  verb("en-verb-would", "would", "бы / вежливая форма will", [
+    "modal_auxiliary_verbs",
+  ]),
+  verb("en-verb-shall", "shall", "должен / будем (формально)", [
+    "modal_auxiliary_verbs",
+  ]),
 
   verb("en-verb-start", "start", "начинать", ["action_verbs"]),
   verb("en-verb-finish", "finish", "заканчивать", ["action_verbs"]),
   verb("en-verb-work", "work", "работать", ["action_verbs"]),
-  verb("en-verb-live", "live", "жить", ["state_verbs", "action_verbs"])
+  verb("en-verb-live", "live", "жить", ["state_verbs", "action_verbs"]),
 ];
 
 const EN_OTHER_WORD_BANK: VocabularyWord[] = [
   other("en-other-him", "him", "его, ему"),
   other("en-other-these", "these", "эти"),
   other("en-other-this", "this", "этот"),
-  other("en-other-i-like-you", "I like you", "Ты мне нравишься (подлежащее — «я»)."),
+  other(
+    "en-other-i-like-you",
+    "I like you",
+    "Ты мне нравишься (подлежащее — «я»).",
+  ),
   other("en-other-she", "she", "она"),
   other("en-other-what", "what", "Что? / Какой?"),
   other("en-other-that", "that", "тот"),
@@ -151,7 +199,10 @@ const EN_OTHER_WORD_BANK: VocabularyWord[] = [
   other("en-other-how-many", "how many", "сколько"),
   other("en-other-yes-i-do", "Yes, I do", "Да."),
   other("en-other-i-need-to-go", "I need to go", "Мне нужно идти."),
-  other("en-other-how", "how", "Как? / Каким образом?")
+  other("en-other-how", "how", "Как? / Каким образом?"),
 ];
 
-export const EN_WORD_BANK: VocabularyWord[] = [...EN_VERB_BANK, ...EN_OTHER_WORD_BANK];
+export const EN_WORD_BANK: VocabularyWord[] = [
+  ...EN_VERB_BANK,
+  ...EN_OTHER_WORD_BANK,
+];
