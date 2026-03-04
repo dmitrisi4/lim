@@ -345,6 +345,7 @@
   max-height: min(74vh, 560px);
   overflow-x: hidden;
   overflow-y: scroll;
+  overscroll-behavior: contain;
   scrollbar-gutter: stable;
   scrollbar-width: thin;
   scrollbar-color: rgba(112, 218, 255, 0.88) rgba(255, 255, 255, 0.1);
@@ -358,6 +359,7 @@
   padding: 0.82rem 0.88rem 2.85rem;
   display: grid;
   gap: 0.54rem;
+  align-content: start;
   position: relative;
 }
 
@@ -417,6 +419,39 @@
   gap: 0.62rem;
 }
 
+.vocab-verb-forms-shell {
+  display: grid;
+  gap: 0.48rem;
+  min-height: 0;
+  align-items: start;
+}
+
+.vocab-verb-forms-rail {
+  display: flex;
+  gap: 0.56rem;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.vocab-verb-forms-rail::-webkit-scrollbar {
+  display: none;
+}
+
+.vocab-verb-form-slide {
+  display: block;
+  flex: 0 0 100%;
+  min-width: 100%;
+  height: auto !important;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
 .vocab-verb-tense-block {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 12px;
@@ -424,6 +459,74 @@
   padding: 0.5rem 0.56rem;
   display: grid;
   gap: 0.34rem;
+}
+
+.vocab-verb-forms-pagination {
+  display: grid;
+  justify-items: center;
+  gap: 0.3rem;
+}
+
+.vocab-verb-forms-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+}
+
+.vocab-verb-forms-nav {
+  width: 1.65rem;
+  height: 1.65rem;
+  border: 1px solid rgba(112, 218, 255, 0.42);
+  border-radius: 999px;
+  background: rgba(112, 218, 255, 0.14);
+  color: #e9f8ff;
+  font-size: 0.84rem;
+  font-weight: 900;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 140ms ease, background-color 140ms ease, transform 140ms ease;
+}
+
+.vocab-verb-forms-nav:hover:not(:disabled) {
+  border-color: rgba(142, 230, 255, 0.76);
+  background: rgba(112, 218, 255, 0.24);
+  transform: translateY(-1px);
+}
+
+.vocab-verb-forms-nav:disabled {
+  opacity: 0.42;
+  cursor: default;
+}
+
+.vocab-verb-forms-page {
+  font-size: 0.7rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text-3);
+}
+
+.vocab-verb-forms-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.22rem;
+}
+
+.vocab-verb-forms-dot {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background-color 140ms ease, transform 140ms ease;
+}
+
+.vocab-verb-forms-dot.active {
+  background: rgba(112, 218, 255, 0.92);
+  transform: scale(1.1);
 }
 
 .vocab-verb-tense-title {
@@ -469,6 +572,7 @@
 .vocab-verb-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
   font-size: 0.75rem;
   color: var(--text-2);
 }
@@ -479,6 +583,17 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   padding: 0.42rem 0.22rem;
   vertical-align: top;
+  word-break: break-word;
+}
+
+.vocab-verb-table th:nth-child(1),
+.vocab-verb-table td:nth-child(1) {
+  width: 24%;
+}
+
+.vocab-verb-table th:nth-child(2),
+.vocab-verb-table td:nth-child(2) {
+  width: 26%;
 }
 
 .vocab-verb-table th {

@@ -1,1 +1,0 @@
-import{_ as o}from"./q-BAMLJNcO.js";import{K as e}from"./q-Cbvs5ygx.js";import{o as r,e as t,U as s}from"./q-Dhsg9qQC.js";const m=e(s("s_e3tzntCgwwU")),d=r(t(()=>o(()=>import("./q-_ekMi8sv.js"),[]),"s_jPkkzZuAfLY")),f={title:"Lim | Profile"};export{d as default,f as head,m as useProfileLoader};

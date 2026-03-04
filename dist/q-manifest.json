@@ -1,6 +1,6 @@
 {
 	"version": "1",
-	"manifestHash": "mxeg69",
+	"manifestHash": "zan7cf",
 	"options": {
 		"target": "client",
 		"buildMode": "production",
@@ -10,7 +10,7 @@
 	},
 	"core": "q-Dhsg9qQC.js",
 	"preloader": "q-BAMLJNcO.js",
-	"bundleGraphAsset": "assets/O2snzNdQ-bundle-graph.json",
+	"bundleGraphAsset": "assets/B862pJy4-bundle-graph.json",
 	"injections": [
 		{
 			"tag": "style",
@@ -24,95 +24,163 @@
 	"mapping": {
 		"s_6LdbsrJr00I": "q-CKxxaYUm.js",
 		"s_8Oo6UyO5GBg": "q-D3N0pEGJ.js",
-		"s_9Q75tmBCZpw": "q-Br8KdOIx.js",
-		"s_AtVBj9BexC4": "q-Br8KdOIx.js",
-		"s_AukE9MYr0es": "q-Br8KdOIx.js",
-		"s_Ckfi04Pd7gw": "q-Br8KdOIx.js",
-		"s_DxbpKb13vDQ": "q-Br8KdOIx.js",
-		"s_KDh8JHOLUbM": "q-Br8KdOIx.js",
+		"s_9Q75tmBCZpw": "q--kf_M-qS.js",
+		"s_AtVBj9BexC4": "q--kf_M-qS.js",
+		"s_AukE9MYr0es": "q--kf_M-qS.js",
+		"s_Ckfi04Pd7gw": "q--kf_M-qS.js",
+		"s_DxbpKb13vDQ": "q--kf_M-qS.js",
+		"s_KDh8JHOLUbM": "q--kf_M-qS.js",
 		"s_KhLTwsowyAs": "q-CKxxaYUm.js",
-		"s_MVZmU2Tv8sw": "q-Br8KdOIx.js",
-		"s_OngugVTxSPU": "q-BEl_DDPV.js",
-		"s_PIDVZMvXLLY": "q-Br8KdOIx.js",
-		"s_STuAykHiivo": "q-Br8KdOIx.js",
+		"s_MVZmU2Tv8sw": "q--kf_M-qS.js",
+		"s_ObFSgH78jyY": "q--kf_M-qS.js",
+		"s_OngugVTxSPU": "q-DrDstlDl.js",
+		"s_PIDVZMvXLLY": "q--kf_M-qS.js",
+		"s_STuAykHiivo": "q--kf_M-qS.js",
 		"s_U50EH0Ii1m0": "q-qAmOxML6.js",
 		"s_YlgBunePf4I": "q-CKxxaYUm.js",
-		"s_dYhVhe06duk": "q-Br8KdOIx.js",
+		"s_dYhVhe06duk": "q--kf_M-qS.js",
 		"s_kfgl1cP0NzA": "q-CKxxaYUm.js",
-		"s_nPKBswVzyvY": "q-Br8KdOIx.js",
-		"s_oI8yP4Ml7Do": "q-Br8KdOIx.js",
+		"s_nPKBswVzyvY": "q--kf_M-qS.js",
+		"s_oI8yP4Ml7Do": "q--kf_M-qS.js",
 		"s_pNyPotOT74E": "q-CKxxaYUm.js",
+		"s_pnKg5JSxrdo": "q--kf_M-qS.js",
 		"s_qv15Lm9DXHc": "q-EWj6qaf6.js",
 		"s_wfmD5OYoAus": "q-CKxxaYUm.js",
-		"s_yH9C4MkVTZA": "q-Br8KdOIx.js",
-		"s_4ekJaGlXabk": "q-Br8KdOIx.js",
-		"s_hOvJLmeMCyk": "q-BEl_DDPV.js",
+		"s_yH9C4MkVTZA": "q--kf_M-qS.js",
+		"s_4ekJaGlXabk": "q--kf_M-qS.js",
+		"s_hOvJLmeMCyk": "q-DrDstlDl.js",
 		"s_IZp0I8YVtFg": "q-CKxxaYUm.js",
-		"s_0AO7ze0mz0U": "q-DCHLRVtJ.js",
-		"s_h0Z1avFs3Nc": "q-BvkMasbS.js",
+		"s_0AO7ze0mz0U": "q-BwCMvq4_.js",
+		"s_h0Z1avFs3Nc": "q-CbiHXdPO.js",
 		"s_giGDhUD2M2Y": "q-DQcIOd3u.js",
 		"s_195xOxs6wI0": "q-CmeoqWtQ.js",
 		"s_7jdaF8Xc9Pg": "q-DG8gcsFn.js",
 		"s_HpnIBPGtAV8": "q-Cm-3xMhh.js",
+		"s_JeAph0l7WfY": "q-Bi0f_wjP.js",
 		"s_MXzZE0H2H0Q": "q-Di2MmU01.js",
 		"s_MaksY9ri834": "q-4UCInVmc.js",
 		"s_dBBEfSw4wm0": "q-DUig32UJ.js",
 		"s_iyo2gaS0E6s": "q-D1l4qjTd.js",
-		"s_35TrxcdTMLU": "q-fdBG51ef.js",
+		"s_35TrxcdTMLU": "q-BGX9t0-D.js",
 		"s_4xh0Ok1kNRc": "q-DWoPAj2m.js",
 		"s_6JHmKbfZA6E": "q-Cp3Ivf5M.js",
 		"s_7WI0CtV36KI": "q-CKxxaYUm.js",
 		"s_8Pr1HiAqq44": "q-DeYDkmov.js",
-		"s_Gxi169gzmfg": "q-BvkMasbS.js",
-		"s_M1TM0E984eo": "q-BEl_DDPV.js",
-		"s_U2TM5t897TM": "q-DCHLRVtJ.js",
+		"s_Gxi169gzmfg": "q-CbiHXdPO.js",
+		"s_M1TM0E984eo": "q-DrDstlDl.js",
+		"s_U2TM5t897TM": "q-BwCMvq4_.js",
 		"s_V8KMWYonO6M": "q-CsHhd0D-.js",
-		"s_XrSAnJC6ZWo": "q-BwtPn1bf.js",
-		"s_act8mBLtA0U": "q-Br8KdOIx.js",
-		"s_bOqXB7horoI": "q-CndG7sJR.js",
-		"s_huE0Elh0KRk": "q-CvE6my2P.js",
-		"s_iqxsYKeuKj0": "q-DtlOd1FP.js",
-		"s_jPkkzZuAfLY": "q-_ekMi8sv.js",
-		"s_pYmAUO01Zl0": "q-BaaDS9eQ.js",
-		"s_ppOoFWsHICo": "q-frxNf2Qo.js",
-		"s_tLAP0o0v0Io": "q-dP35HHAq.js",
-		"s_yq2EIwGo5YU": "q-CrJ5BhsX.js",
-		"s_lBdrmkqIfHo": "q-BvkMasbS.js",
+		"s_XrSAnJC6ZWo": "q-tFyK1Pq_.js",
+		"s_act8mBLtA0U": "q--kf_M-qS.js",
+		"s_bOqXB7horoI": "q-BtpuLt0G.js",
+		"s_huE0Elh0KRk": "q-CP_qb_Bn.js",
+		"s_iqxsYKeuKj0": "q-B6w3I31j.js",
+		"s_jPkkzZuAfLY": "q-B7hoXotg.js",
+		"s_pYmAUO01Zl0": "q-B72QkBt-.js",
+		"s_ppOoFWsHICo": "q-Iv4pGBwH.js",
+		"s_tLAP0o0v0Io": "q-BUJ8aeDJ.js",
+		"s_yq2EIwGo5YU": "q-HrVwrj3S.js",
+		"s_lBdrmkqIfHo": "q-CbiHXdPO.js",
 		"s_00q5jnKbEBo": "q-CsHhd0D-.js",
 		"s_08f8o9tStiM": "q-CKxxaYUm.js",
-		"s_B7tMY4O9MNo": "q-CvE6my2P.js",
-		"s_Db3MLQWvnuQ": "q-_ekMi8sv.js",
+		"s_B7tMY4O9MNo": "q-CP_qb_Bn.js",
+		"s_Db3MLQWvnuQ": "q-B7hoXotg.js",
 		"s_Hy0VqvEE0h0": "q-Cp3Ivf5M.js",
-		"s_a01kgaYJg0Y": "q-frxNf2Qo.js",
+		"s_a01kgaYJg0Y": "q-Iv4pGBwH.js",
 		"s_eIPQZM6URVg": "q-DeYDkmov.js",
 		"s_g3A70RjkUIk": "q-CKxxaYUm.js",
-		"s_p9JqB4AScV4": "q-dP35HHAq.js",
-		"s_tj4JTRImQlM": "q-BwtPn1bf.js",
-		"s_vjHxFOIlgX4": "q-Br8KdOIx.js",
-		"s_xXHT1b0m8sg": "q-BEl_DDPV.js",
-		"s_NoQkLCnB10o": "q-Byk-Vkp1.js",
+		"s_p9JqB4AScV4": "q-BUJ8aeDJ.js",
+		"s_tj4JTRImQlM": "q-tFyK1Pq_.js",
+		"s_vjHxFOIlgX4": "q--kf_M-qS.js",
+		"s_xXHT1b0m8sg": "q-DrDstlDl.js",
+		"s_NoQkLCnB10o": "q-Dx_RaUzz.js",
 		"s_QRX59I8Q02c": "q-DsPhEGT6.js",
 		"s_egvKclXdyy0": "q-BKs8fl1A.js",
 		"s_uXeawQL0Gic": "q-DBuVPYei.js",
-		"s_04ls3VPuS9o": "q-DCHLRVtJ.js",
-		"s_4JNoRrXrPJk": "q-Br8KdOIx.js",
-		"s_7RxZnlpVjM0": "q-DtlOd1FP.js",
-		"s_8VADAEwf0v0": "q-BEl_DDPV.js",
+		"s_04ls3VPuS9o": "q-BwCMvq4_.js",
+		"s_4JNoRrXrPJk": "q--kf_M-qS.js",
+		"s_7RxZnlpVjM0": "q-B6w3I31j.js",
+		"s_8VADAEwf0v0": "q-DrDstlDl.js",
 		"s_9AcICxuI9tw": "q-CKxxaYUm.js",
 		"s_BYpw41FJ0as": "q-CKxxaYUm.js",
-		"s_INBGe26rqDI": "q-CndG7sJR.js",
-		"s_SM8fcmRxw04": "q-dP35HHAq.js",
-		"s_TX7J9gX18YM": "q-BvkMasbS.js",
-		"s_WQcAX0d0rHg": "q-DtlOd1FP.js",
+		"s_INBGe26rqDI": "q-BtpuLt0G.js",
+		"s_SM8fcmRxw04": "q-BUJ8aeDJ.js",
+		"s_TX7J9gX18YM": "q-CbiHXdPO.js",
+		"s_WQcAX0d0rHg": "q-B6w3I31j.js",
 		"s_Y3UU8NflqMQ": "q-DWoPAj2m.js",
 		"s_YZ1rACO0MSk": "q-CKxxaYUm.js",
-		"s_bhE0Z4Oxf4o": "q-DtlOd1FP.js",
-		"s_hge0y0pYtQY": "q-BvkMasbS.js",
-		"s_iw4ZoTXpybA": "q-CndG7sJR.js",
-		"s_mbnwBuBK1sk": "q-BEl_DDPV.js",
-		"s_nxNAN6pq5NM": "q-frxNf2Qo.js"
+		"s_bhE0Z4Oxf4o": "q-B6w3I31j.js",
+		"s_hge0y0pYtQY": "q-CbiHXdPO.js",
+		"s_iw4ZoTXpybA": "q-BtpuLt0G.js",
+		"s_mbnwBuBK1sk": "q-DrDstlDl.js",
+		"s_nxNAN6pq5NM": "q-Iv4pGBwH.js",
+		"s_ynTh0tu50QU": "q--kf_M-qS.js"
 	},
 	"bundles": {
+		"q--kf_M-qS.js": {
+			"size": 13707,
+			"total": 97935,
+			"imports": [
+				"q-BKasXO_m.js",
+				"q-CScGErWG.js",
+				"q-De-2UM8n.js",
+				"q-Dhsg9qQC.js",
+				"q-JlSQkEov.js"
+			],
+			"dynamicImports": [
+				"q-4UCInVmc.js",
+				"q-Bi0f_wjP.js",
+				"q-DG8gcsFn.js",
+				"q-DUig32UJ.js",
+				"q-EWj6qaf6.js",
+				"q-qAmOxML6.js"
+			],
+			"origins": [
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_act8mBLtA0U.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_button_onClick_AukE9MYr0es.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_Fragment_button_onClick_1_nPKBswVzyvY.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_Fragment_button_onClick_PIDVZMvXLLY.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_button_onClick_1_9Q75tmBCZpw.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_button_onClick_STuAykHiivo.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_button_onClick_dYhVhe06duk.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_button_onClick_1_Ckfi04Pd7gw.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_button_onClick_AtVBj9BexC4.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_div_button_onClick_1_oI8yP4Ml7Do.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_div_button_onClick_KDh8JHOLUbM.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_section_div_footer_div_button_onClick_1_pnKg5JSxrdo.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_section_div_footer_div_button_onClick_ObFSgH78jyY.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_section_header_button_onClick_yH9C4MkVTZA.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_onClick_MVZmU2Tv8sw.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_onClick_DxbpKb13vDQ.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_onContextMenu_4ekJaGlXabk.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_openCardContextMenu_4JNoRrXrPJk.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_shiftVerbFormsSlide_ynTh0tu50QU.js",
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_useStylesScoped_vjHxFOIlgX4.js"
+			],
+			"symbols": [
+				"s_4ekJaGlXabk",
+				"s_4JNoRrXrPJk",
+				"s_9Q75tmBCZpw",
+				"s_act8mBLtA0U",
+				"s_AtVBj9BexC4",
+				"s_AukE9MYr0es",
+				"s_Ckfi04Pd7gw",
+				"s_DxbpKb13vDQ",
+				"s_dYhVhe06duk",
+				"s_KDh8JHOLUbM",
+				"s_MVZmU2Tv8sw",
+				"s_nPKBswVzyvY",
+				"s_ObFSgH78jyY",
+				"s_oI8yP4Ml7Do",
+				"s_PIDVZMvXLLY",
+				"s_pnKg5JSxrdo",
+				"s_STuAykHiivo",
+				"s_vjHxFOIlgX4",
+				"s_yH9C4MkVTZA",
+				"s_ynTh0tu50QU"
+			],
+			"interactivity": 5
+		},
 		"q-0RhcCzsp.js": {
 			"size": 367,
 			"total": 54228,
@@ -141,13 +209,75 @@
 			],
 			"interactivity": 3
 		},
-		"q-_ekMi8sv.js": {
+		"q-aNvqtWSM.js": {
+			"size": 1081,
+			"total": 1081,
+			"origins": [
+				"src/shared/ui/CardShell.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-AqeHUsg_.js": {
+			"size": 476,
+			"total": 117060,
+			"imports": [
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
+			],
+			"dynamicImports": [
+				"q-tFyK1Pq_.js"
+			],
+			"origins": [
+				"src/routes/layout.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-B6w3I31j.js": {
+			"size": 2045,
+			"total": 118629,
+			"imports": [
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
+			],
+			"dynamicImports": [
+				"q-D1l4qjTd.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_handleClientSideNavigation_WQcAX0d0rHg.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_handlePrefetch_bhE0Z4Oxf4o.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_handlePreload_7RxZnlpVjM0.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_iqxsYKeuKj0.js"
+			],
+			"symbols": [
+				"s_7RxZnlpVjM0",
+				"s_bhE0Z4Oxf4o",
+				"s_iqxsYKeuKj0",
+				"s_WQcAX0d0rHg"
+			],
+			"interactivity": 2
+		},
+		"q-B72QkBt-.js": {
+			"size": 543,
+			"total": 117127,
+			"imports": [
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
+			],
+			"origins": [
+				"src/shared/ui/RouterHead.tsx_RouterHead_component_pYmAUO01Zl0.js"
+			],
+			"symbols": [
+				"s_pYmAUO01Zl0"
+			],
+			"interactivity": 2
+		},
+		"q-B7hoXotg.js": {
 			"size": 1898,
 			"total": 228305,
 			"imports": [
 				"q-Bal6Z-F7.js",
-				"q-BnBKed86.js",
 				"q-Cj_50NtI.js",
+				"q-DhHGKOsj.js",
 				"q-Dhsg9qQC.js",
 				"q-WLQ2Jooa.js"
 			],
@@ -158,44 +288,6 @@
 			"symbols": [
 				"s_Db3MLQWvnuQ",
 				"s_jPkkzZuAfLY"
-			],
-			"interactivity": 2
-		},
-		"q-aNvqtWSM.js": {
-			"size": 1081,
-			"total": 1081,
-			"origins": [
-				"src/shared/ui/CardShell.css?inline"
-			],
-			"interactivity": 0
-		},
-		"q-B55slKQ-.js": {
-			"size": 606,
-			"total": 54467,
-			"imports": [
-				"q-Dhsg9qQC.js"
-			],
-			"dynamicImports": [
-				"q-dP35HHAq.js"
-			],
-			"origins": [
-				"src/features/feed/ui/FeedList.tsx",
-				"src/shared/lib/feed-filters.ts"
-			],
-			"interactivity": 0
-		},
-		"q-BaaDS9eQ.js": {
-			"size": 543,
-			"total": 117127,
-			"imports": [
-				"q-Cbvs5ygx.js",
-				"q-Dhsg9qQC.js"
-			],
-			"origins": [
-				"src/shared/ui/RouterHead.tsx_RouterHead_component_pYmAUO01Zl0.js"
-			],
-			"symbols": [
-				"s_pYmAUO01Zl0"
 			],
 			"interactivity": 2
 		},
@@ -216,40 +308,6 @@
 			],
 			"interactivity": 0
 		},
-		"q-BEl_DDPV.js": {
-			"size": 11830,
-			"total": 366437,
-			"imports": [
-				"q-BKasXO_m.js",
-				"q-BlI4wp5J.js",
-				"q-BQfJyEdo.js",
-				"q-BZP8dWqq.js",
-				"q-Cbvs5ygx.js",
-				"q-Cj_50NtI.js",
-				"q-CUQjLBhd.js",
-				"q-Dhsg9qQC.js"
-			],
-			"dynamicImports": [
-				"q-Cm-3xMhh.js"
-			],
-			"origins": [
-				"src/routes/vocabulary/index.tsx_vocabulary_component_M1TM0E984eo.js",
-				"src/routes/vocabulary/index.tsx_vocabulary_component_section_aside_button_onClick_OngugVTxSPU.js",
-				"src/routes/vocabulary/index.tsx_vocabulary_component_section_aside_div_form_input_onInput_hOvJLmeMCyk.js",
-				"src/routes/vocabulary/index.tsx_vocabulary_component_section_aside_div_form_onSubmit_mbnwBuBK1sk.js",
-				"src/routes/vocabulary/index.tsx_vocabulary_component_section_div_VocabularyDeck_onExplainWord_8VADAEwf0v0.js",
-				"src/routes/vocabulary/index.tsx_vocabulary_component_useStylesScoped_xXHT1b0m8sg.js"
-			],
-			"symbols": [
-				"s_8VADAEwf0v0",
-				"s_hOvJLmeMCyk",
-				"s_M1TM0E984eo",
-				"s_mbnwBuBK1sk",
-				"s_OngugVTxSPU",
-				"s_xXHT1b0m8sg"
-			],
-			"interactivity": 5
-		},
 		"q-BF7lMCvT.js": {
 			"size": 1901,
 			"total": 1901,
@@ -258,18 +316,47 @@
 			],
 			"interactivity": 0
 		},
-		"q-BGaD_Dl1.js": {
-			"size": 171,
-			"total": 54032,
+		"q-BGX9t0-D.js": {
+			"size": 982,
+			"total": 117566,
+			"imports": [
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_RouterOutlet_component_35TrxcdTMLU.js"
+			],
+			"symbols": [
+				"s_35TrxcdTMLU"
+			],
+			"interactivity": 2
+		},
+		"q-Bi0f_wjP.js": {
+			"size": 727,
+			"total": 54588,
 			"imports": [
 				"q-Dhsg9qQC.js"
 			],
+			"origins": [
+				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask_3_JeAph0l7WfY.js"
+			],
+			"symbols": [
+				"s_JeAph0l7WfY"
+			],
+			"interactivity": 3
+		},
+		"q-BI9Rfpi4.js": {
+			"size": 373,
+			"total": 116957,
+			"imports": [
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
+			],
 			"dynamicImports": [
-				"q-CrJ5BhsX.js"
+				"q-CP_qb_Bn.js"
 			],
 			"origins": [
-				"src/global.css",
-				"src/root.tsx"
+				"src/routes/index.tsx"
 			],
 			"interactivity": 0
 		},
@@ -302,21 +389,6 @@
 			],
 			"interactivity": 0
 		},
-		"q-BnBKed86.js": {
-			"size": 296,
-			"total": 116880,
-			"imports": [
-				"q-Cbvs5ygx.js",
-				"q-Dhsg9qQC.js"
-			],
-			"dynamicImports": [
-				"q-_ekMi8sv.js"
-			],
-			"origins": [
-				"src/routes/profile/index.tsx"
-			],
-			"interactivity": 0
-		},
 		"q-BOAvJzEg.js": {
 			"size": 5242,
 			"total": 5242,
@@ -333,115 +405,97 @@
 			],
 			"interactivity": 0
 		},
-		"q-Br8KdOIx.js": {
-			"size": 11750,
-			"total": 94119,
+		"q-BtpuLt0G.js": {
+			"size": 1406,
+			"total": 117990,
 			"imports": [
-				"q-BKasXO_m.js",
-				"q-BrBn9Are.js",
-				"q-C_jQXHdT.js",
-				"q-CScGErWG.js",
-				"q-Dhsg9qQC.js"
-			],
-			"dynamicImports": [
-				"q-4UCInVmc.js",
-				"q-DG8gcsFn.js",
-				"q-DUig32UJ.js",
-				"q-EWj6qaf6.js",
-				"q-qAmOxML6.js"
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
 			],
 			"origins": [
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_act8mBLtA0U.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_button_onClick_AukE9MYr0es.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_Fragment_button_onClick_1_nPKBswVzyvY.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_Fragment_button_onClick_PIDVZMvXLLY.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_button_onClick_1_9Q75tmBCZpw.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_button_onClick_STuAykHiivo.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_button_onClick_dYhVhe06duk.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_button_onClick_1_Ckfi04Pd7gw.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_button_onClick_AtVBj9BexC4.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_div_button_onClick_1_oI8yP4Ml7Do.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_div_button_onClick_KDh8JHOLUbM.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_section_header_button_onClick_yH9C4MkVTZA.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_onClick_MVZmU2Tv8sw.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_onClick_DxbpKb13vDQ.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_onContextMenu_4ekJaGlXabk.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_openCardContextMenu_4JNoRrXrPJk.js",
-				"src/features/vocabulary/ui/VocabularyDeck.tsx_VocabularyDeck_component_useStylesScoped_vjHxFOIlgX4.js"
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_GetForm_component_bOqXB7horoI.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_GetForm_component_form_onSubmit_1_INBGe26rqDI.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_GetForm_component_form_onSubmit_iw4ZoTXpybA.js"
 			],
 			"symbols": [
-				"s_4ekJaGlXabk",
-				"s_4JNoRrXrPJk",
-				"s_9Q75tmBCZpw",
-				"s_act8mBLtA0U",
-				"s_AtVBj9BexC4",
-				"s_AukE9MYr0es",
-				"s_Ckfi04Pd7gw",
-				"s_DxbpKb13vDQ",
-				"s_dYhVhe06duk",
-				"s_KDh8JHOLUbM",
-				"s_MVZmU2Tv8sw",
-				"s_nPKBswVzyvY",
-				"s_oI8yP4Ml7Do",
-				"s_PIDVZMvXLLY",
-				"s_STuAykHiivo",
-				"s_vjHxFOIlgX4",
-				"s_yH9C4MkVTZA"
+				"s_bOqXB7horoI",
+				"s_INBGe26rqDI",
+				"s_iw4ZoTXpybA"
 			],
-			"interactivity": 5
+			"interactivity": 2
 		},
-		"q-BrBn9Are.js": {
-			"size": 10822,
-			"total": 10822,
+		"q-Btso4JD4.js": {
+			"size": 345,
+			"total": 345,
+			"dynamicImports": [
+				"q-AqeHUsg_.js",
+				"q-BI9Rfpi4.js",
+				"q-DhHGKOsj.js",
+				"q-HVNlOH1N.js",
+				"q-jUeR8m-d.js"
+			],
 			"origins": [
-				"src/features/vocabulary/ui/VocabularyDeck.css?inline"
+				"@qwik-city-plan"
 			],
 			"interactivity": 0
 		},
-		"q-BvkMasbS.js": {
-			"size": 7012,
-			"total": 123941,
+		"q-BuhNvGI7.js": {
+			"size": 178,
+			"total": 54039,
 			"imports": [
-				"q-Cbvs5ygx.js",
-				"q-CpxZ8aLF.js",
 				"q-Dhsg9qQC.js"
 			],
+			"dynamicImports": [
+				"q--kf_M-qS.js"
+			],
 			"origins": [
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_Gxi169gzmfg.js",
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_goto_TX7J9gX18YM.js",
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_registerPreventNav_hge0y0pYtQY.js",
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_useStyles_lBdrmkqIfHo.js",
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_useTask_h0Z1avFs3Nc.js"
+				"src/features/vocabulary/ui/VocabularyDeck.tsx"
 			],
-			"symbols": [
-				"s_Gxi169gzmfg",
-				"s_h0Z1avFs3Nc",
-				"s_hge0y0pYtQY",
-				"s_lBdrmkqIfHo",
-				"s_TX7J9gX18YM"
-			],
-			"interactivity": 3
+			"interactivity": 0
 		},
-		"q-BwtPn1bf.js": {
-			"size": 3781,
-			"total": 296889,
+		"q-BUJ8aeDJ.js": {
+			"size": 2623,
+			"total": 114277,
 			"imports": [
-				"q-BOAvJzEg.js",
-				"q-C9SoUaHy.js",
-				"q-Cbvs5ygx.js",
-				"q-Cj_50NtI.js",
+				"q-BxZSo4WW.js",
 				"q-Dhsg9qQC.js",
-				"q-Dv1I_5BI.js"
+				"q-DiMiLf0K.js",
+				"q-iu_iGG7c.js"
+			],
+			"dynamicImports": [
+				"q-CmeoqWtQ.js",
+				"q-Di2MmU01.js"
 			],
 			"origins": [
-				"src/routes/layout.tsx_layout_component_XrSAnJC6ZWo.js",
-				"src/routes/layout.tsx_layout_component_useStylesScoped_tj4JTRImQlM.js"
+				"src/features/feed/ui/FeedList.tsx_FeedList_component_handleComplete_SM8fcmRxw04.js",
+				"src/features/feed/ui/FeedList.tsx_FeedList_component_tLAP0o0v0Io.js",
+				"src/features/feed/ui/FeedList.tsx_FeedList_component_useStylesScoped_p9JqB4AScV4.js"
 			],
 			"symbols": [
-				"s_tj4JTRImQlM",
-				"s_XrSAnJC6ZWo"
+				"s_p9JqB4AScV4",
+				"s_SM8fcmRxw04",
+				"s_tLAP0o0v0Io"
 			],
 			"interactivity": 2
+		},
+		"q-BwCMvq4_.js": {
+			"size": 1370,
+			"total": 117954,
+			"imports": [
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityMockProvider_component_U2TM5t897TM.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityMockProvider_component_goto_04ls3VPuS9o.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityMockProvider_component_useTask_0AO7ze0mz0U.js"
+			],
+			"symbols": [
+				"s_04ls3VPuS9o",
+				"s_0AO7ze0mz0U",
+				"s_U2TM5t897TM"
+			],
+			"interactivity": 3
 		},
 		"q-BXRqGgy4.js": {
 			"size": 1669,
@@ -459,75 +513,44 @@
 			],
 			"interactivity": 0
 		},
-		"q-Byk-Vkp1.js": {
-			"size": 1318,
-			"total": 117902,
+		"q-C0O5zKyD.js": {
+			"size": 171,
+			"total": 54032,
 			"imports": [
-				"q-Cbvs5ygx.js",
 				"q-Dhsg9qQC.js"
 			],
+			"dynamicImports": [
+				"q-HrVwrj3S.js"
+			],
 			"origins": [
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_serverQrl_rpc_NoQkLCnB10o.js"
+				"src/global.css",
+				"src/root.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-CbiHXdPO.js": {
+			"size": 7012,
+			"total": 123941,
+			"imports": [
+				"q-Btso4JD4.js",
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_Gxi169gzmfg.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_goto_TX7J9gX18YM.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_registerPreventNav_hge0y0pYtQY.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_useStyles_lBdrmkqIfHo.js",
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityProvider_component_useTask_h0Z1avFs3Nc.js"
 			],
 			"symbols": [
-				"s_NoQkLCnB10o"
+				"s_Gxi169gzmfg",
+				"s_h0Z1avFs3Nc",
+				"s_hge0y0pYtQY",
+				"s_lBdrmkqIfHo",
+				"s_TX7J9gX18YM"
 			],
-			"interactivity": 1
-		},
-		"q-BZP8dWqq.js": {
-			"size": 178,
-			"total": 54039,
-			"imports": [
-				"q-Dhsg9qQC.js"
-			],
-			"dynamicImports": [
-				"q-Br8KdOIx.js"
-			],
-			"origins": [
-				"src/features/vocabulary/ui/VocabularyDeck.tsx"
-			],
-			"interactivity": 0
-		},
-		"q-C9SoUaHy.js": {
-			"size": 476,
-			"total": 117060,
-			"imports": [
-				"q-Cbvs5ygx.js",
-				"q-Dhsg9qQC.js"
-			],
-			"dynamicImports": [
-				"q-BwtPn1bf.js"
-			],
-			"origins": [
-				"src/routes/layout.tsx"
-			],
-			"interactivity": 0
-		},
-		"q-C_jQXHdT.js": {
-			"size": 15888,
-			"total": 15888,
-			"origins": [
-				"src/features/vocabulary/model/verb-insights.ts"
-			],
-			"interactivity": 0
-		},
-		"q-Cbvs5ygx.js": {
-			"size": 8862,
-			"total": 62723,
-			"imports": [
-				"q-Dhsg9qQC.js"
-			],
-			"dynamicImports": [
-				"q-BKs8fl1A.js",
-				"q-BvkMasbS.js",
-				"q-DBuVPYei.js",
-				"q-DtlOd1FP.js",
-				"q-fdBG51ef.js"
-			],
-			"origins": [
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs"
-			],
-			"interactivity": 0
+			"interactivity": 3
 		},
 		"q-CdC6OKNJ.js": {
 			"size": 9883,
@@ -646,25 +669,6 @@
 			],
 			"interactivity": 3
 		},
-		"q-CndG7sJR.js": {
-			"size": 1406,
-			"total": 117990,
-			"imports": [
-				"q-Cbvs5ygx.js",
-				"q-Dhsg9qQC.js"
-			],
-			"origins": [
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_GetForm_component_bOqXB7horoI.js",
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_GetForm_component_form_onSubmit_1_INBGe26rqDI.js",
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_GetForm_component_form_onSubmit_iw4ZoTXpybA.js"
-			],
-			"symbols": [
-				"s_bOqXB7horoI",
-				"s_INBGe26rqDI",
-				"s_iw4ZoTXpybA"
-			],
-			"interactivity": 2
-		},
 		"q-Cp3Ivf5M.js": {
 			"size": 695,
 			"total": 55637,
@@ -682,36 +686,40 @@
 			],
 			"interactivity": 2
 		},
-		"q-CpxZ8aLF.js": {
-			"size": 345,
-			"total": 345,
-			"dynamicImports": [
-				"q-BnBKed86.js",
-				"q-C9SoUaHy.js",
-				"q-CUQjLBhd.js",
-				"q-DGgrr6uW.js",
-				"q-DT8MTis0.js"
-			],
-			"origins": [
-				"@qwik-city-plan"
-			],
-			"interactivity": 0
-		},
-		"q-CrJ5BhsX.js": {
-			"size": 547,
-			"total": 171157,
+		"q-CP_qb_Bn.js": {
+			"size": 1307,
+			"total": 344727,
 			"imports": [
-				"q-Cbvs5ygx.js",
+				"q-0RhcCzsp.js",
+				"q-BI9Rfpi4.js",
+				"q-BXRqGgy4.js",
+				"q-Cj_50NtI.js",
 				"q-Dhsg9qQC.js",
-				"q-oaGnz-dY.js"
+				"q-DSVoI10k.js"
 			],
 			"origins": [
-				"src/root.tsx_root_component_yq2EIwGo5YU.js"
+				"src/routes/index.tsx_routes_component_huE0Elh0KRk.js",
+				"src/routes/index.tsx_routes_component_useStylesScoped_B7tMY4O9MNo.js"
 			],
 			"symbols": [
-				"s_yq2EIwGo5YU"
+				"s_B7tMY4O9MNo",
+				"s_huE0Elh0KRk"
 			],
 			"interactivity": 2
+		},
+		"q-CrTDxpUq.js": {
+			"size": 165,
+			"total": 54026,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-B72QkBt-.js"
+			],
+			"origins": [
+				"src/shared/ui/RouterHead.tsx"
+			],
+			"interactivity": 0
 		},
 		"q-CScGErWG.js": {
 			"size": 660,
@@ -737,42 +745,6 @@
 			"symbols": [
 				"s_00q5jnKbEBo",
 				"s_V8KMWYonO6M"
-			],
-			"interactivity": 2
-		},
-		"q-CUQjLBhd.js": {
-			"size": 897,
-			"total": 117481,
-			"imports": [
-				"q-Cbvs5ygx.js",
-				"q-Dhsg9qQC.js"
-			],
-			"dynamicImports": [
-				"q-BEl_DDPV.js"
-			],
-			"origins": [
-				"src/routes/vocabulary/index.tsx"
-			],
-			"interactivity": 0
-		},
-		"q-CvE6my2P.js": {
-			"size": 1307,
-			"total": 344727,
-			"imports": [
-				"q-0RhcCzsp.js",
-				"q-BXRqGgy4.js",
-				"q-Cbvs5ygx.js",
-				"q-Cj_50NtI.js",
-				"q-DGgrr6uW.js",
-				"q-Dhsg9qQC.js"
-			],
-			"origins": [
-				"src/routes/index.tsx_routes_component_huE0Elh0KRk.js",
-				"src/routes/index.tsx_routes_component_useStylesScoped_B7tMY4O9MNo.js"
-			],
-			"symbols": [
-				"s_B7tMY4O9MNo",
-				"s_huE0Elh0KRk"
 			],
 			"interactivity": 2
 		},
@@ -815,24 +787,13 @@
 			],
 			"interactivity": 1
 		},
-		"q-DCHLRVtJ.js": {
-			"size": 1370,
-			"total": 117954,
-			"imports": [
-				"q-Cbvs5ygx.js",
-				"q-Dhsg9qQC.js"
-			],
+		"q-De-2UM8n.js": {
+			"size": 15943,
+			"total": 15943,
 			"origins": [
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityMockProvider_component_U2TM5t897TM.js",
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityMockProvider_component_goto_04ls3VPuS9o.js",
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_QwikCityMockProvider_component_useTask_0AO7ze0mz0U.js"
+				"src/features/vocabulary/model/verb-insights.ts"
 			],
-			"symbols": [
-				"s_04ls3VPuS9o",
-				"s_0AO7ze0mz0U",
-				"s_U2TM5t897TM"
-			],
-			"interactivity": 3
+			"interactivity": 0
 		},
 		"q-DeYDkmov.js": {
 			"size": 712,
@@ -865,18 +826,18 @@
 			],
 			"interactivity": 3
 		},
-		"q-DGgrr6uW.js": {
-			"size": 373,
-			"total": 116957,
+		"q-DhHGKOsj.js": {
+			"size": 296,
+			"total": 116880,
 			"imports": [
-				"q-Cbvs5ygx.js",
-				"q-Dhsg9qQC.js"
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
 			],
 			"dynamicImports": [
-				"q-CvE6my2P.js"
+				"q-B7hoXotg.js"
 			],
 			"origins": [
-				"src/routes/index.tsx"
+				"src/routes/profile/index.tsx"
 			],
 			"interactivity": 0
 		},
@@ -911,31 +872,6 @@
 			],
 			"interactivity": 0
 		},
-		"q-dP35HHAq.js": {
-			"size": 2623,
-			"total": 114277,
-			"imports": [
-				"q-BxZSo4WW.js",
-				"q-Dhsg9qQC.js",
-				"q-DiMiLf0K.js",
-				"q-iu_iGG7c.js"
-			],
-			"dynamicImports": [
-				"q-CmeoqWtQ.js",
-				"q-Di2MmU01.js"
-			],
-			"origins": [
-				"src/features/feed/ui/FeedList.tsx_FeedList_component_handleComplete_SM8fcmRxw04.js",
-				"src/features/feed/ui/FeedList.tsx_FeedList_component_tLAP0o0v0Io.js",
-				"src/features/feed/ui/FeedList.tsx_FeedList_component_useStylesScoped_p9JqB4AScV4.js"
-			],
-			"symbols": [
-				"s_p9JqB4AScV4",
-				"s_SM8fcmRxw04",
-				"s_tLAP0o0v0Io"
-			],
-			"interactivity": 2
-		},
 		"q-DQcIOd3u.js": {
 			"size": 150,
 			"total": 54011,
@@ -949,6 +885,40 @@
 				"s_giGDhUD2M2Y"
 			],
 			"interactivity": 3
+		},
+		"q-DrDstlDl.js": {
+			"size": 11830,
+			"total": 366437,
+			"imports": [
+				"q-BKasXO_m.js",
+				"q-BlI4wp5J.js",
+				"q-BQfJyEdo.js",
+				"q-BuhNvGI7.js",
+				"q-Cj_50NtI.js",
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js",
+				"q-jUeR8m-d.js"
+			],
+			"dynamicImports": [
+				"q-Cm-3xMhh.js"
+			],
+			"origins": [
+				"src/routes/vocabulary/index.tsx_vocabulary_component_M1TM0E984eo.js",
+				"src/routes/vocabulary/index.tsx_vocabulary_component_section_aside_button_onClick_OngugVTxSPU.js",
+				"src/routes/vocabulary/index.tsx_vocabulary_component_section_aside_div_form_input_onInput_hOvJLmeMCyk.js",
+				"src/routes/vocabulary/index.tsx_vocabulary_component_section_aside_div_form_onSubmit_mbnwBuBK1sk.js",
+				"src/routes/vocabulary/index.tsx_vocabulary_component_section_div_VocabularyDeck_onExplainWord_8VADAEwf0v0.js",
+				"src/routes/vocabulary/index.tsx_vocabulary_component_useStylesScoped_xXHT1b0m8sg.js"
+			],
+			"symbols": [
+				"s_8VADAEwf0v0",
+				"s_hOvJLmeMCyk",
+				"s_M1TM0E984eo",
+				"s_mbnwBuBK1sk",
+				"s_OngugVTxSPU",
+				"s_xXHT1b0m8sg"
+			],
+			"interactivity": 5
 		},
 		"q-DsPhEGT6.js": {
 			"size": 170,
@@ -964,44 +934,23 @@
 			],
 			"interactivity": 1
 		},
-		"q-DT8MTis0.js": {
-			"size": 353,
-			"total": 116937,
+		"q-DSVoI10k.js": {
+			"size": 8862,
+			"total": 62723,
 			"imports": [
-				"q-Cbvs5ygx.js",
 				"q-Dhsg9qQC.js"
 			],
 			"dynamicImports": [
-				"q-frxNf2Qo.js"
+				"q-B6w3I31j.js",
+				"q-BGX9t0-D.js",
+				"q-BKs8fl1A.js",
+				"q-CbiHXdPO.js",
+				"q-DBuVPYei.js"
 			],
 			"origins": [
-				"src/routes/feed/index.tsx"
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs"
 			],
 			"interactivity": 0
-		},
-		"q-DtlOd1FP.js": {
-			"size": 2045,
-			"total": 118629,
-			"imports": [
-				"q-Cbvs5ygx.js",
-				"q-Dhsg9qQC.js"
-			],
-			"dynamicImports": [
-				"q-D1l4qjTd.js"
-			],
-			"origins": [
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_handleClientSideNavigation_WQcAX0d0rHg.js",
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_handlePrefetch_bhE0Z4Oxf4o.js",
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_handlePreload_7RxZnlpVjM0.js",
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_Link_component_iqxsYKeuKj0.js"
-			],
-			"symbols": [
-				"s_7RxZnlpVjM0",
-				"s_bhE0Z4Oxf4o",
-				"s_iqxsYKeuKj0",
-				"s_WQcAX0d0rHg"
-			],
-			"interactivity": 2
 		},
 		"q-DUig32UJ.js": {
 			"size": 357,
@@ -1042,6 +991,21 @@
 			],
 			"interactivity": 2
 		},
+		"q-Dx_RaUzz.js": {
+			"size": 1318,
+			"total": 117902,
+			"imports": [
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
+			],
+			"origins": [
+				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_serverQrl_rpc_NoQkLCnB10o.js"
+			],
+			"symbols": [
+				"s_NoQkLCnB10o"
+			],
+			"interactivity": 1
+		},
 		"q-EWj6qaf6.js": {
 			"size": 61,
 			"total": 61,
@@ -1053,32 +1017,62 @@
 			],
 			"interactivity": 5
 		},
-		"q-fdBG51ef.js": {
-			"size": 982,
-			"total": 117566,
+		"q-HrVwrj3S.js": {
+			"size": 547,
+			"total": 171157,
 			"imports": [
-				"q-Cbvs5ygx.js",
-				"q-Dhsg9qQC.js"
+				"q-CrTDxpUq.js",
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
 			],
 			"origins": [
-				"node_modules/@builder.io/qwik-city/lib/index.qwik.mjs_RouterOutlet_component_35TrxcdTMLU.js"
+				"src/root.tsx_root_component_yq2EIwGo5YU.js"
 			],
 			"symbols": [
-				"s_35TrxcdTMLU"
+				"s_yq2EIwGo5YU"
 			],
 			"interactivity": 2
 		},
-		"q-frxNf2Qo.js": {
+		"q-HVNlOH1N.js": {
+			"size": 353,
+			"total": 116937,
+			"imports": [
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
+			],
+			"dynamicImports": [
+				"q-Iv4pGBwH.js"
+			],
+			"origins": [
+				"src/routes/feed/index.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-iu_iGG7c.js": {
+			"size": 1310,
+			"total": 55171,
+			"imports": [
+				"q-Dhsg9qQC.js"
+			],
+			"dynamicImports": [
+				"q-CKxxaYUm.js"
+			],
+			"origins": [
+				"src/entities/card/ui/CardRenderer.tsx"
+			],
+			"interactivity": 0
+		},
+		"q-Iv4pGBwH.js": {
 			"size": 5070,
 			"total": 474547,
 			"imports": [
-				"q-B55slKQ-.js",
-				"q-Cbvs5ygx.js",
 				"q-Cj_50NtI.js",
 				"q-Dhsg9qQC.js",
-				"q-DT8MTis0.js",
+				"q-DSVoI10k.js",
+				"q-HVNlOH1N.js",
 				"q-jW-1_gEr.js",
-				"q-Ms4haiBm.js"
+				"q-Ms4haiBm.js",
+				"q-p325sDro.js"
 			],
 			"origins": [
 				"src/routes/feed/index.tsx_feed_component_onComplete_nxNAN6pq5NM.js",
@@ -1092,17 +1086,26 @@
 			],
 			"interactivity": 2
 		},
-		"q-iu_iGG7c.js": {
-			"size": 1310,
-			"total": 55171,
+		"q-JlSQkEov.js": {
+			"size": 12626,
+			"total": 12626,
+			"origins": [
+				"src/features/vocabulary/ui/VocabularyDeck.css?inline"
+			],
+			"interactivity": 0
+		},
+		"q-jUeR8m-d.js": {
+			"size": 897,
+			"total": 117481,
 			"imports": [
-				"q-Dhsg9qQC.js"
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js"
 			],
 			"dynamicImports": [
-				"q-CKxxaYUm.js"
+				"q-DrDstlDl.js"
 			],
 			"origins": [
-				"src/entities/card/ui/CardRenderer.tsx"
+				"src/routes/vocabulary/index.tsx"
 			],
 			"interactivity": 0
 		},
@@ -1161,17 +1164,18 @@
 			],
 			"interactivity": 0
 		},
-		"q-oaGnz-dY.js": {
-			"size": 165,
-			"total": 54026,
+		"q-p325sDro.js": {
+			"size": 606,
+			"total": 54467,
 			"imports": [
 				"q-Dhsg9qQC.js"
 			],
 			"dynamicImports": [
-				"q-BaaDS9eQ.js"
+				"q-BUJ8aeDJ.js"
 			],
 			"origins": [
-				"src/shared/ui/RouterHead.tsx"
+				"src/features/feed/ui/FeedList.tsx",
+				"src/shared/lib/feed-filters.ts"
 			],
 			"interactivity": 0
 		},
@@ -1185,6 +1189,27 @@
 				"s_U50EH0Ii1m0"
 			],
 			"interactivity": 5
+		},
+		"q-tFyK1Pq_.js": {
+			"size": 3781,
+			"total": 296889,
+			"imports": [
+				"q-AqeHUsg_.js",
+				"q-BOAvJzEg.js",
+				"q-Cj_50NtI.js",
+				"q-Dhsg9qQC.js",
+				"q-DSVoI10k.js",
+				"q-Dv1I_5BI.js"
+			],
+			"origins": [
+				"src/routes/layout.tsx_layout_component_XrSAnJC6ZWo.js",
+				"src/routes/layout.tsx_layout_component_useStylesScoped_tj4JTRImQlM.js"
+			],
+			"symbols": [
+				"s_tj4JTRImQlM",
+				"s_XrSAnJC6ZWo"
+			],
+			"interactivity": 2
 		},
 		"q-WLQ2Jooa.js": {
 			"size": 137,
@@ -1200,9 +1225,9 @@
 			"name": "style.css",
 			"size": 1343
 		},
-		"assets/O2snzNdQ-bundle-graph.json": {
+		"assets/B862pJy4-bundle-graph.json": {
 			"name": "bundle-graph.json",
-			"size": 488
+			"size": 503
 		}
 	},
 	"symbols": {
@@ -1244,8 +1269,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				13933,
-				14162
+				16147,
+				16376
 			]
 		},
 		"s_AtVBj9BexC4": {
@@ -1258,8 +1283,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				10405,
-				10544
+				12619,
+				12758
 			]
 		},
 		"s_AukE9MYr0es": {
@@ -1272,8 +1297,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				11524,
-				11663
+				13738,
+				13877
 			]
 		},
 		"s_Ckfi04Pd7gw": {
@@ -1286,8 +1311,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				18920,
-				19674
+				23456,
+				24210
 			]
 		},
 		"s_DxbpKb13vDQ": {
@@ -1300,8 +1325,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				7820,
-				7924
+				10034,
+				10138
 			]
 		},
 		"s_KDh8JHOLUbM": {
@@ -1314,8 +1339,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				9437,
-				9618
+				11651,
+				11832
 			]
 		},
 		"s_KhLTwsowyAs": {
@@ -1342,8 +1367,22 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				14830,
-				14911
+				17044,
+				17125
+			]
+		},
+		"s_ObFSgH78jyY": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_section_div_footer_div_button_onClick",
+			"hash": "ObFSgH78jyY",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_section_div_footer_div_button_onClick_ObFSgH78jyY",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				20780,
+				20889
 			]
 		},
 		"s_OngugVTxSPU": {
@@ -1370,8 +1409,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				12431,
-				12618
+				14645,
+				14832
 			]
 		},
 		"s_STuAykHiivo": {
@@ -1384,8 +1423,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				13487,
-				13632
+				15701,
+				15846
 			]
 		},
 		"s_U50EH0Ii1m0": {
@@ -1398,8 +1437,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				15043,
-				15128
+				17257,
+				17342
 			]
 		},
 		"s_YlgBunePf4I": {
@@ -1426,8 +1465,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				10854,
-				11067
+				13068,
+				13281
 			]
 		},
 		"s_kfgl1cP0NzA": {
@@ -1454,8 +1493,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				12917,
-				13107
+				15131,
+				15321
 			]
 		},
 		"s_oI8yP4Ml7Do": {
@@ -1468,8 +1507,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				9895,
-				10079
+				12109,
+				12293
 			]
 		},
 		"s_pNyPotOT74E": {
@@ -1486,6 +1525,20 @@
 				9711
 			]
 		},
+		"s_pnKg5JSxrdo": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_section_div_footer_div_button_onClick_1",
+			"hash": "pnKg5JSxrdo",
+			"ctxKind": "eventHandler",
+			"ctxName": "onClick$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_div_div_section_div_footer_div_button_onClick_1_pnKg5JSxrdo",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				21608,
+				21716
+			]
+		},
 		"s_qv15Lm9DXHc": {
 			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_div_swiper_container_swiper_slide_article_Fragment_div_onClick",
 			"hash": "qv15Lm9DXHc",
@@ -1496,8 +1549,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				12009,
-				12094
+				14223,
+				14308
 			]
 		},
 		"s_wfmD5OYoAus": {
@@ -1524,8 +1577,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				15593,
-				15690
+				17807,
+				17904
 			]
 		},
 		"s_4ekJaGlXabk": {
@@ -1538,8 +1591,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				7958,
-				8104
+				10172,
+				10318
 			]
 		},
 		"s_hOvJLmeMCyk": {
@@ -1635,8 +1688,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				3156,
-				4226
+				3258,
+				4328
 			]
 		},
 		"s_HpnIBPGtAV8": {
@@ -1651,6 +1704,20 @@
 			"loc": [
 				4703,
 				4955
+			]
+		},
+		"s_JeAph0l7WfY": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask_3",
+			"hash": "JeAph0l7WfY",
+			"ctxKind": "function",
+			"ctxName": "useVisibleTask$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_useVisibleTask_3_JeAph0l7WfY",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				5373,
+				6556
 			]
 		},
 		"s_MXzZE0H2H0Q": {
@@ -1677,8 +1744,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				4248,
-				5249
+				4350,
+				5351
 			]
 		},
 		"s_dBBEfSw4wm0": {
@@ -1691,8 +1758,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				2640,
-				3134
+				2742,
+				3236
 			]
 		},
 		"s_iyo2gaS0E6s": {
@@ -1849,7 +1916,7 @@
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
 				1542,
-				20385
+				24921
 			]
 		},
 		"s_bOqXB7horoI": {
@@ -2214,8 +2281,8 @@
 			"parent": "s_act8mBLtA0U",
 			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
 			"loc": [
-				5286,
-				6343
+				6593,
+				7650
 			]
 		},
 		"s_7RxZnlpVjM0": {
@@ -2426,6 +2493,20 @@
 			"loc": [
 				3012,
 				3240
+			]
+		},
+		"s_ynTh0tu50QU": {
+			"displayName": "VocabularyDeck.tsx_VocabularyDeck_component_shiftVerbFormsSlide",
+			"hash": "ynTh0tu50QU",
+			"ctxKind": "function",
+			"ctxName": "$",
+			"captures": true,
+			"canonicalFilename": "VocabularyDeck.tsx_VocabularyDeck_component_shiftVerbFormsSlide_ynTh0tu50QU",
+			"parent": "s_act8mBLtA0U",
+			"origin": "features/vocabulary/ui/VocabularyDeck.tsx",
+			"loc": [
+				7687,
+				8083
 			]
 		}
 	},

@@ -1,1 +1,0 @@
-import{_ as t}from"./q-BAMLJNcO.js";import{K as e,M as s}from"./q-Cbvs5ygx.js";import{o as r,e as a,U as o}from"./q-Dhsg9qQC.js";const m=e(o("s_aPb0MuyCf9Q")),n=s(o("s_If1SBFEHqAY")),c=r(a(()=>t(()=>import("./q-frxNf2Qo.js"),[]),"s_ppOoFWsHICo")),u={title:"Lim | Feed"};export{c as default,u as head,m as useFeedLoader,n as useSubmitInteractionAction};

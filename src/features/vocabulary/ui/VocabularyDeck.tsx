@@ -42,6 +42,8 @@ export const VocabularyDeck = component$<VocabularyDeckProps>((props) => {
   const activeIndex = useSignal(0);
   const swiperRef = useSignal<HTMLElement>();
   const verbModalRef = useSignal<HTMLElement>();
+  const verbFormsRailRef = useSignal<HTMLElement>();
+  const activeVerbFormSlideIndex = useSignal(0);
   const cardContextMenu = useSignal<null | { wordId: string; x: number; y: number }>(null);
   const modalScrollState = useSignal({ canScroll: false, atBottom: false });
   const activeVerbPanel = useSignal<null | { wordId: string; mode: "forms" | "examples" }>(null);
@@ -148,6 +150,47 @@ export const VocabularyDeck = component$<VocabularyDeckProps>((props) => {
     });
   });
 
+  useVisibleTask$(({ track, cleanup }) => {
+    track(() => activeVerbPanel.value?.wordId ?? "");
+    track(() => activeVerbPanel.value?.mode ?? "");
+    track(() => verbFormsRailRef.value);
+
+    const panelState = activeVerbPanel.value;
+    if (!panelState || panelState.mode !== "forms") {
+      activeVerbFormSlideIndex.value = 0;
+      return;
+    }
+
+    const element = verbFormsRailRef.value;
+    if (!element) {
+      activeVerbFormSlideIndex.value = 0;
+      return;
+    }
+
+    const syncActiveIndex = () => {
+      const viewportWidth = Math.max(1, element.clientWidth);
+      const raw = Math.round(element.scrollLeft / viewportWidth);
+      const maxIndex = Math.max(0, element.children.length - 1);
+      activeVerbFormSlideIndex.value = Math.min(Math.max(raw, 0), maxIndex);
+    };
+
+    const onScroll = () => {
+      syncActiveIndex();
+    };
+    const onResize = () => {
+      syncActiveIndex();
+    };
+
+    element.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize);
+    syncActiveIndex();
+
+    cleanup(() => {
+      element.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+    });
+  });
+
   const openCardContextMenu$ = $((event: Event, wordId: string, withVerbActions: boolean) => {
     const target = event.target as Element | null;
     if (target?.closest("button, a, input, textarea, select, label, [role='button'], [data-menu-skip='true']")) {
@@ -173,6 +216,20 @@ export const VocabularyDeck = component$<VocabularyDeckProps>((props) => {
     cardContextMenu.value = { wordId, x, y };
   });
 
+  const shiftVerbFormsSlide$ = $((direction: -1 | 1) => {
+    const element = verbFormsRailRef.value;
+    if (!element) {
+      return;
+    }
+
+    const step = Math.max(element.clientWidth, 260);
+    const maxLeft = Math.max(0, element.scrollWidth - element.clientWidth);
+    const nextLeft = Math.min(Math.max(element.scrollLeft + step * direction, 0), maxLeft);
+    element.scrollTo({ left: nextLeft, behavior: "smooth" });
+  });
+
+  const isVerbPanelOpen = activeVerbPanel.value !== null;
+
   return (
     <div class="vocab-swiper-wrap">
       <SwiperContainer
@@ -182,13 +239,14 @@ export const VocabularyDeck = component$<VocabularyDeckProps>((props) => {
         direction="vertical"
         slides-per-view="1"
         space-between="0"
-        mousewheel-enabled="true"
+        mousewheel-enabled={isVerbPanelOpen ? "false" : "true"}
         mousewheel-force-to-axis="true"
         mousewheel-threshold-delta="34"
         mousewheel-threshold-time="420"
         mousewheel-sensitivity="0.55"
         mousewheel-release-on-edges="false"
-        keyboard="true"
+        keyboard={isVerbPanelOpen ? "false" : "true"}
+        allow-touch-move={isVerbPanelOpen ? "false" : "true"}
         speed="320"
         resistance-ratio="0.16"
         touch-start-prevent-default="false"
@@ -204,6 +262,13 @@ export const VocabularyDeck = component$<VocabularyDeckProps>((props) => {
           const isLearned = wordProgress.value[word.id] === true;
           const panelTitle =
             panelState?.mode === "forms" ? props.verbFormsTitleLabel : panelState?.mode === "examples" ? props.verbExamplesTitleLabel : "";
+          const tenseSlides = insight
+            ? VERB_TENSE_OPTIONS.map((tense) => ({
+                tense,
+                rows: insight.formsByTense[tense]
+              })).filter((entry) => entry.rows.length > 0)
+            : [];
+          const tenseSlideCount = tenseSlides.length;
 
           return (
             <SwiperSlide key={word.id} class="vocab-slide">
@@ -397,41 +462,78 @@ export const VocabularyDeck = component$<VocabularyDeckProps>((props) => {
                         <p class="vocab-verb-note">{insight.note}</p>
 
                         {panelState?.mode === "forms" ? (
-                          <div class="vocab-verb-tense-list">
-                            {VERB_TENSE_OPTIONS.map((tense) => {
-                              const rows = insight.formsByTense[tense];
-                              if (!rows || rows.length === 0) {
-                                return null;
-                              }
+                          <div class="vocab-verb-forms-shell">
+                            <div key={`${word.id}-verb-forms`} ref={verbFormsRailRef} class="vocab-verb-forms-rail">
+                              {tenseSlides.map(({ tense, rows }) => (
+                                <section key={`${word.id}-tense-${tense}`} class="vocab-verb-form-slide">
+                                  <section class="vocab-verb-tense-block">
+                                    <h5 class="vocab-verb-tense-title">{props.verbTenseLabelMap[tense]}</h5>
+                                    <p class="vocab-verb-tense-usage">{insight.tenseUsage[tense]}</p>
 
-                              return (
-                                <section key={`${word.id}-tense-${tense}`} class="vocab-verb-tense-block">
-                                  <h5 class="vocab-verb-tense-title">{props.verbTenseLabelMap[tense]}</h5>
-                                  <p class="vocab-verb-tense-usage">{insight.tenseUsage[tense]}</p>
-
-                                  <div class="vocab-verb-table-wrap">
-                                    <table class="vocab-verb-table">
-                                      <thead>
-                                        <tr>
-                                          <th>{props.verbPersonLabel}</th>
-                                          <th>{props.verbFormLabel}</th>
-                                          <th>{props.verbUsageLabel}</th>
-                                        </tr>
-                                      </thead>
-                                      <tbody>
-                                        {rows.map((row) => (
-                                          <tr key={`${word.id}-${tense}-${row.person}`}>
-                                            <td>{row.person}</td>
-                                            <td class="vocab-verb-form">{row.form}</td>
-                                            <td>{row.usage}</td>
+                                    <div class="vocab-verb-table-wrap">
+                                      <table class="vocab-verb-table">
+                                        <thead>
+                                          <tr>
+                                            <th>{props.verbPersonLabel}</th>
+                                            <th>{props.verbFormLabel}</th>
+                                            <th>{props.verbUsageLabel}</th>
                                           </tr>
-                                        ))}
-                                      </tbody>
-                                    </table>
-                                  </div>
+                                        </thead>
+                                        <tbody>
+                                          {rows.map((row) => (
+                                            <tr key={`${word.id}-${tense}-${row.person}`}>
+                                              <td>{row.person}</td>
+                                              <td class="vocab-verb-form">{row.form}</td>
+                                              <td>{row.usage}</td>
+                                            </tr>
+                                          ))}
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </section>
                                 </section>
-                              );
-                            })}
+                              ))}
+                            </div>
+
+                            {tenseSlideCount > 1 ? (
+                              <footer class="vocab-verb-forms-pagination" aria-live="polite">
+                                <div class="vocab-verb-forms-controls">
+                                  <button
+                                    type="button"
+                                    class="vocab-verb-forms-nav"
+                                    aria-label="Previous tense"
+                                    disabled={activeVerbFormSlideIndex.value <= 0}
+                                    onClick$={() => {
+                                      shiftVerbFormsSlide$(-1);
+                                    }}
+                                  >
+                                    ←
+                                  </button>
+                                  <span class="vocab-verb-forms-page">
+                                    {Math.min(tenseSlideCount, activeVerbFormSlideIndex.value + 1)} / {tenseSlideCount}
+                                  </span>
+                                  <button
+                                    type="button"
+                                    class="vocab-verb-forms-nav"
+                                    aria-label="Next tense"
+                                    disabled={activeVerbFormSlideIndex.value >= tenseSlideCount - 1}
+                                    onClick$={() => {
+                                      shiftVerbFormsSlide$(1);
+                                    }}
+                                  >
+                                    →
+                                  </button>
+                                </div>
+                                <div class="vocab-verb-forms-dots" aria-hidden="true">
+                                  {tenseSlides.map(({ tense }, index) => (
+                                    <span
+                                      key={`${word.id}-tense-dot-${tense}`}
+                                      class={index === activeVerbFormSlideIndex.value ? "vocab-verb-forms-dot active" : "vocab-verb-forms-dot"}
+                                    />
+                                  ))}
+                                </div>
+                              </footer>
+                            ) : null}
                           </div>
                         ) : (
                           <ul class="vocab-verb-examples">
