@@ -6,6 +6,8 @@ export interface UiCopy {
   navHome: string;
   navFeed: string;
   navVocabulary: string;
+  navMap: string;
+  navQuests: string;
   navProfile: string;
   languageControlTitle: string;
   languageControlShort: string;
@@ -14,6 +16,8 @@ export interface UiCopy {
   homeSubtitle: string;
   homeOpenFeed: string;
   homeOpenVocabulary: string;
+  homeOpenLanguageMap: string;
+  homeOpenQuests: string;
   homeOpenProfile: string;
   homeOverviewTitle: string;
   homeOverviewSubtitle: string;
@@ -97,6 +101,48 @@ export interface UiCopy {
   vocabAiThinking: string;
   vocabAiCollapse: string;
   vocabAiExpand: string;
+  mapTitle: string;
+  mapSubtitle: string;
+  mapProgressTitle: string;
+  mapProgressLearnedSuffix: string;
+  mapFilterUnlearnedOnly: string;
+  mapLegendTitle: string;
+  mapGraphAriaLabel: string;
+  mapNoVisibleNodes: string;
+  mapShowAllNodes: string;
+  mapCategoryCore: string;
+  mapCategoryTimeline: string;
+  mapCategoryTense: string;
+  mapCategoryVerbSystem: string;
+  mapCategoryIrregular: string;
+  mapFormulaTitle: string;
+  mapKeyVerbsTitle: string;
+  mapIrregularTableTitle: string;
+  mapRelatedNodesTitle: string;
+  mapRelatedCardsTitle: string;
+  mapRelatedCardsOpenGrammar: string;
+  mapRelatedCardsOpenVocabulary: string;
+  mapRelatedCardsOpenVerbDeck: string;
+  mapRelatedCardsOpenIrregular: string;
+  mapRelatedCardsOpenAuxiliary: string;
+  mapNodeCardsProgressTitle: string;
+  mapNodeCardsProgressSuffix: string;
+  mapNodeCardsProgressEmpty: string;
+  mapStatusTitle: string;
+  mapStatusNew: string;
+  mapStatusLearning: string;
+  mapStatusLearned: string;
+  mapDiscussButton: string;
+  mapChatTitle: string;
+  mapChatSubtitle: string;
+  mapChatContext: string;
+  mapChatNoContext: string;
+  mapChatEmptyState: string;
+  mapChatInputPlaceholder: string;
+  mapChatSend: string;
+  mapChatYou: string;
+  mapChatAssistant: string;
+  mapChatThinking: string;
   categoryGrammar: string;
   categoryVocabulary: string;
   categorySpeaking: string;
@@ -146,6 +192,8 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     navHome: "Home",
     navFeed: "Feed",
     navVocabulary: "Vocab",
+    navMap: "Map",
+    navQuests: "Quests",
     navProfile: "Profile",
     languageControlTitle: "Study + Interface Language",
     languageControlShort: "Study + UI",
@@ -154,6 +202,8 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     homeSubtitle: "Web MVP on Qwik City: short learning cards, interactive tasks and progress in one loop.",
     homeOpenFeed: "Open feed",
     homeOpenVocabulary: "Open vocabulary",
+    homeOpenLanguageMap: "Open language map",
+    homeOpenQuests: "Open quests",
     homeOpenProfile: "Open profile",
     homeOverviewTitle: "Learning map",
     homeOverviewSubtitle: "Levels and categories use the same data source as your feed, including answer quality.",
@@ -237,6 +287,48 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     vocabAiThinking: "Thinking",
     vocabAiCollapse: "Collapse chat",
     vocabAiExpand: "Expand chat",
+    mapTitle: "Language map",
+    mapSubtitle: "A graph view of tense structure, key verbs, and irregular verb patterns.",
+    mapProgressTitle: "Node progress",
+    mapProgressLearnedSuffix: "learned",
+    mapFilterUnlearnedOnly: "Show unlearned only",
+    mapLegendTitle: "Node categories",
+    mapGraphAriaLabel: "Interactive language map graph",
+    mapNoVisibleNodes: "No nodes match current filter.",
+    mapShowAllNodes: "Show all nodes",
+    mapCategoryCore: "Core",
+    mapCategoryTimeline: "Timeline",
+    mapCategoryTense: "Tenses",
+    mapCategoryVerbSystem: "Verb system",
+    mapCategoryIrregular: "Irregular verbs",
+    mapFormulaTitle: "Formula",
+    mapKeyVerbsTitle: "Key verbs",
+    mapIrregularTableTitle: "Irregular forms",
+    mapRelatedNodesTitle: "Connected nodes",
+    mapRelatedCardsTitle: "Related cards",
+    mapRelatedCardsOpenGrammar: "Open grammar cards",
+    mapRelatedCardsOpenVocabulary: "Open vocabulary feed",
+    mapRelatedCardsOpenVerbDeck: "Open verb deck",
+    mapRelatedCardsOpenIrregular: "Open irregular cards",
+    mapRelatedCardsOpenAuxiliary: "Open auxiliary cards",
+    mapNodeCardsProgressTitle: "Cards learned in this node",
+    mapNodeCardsProgressSuffix: "cards learned",
+    mapNodeCardsProgressEmpty: "No related cards found for this node yet.",
+    mapStatusTitle: "Learning status",
+    mapStatusNew: "New",
+    mapStatusLearning: "Learning",
+    mapStatusLearned: "Learned",
+    mapDiscussButton: "Discuss in chat",
+    mapChatTitle: "Node chat",
+    mapChatSubtitle: "Open a node and ask questions with node context.",
+    mapChatContext: "Current topic",
+    mapChatNoContext: "Select a node and press Discuss in chat.",
+    mapChatEmptyState: "No messages yet. Start from a node card.",
+    mapChatInputPlaceholder: "Ask about this node...",
+    mapChatSend: "Send",
+    mapChatYou: "You",
+    mapChatAssistant: "AI",
+    mapChatThinking: "Thinking...",
     categoryGrammar: "Grammar",
     categoryVocabulary: "Vocabulary",
     categorySpeaking: "Speaking",
@@ -272,6 +364,8 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     navHome: "Inicio",
     navFeed: "Feed",
     navVocabulary: "Vocab",
+    navMap: "Mapa",
+    navQuests: "Misiones",
     navProfile: "Perfil",
     languageControlTitle: "Idioma de estudio + interfaz",
     languageControlShort: "Estudio + UI",
@@ -280,6 +374,8 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     homeSubtitle: "MVP web en Qwik City: tarjetas cortas, interacciones y progreso en un solo ciclo.",
     homeOpenFeed: "Abrir feed",
     homeOpenVocabulary: "Abrir vocabulario",
+    homeOpenLanguageMap: "Abrir mapa",
+    homeOpenQuests: "Abrir misiones",
     homeOpenProfile: "Abrir perfil",
     homeOverviewTitle: "Mapa de aprendizaje",
     homeOverviewSubtitle: "Niveles y categorias con la misma fuente de datos del feed y calidad de respuestas.",
@@ -363,6 +459,48 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     vocabAiThinking: "Pensando",
     vocabAiCollapse: "Contraer chat",
     vocabAiExpand: "Expandir chat",
+    mapTitle: "Mapa del idioma",
+    mapSubtitle: "Vista en grafo de tiempos verbales, verbos clave y patrones irregulares.",
+    mapProgressTitle: "Progreso de nodos",
+    mapProgressLearnedSuffix: "aprendidos",
+    mapFilterUnlearnedOnly: "Mostrar solo no aprendidos",
+    mapLegendTitle: "Categorias de nodos",
+    mapGraphAriaLabel: "Grafo interactivo del idioma",
+    mapNoVisibleNodes: "No hay nodos para el filtro actual.",
+    mapShowAllNodes: "Mostrar todos",
+    mapCategoryCore: "Nucleo",
+    mapCategoryTimeline: "Linea temporal",
+    mapCategoryTense: "Tiempos",
+    mapCategoryVerbSystem: "Sistema verbal",
+    mapCategoryIrregular: "Verbos irregulares",
+    mapFormulaTitle: "Formula",
+    mapKeyVerbsTitle: "Verbos clave",
+    mapIrregularTableTitle: "Formas irregulares",
+    mapRelatedNodesTitle: "Nodos conectados",
+    mapRelatedCardsTitle: "Tarjetas relacionadas",
+    mapRelatedCardsOpenGrammar: "Abrir tarjetas de gramatica",
+    mapRelatedCardsOpenVocabulary: "Abrir feed de vocabulario",
+    mapRelatedCardsOpenVerbDeck: "Abrir mazo de verbos",
+    mapRelatedCardsOpenIrregular: "Abrir irregulares",
+    mapRelatedCardsOpenAuxiliary: "Abrir auxiliares",
+    mapNodeCardsProgressTitle: "Tarjetas aprendidas en este nodo",
+    mapNodeCardsProgressSuffix: "tarjetas aprendidas",
+    mapNodeCardsProgressEmpty: "Aun no hay tarjetas relacionadas para este nodo.",
+    mapStatusTitle: "Estado de aprendizaje",
+    mapStatusNew: "Nuevo",
+    mapStatusLearning: "En progreso",
+    mapStatusLearned: "Aprendido",
+    mapDiscussButton: "Hablar en chat",
+    mapChatTitle: "Chat del nodo",
+    mapChatSubtitle: "Abre un nodo y pregunta con ese contexto.",
+    mapChatContext: "Tema actual",
+    mapChatNoContext: "Elige un nodo y pulsa Hablar en chat.",
+    mapChatEmptyState: "Aun no hay mensajes. Empieza desde una tarjeta de nodo.",
+    mapChatInputPlaceholder: "Pregunta sobre este nodo...",
+    mapChatSend: "Enviar",
+    mapChatYou: "Tu",
+    mapChatAssistant: "AI",
+    mapChatThinking: "Pensando...",
     categoryGrammar: "Gramatica",
     categoryVocabulary: "Vocabulario",
     categorySpeaking: "Habla",

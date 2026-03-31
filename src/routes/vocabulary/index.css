@@ -1,5 +1,5 @@
 .vocabulary-page {
-  height: calc(100dvh - 170px);
+  height: calc(100dvh - 140px);
   min-height: 620px;
   display: grid;
   grid-template-columns: clamp(240px, 18vw, 300px) minmax(0, 1fr) clamp(290px, 24vw, 410px);

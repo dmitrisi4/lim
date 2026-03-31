@@ -1,4 +1,4 @@
-import type { VocabularyChatRequest } from "~/features/vocabulary/model/chat";
+import type { LanguageMapChatRequest } from "~/features/language-map/model/chat";
 import { env } from "~/shared/config/env";
 
 interface GeminiResponse {
@@ -11,42 +11,50 @@ interface GeminiResponse {
   }>;
 }
 
-function buildSystemInstruction(language: VocabularyChatRequest["language"]): string {
+function buildSystemInstruction(language: LanguageMapChatRequest["language"]): string {
   if (language === "es") {
     return [
-      "You are a language tutor helping a student while reviewing flashcards.",
-      "Answer in clear Spanish. Keep it concise and practical.",
-      "Use examples when useful and explain mistakes politely.",
-      "Stay focused on the current card topic."
+      "You are an English tutor helping with a language graph node.",
+      "Answer in clear Spanish unless the student asks for English output.",
+      "Keep responses practical, structured, and concise.",
+      "Use examples and short drills when useful."
     ].join(" ");
   }
 
   return [
-    "You are a language tutor helping a student while reviewing flashcards.",
-    "Answer in clear English. Keep it concise and practical.",
-    "Use examples when useful and explain mistakes politely.",
-    "Stay focused on the current card topic."
+    "You are an English tutor helping with a language graph node.",
+    "Answer in clear English.",
+    "Keep responses practical, structured, and concise.",
+    "Use examples and short drills when useful."
   ].join(" ");
 }
 
-function buildUserPrompt(input: VocabularyChatRequest): string {
-  const contextLines = [
-    `Card term: ${input.word.term}`,
-    `Card translation: ${input.word.translation}`,
-    `Card type: ${input.word.type}`,
-    `Card sections: ${(input.word.sections ?? []).join(", ")}`,
-    input.word.note ? `Card note: ${input.word.note}` : "",
-    input.word.example ? `Card example: ${input.word.example}` : "",
+function buildNodeContextLines(input: LanguageMapChatRequest): string[] {
+  const irregularLines = input.node.irregularSamples?.map(
+    (sample) => `${sample.base} -> ${sample.past} -> ${sample.participle}`
+  );
+
+  return [
+    `Node id: ${input.node.id}`,
+    `Node title: ${input.node.label}`,
+    `Node category: ${input.node.category}`,
+    `Node summary: ${input.node.summary}`,
+    `Node details: ${input.node.details}`,
+    input.node.formula ? `Node formula: ${input.node.formula}` : "",
+    `Key verbs: ${(input.node.keyVerbs ?? []).join(", ")}`,
+    irregularLines && irregularLines.length > 0 ? `Irregular samples: ${irregularLines.join("; ")}` : "",
     `Mode: ${input.mode}`
   ].filter((line) => line.length > 0);
+}
 
+function buildUserPrompt(input: LanguageMapChatRequest): string {
   const historyLines = input.history
     .slice(-10)
     .map((item, index) => `${index + 1}. ${item.role.toUpperCase()}: ${item.text}`);
 
   return [
-    "Use this card context and dialogue to answer the latest student message.",
-    ...contextLines,
+    "Use this language-map node context and dialogue to answer the latest student message.",
+    ...buildNodeContextLines(input),
     "",
     "Recent dialogue:",
     ...(historyLines.length > 0 ? historyLines : ["No previous messages."]),
@@ -65,7 +73,7 @@ function extractGeminiText(payload: GeminiResponse): string {
   return text;
 }
 
-export async function generateVocabularyGeminiReply(input: VocabularyChatRequest): Promise<string> {
+export async function generateLanguageMapGeminiReply(input: LanguageMapChatRequest): Promise<string> {
 	const apiKey = env.geminiApiKey;
 	if (!apiKey) {
 		throw new Error("GEMINI_API_KEY is not configured");
@@ -91,7 +99,7 @@ export async function generateVocabularyGeminiReply(input: VocabularyChatRequest
         }
       ],
       generationConfig: {
-        temperature: 0.45,
+        temperature: 0.4,
         topP: 0.9,
         maxOutputTokens: 700
       }

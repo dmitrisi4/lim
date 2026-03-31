@@ -30,6 +30,12 @@ export default component$(() => {
           <Link href="/vocabulary/" class="hero-link hero-link-secondary">
             {ui.homeOpenVocabulary}
           </Link>
+          <a href="/language-map/" class="hero-link hero-link-secondary">
+            {ui.homeOpenLanguageMap}
+          </a>
+          <a href="/quests/" class="hero-link hero-link-secondary">
+            {ui.homeOpenQuests}
+          </a>
           <Link href="/profile" class="hero-link hero-link-secondary">
             {ui.homeOpenProfile}
           </Link>

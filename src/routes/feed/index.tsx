@@ -2,6 +2,7 @@ import { $, component$, useStylesScoped$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { Link, routeAction$, routeLoader$ } from "@builder.io/qwik-city";
 import { isCardType } from "~/entities/card/model/guards";
+import { markCardCompleted } from "~/entities/card/model/completed-progress";
 import { getFeedPage } from "~/features/feed/model/get-feed";
 import { FeedList } from "~/features/feed/ui/FeedList";
 import type { CardCompletionInput, InteractionSubmissionInput } from "~/features/interactions/model/types";
@@ -72,6 +73,8 @@ export default component$(() => {
   };
 
   const onComplete$ = $(async (payload: CardCompletionInput) => {
+    markCardCompleted(payload.cardId);
+
     await submitAction.submit({
       userId: DEMO_USER_ID,
       cardId: payload.cardId,

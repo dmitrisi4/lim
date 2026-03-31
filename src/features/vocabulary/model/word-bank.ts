@@ -237,6 +237,10 @@ export function filterVocabularyWords(filters: VocabularyFilters, language: Lear
   });
 }
 
+export function getVocabularyWordBank(language: LearningLanguage = "en"): VocabularyWord[] {
+  return WORD_BANK_BY_LANGUAGE[language] ?? WORD_BANK_BY_LANGUAGE.en;
+}
+
 export function buildVocabularyHref(filters: VocabularyFilters, language?: LearningLanguage): string {
   const params = new URLSearchParams();
   filters.types.forEach((type) => params.append("type", type));

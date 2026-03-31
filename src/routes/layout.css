@@ -291,7 +291,7 @@
     bottom: max(0.65rem, env(safe-area-inset-bottom));
     z-index: 70;
     justify-content: space-between;
-    gap: 0.34rem;
+    gap: 0.25rem;
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.12);
     padding: 0.36rem;
@@ -309,7 +309,7 @@
     flex-direction: column;
     gap: 0.22rem;
     border-radius: 14px;
-    padding: 0.45rem 0.3rem 0.5rem;
+    padding: 0.42rem 0.16rem 0.46rem;
   }
 
   .nav-link::after {
@@ -319,7 +319,7 @@
   }
 
   .nav-label {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     font-weight: 650;
     white-space: nowrap;
   }
@@ -335,7 +335,7 @@
   }
 
   .nav-label {
-    font-size: 0.61rem;
+    font-size: 0.58rem;
   }
 }
 
