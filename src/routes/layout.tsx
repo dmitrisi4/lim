@@ -1,4 +1,4 @@
-import { component$, Slot, useContextProvider, useStylesScoped$ } from "@builder.io/qwik";
+import { $, component$, Slot, useContextProvider, useSignal, useStylesScoped$, useVisibleTask$ } from "@builder.io/qwik";
 import { Link, routeLoader$, useLocation } from "@builder.io/qwik-city";
 import { I18N_CONTEXT } from "~/shared/i18n/context";
 import {
@@ -39,6 +39,26 @@ export default component$(() => {
 
   const ui = i18n.value.ui;
   const currentLanguage = i18n.value.language;
+  const mobileMenuOpen = useSignal(false);
+
+  useVisibleTask$(({ cleanup }) => {
+    const closeMenu = () => {
+      mobileMenuOpen.value = false;
+    };
+
+    window.addEventListener("resize", closeMenu);
+    return cleanup(() => {
+      window.removeEventListener("resize", closeMenu);
+    });
+  });
+
+  const toggleMobileMenu = $(() => {
+    mobileMenuOpen.value = !mobileMenuOpen.value;
+  });
+
+  const closeMobileMenu = $(() => {
+    mobileMenuOpen.value = false;
+  });
 
   const homeActive = location.url.pathname === "/";
   const feedActive = location.url.pathname.startsWith("/feed");
@@ -60,25 +80,61 @@ export default component$(() => {
             </div>
           </div>
 
-          <div class="language-inline" aria-label={ui.languageControlTitle} title={ui.languageControlHint}>
-            <span class="language-inline-label">{ui.languageControlShort}</span>
-            <div class="language-chip-row">
-              {LEARNING_LANGUAGE_OPTIONS.map((option) => (
-                <Link
-                  key={`lang-${option.code}`}
-                  href={buildLanguageHref(location.url, option.code)}
-                  class={languageChipClass(option.code === currentLanguage)}
-                  aria-current={option.code === currentLanguage ? "page" : undefined}
-                >
-                  <span class="language-chip-code">{option.code.toUpperCase()}</span>
-                  <span>{option.nativeName}</span>
-                </Link>
-              ))}
+          <div class="topbar-actions">
+            <button
+              type="button"
+              class={mobileMenuOpen.value ? "mobile-menu-toggle active" : "mobile-menu-toggle"}
+              aria-label={mobileMenuOpen.value ? ui.mobileMenuClose : ui.mobileMenuOpen}
+              aria-expanded={mobileMenuOpen.value ? "true" : "false"}
+              aria-controls="main-nav"
+              onClick$={toggleMobileMenu}
+            >
+              <span class="mobile-menu-toggle-label">{ui.mobileMenuLabel}</span>
+              <span class="mobile-menu-toggle-bars" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </span>
+            </button>
+
+            <div class="language-inline" aria-label={ui.languageControlTitle} title={ui.languageControlHint}>
+              <span class="language-inline-label">{ui.languageControlShort}</span>
+              <div class="language-chip-row">
+                {LEARNING_LANGUAGE_OPTIONS.map((option) => (
+                  <Link
+                    key={`lang-${option.code}`}
+                    href={buildLanguageHref(location.url, option.code)}
+                    class={languageChipClass(option.code === currentLanguage)}
+                    aria-current={option.code === currentLanguage ? "page" : undefined}
+                    onClick$={closeMobileMenu}
+                  >
+                    <span class="language-chip-code">{option.code.toUpperCase()}</span>
+                    <span>{option.nativeName}</span>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
-          <nav class="nav" aria-label="Main">
-            <a href="/" class={navItemClass(homeActive)} aria-current={homeActive ? "page" : undefined}>
+          <nav id="main-nav" class={mobileMenuOpen.value ? "nav nav-open" : "nav"} aria-label="Main">
+            <div class="language-inline language-inline-mobile" aria-label={ui.languageControlTitle} title={ui.languageControlHint}>
+              <span class="language-inline-label">{ui.languageControlShort}</span>
+              <div class="language-chip-row">
+                {LEARNING_LANGUAGE_OPTIONS.map((option) => (
+                  <Link
+                    key={`mobile-lang-${option.code}`}
+                    href={buildLanguageHref(location.url, option.code)}
+                    class={languageChipClass(option.code === currentLanguage)}
+                    aria-current={option.code === currentLanguage ? "page" : undefined}
+                    onClick$={closeMobileMenu}
+                  >
+                    <span class="language-chip-code">{option.code.toUpperCase()}</span>
+                    <span>{option.nativeName}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <a href="/" class={navItemClass(homeActive)} aria-current={homeActive ? "page" : undefined} onClick$={closeMobileMenu}>
               <span class="nav-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="presentation">
                   <path d="M3.75 10.5 12 3.75l8.25 6.75v8.25a1.5 1.5 0 0 1-1.5 1.5h-4.5v-6h-4.5v6h-4.5a1.5 1.5 0 0 1-1.5-1.5z" />
@@ -87,7 +143,7 @@ export default component$(() => {
               <span class={navItemLabelClass(homeActive)}>{ui.navHome}</span>
             </a>
 
-            <a href="/feed" class={navItemClass(feedActive)} aria-current={feedActive ? "page" : undefined}>
+            <a href="/feed" class={navItemClass(feedActive)} aria-current={feedActive ? "page" : undefined} onClick$={closeMobileMenu}>
               <span class="nav-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="presentation">
                   <rect x="4.5" y="4.5" width="15" height="15" rx="4" ry="4" />
@@ -98,7 +154,7 @@ export default component$(() => {
               <span class={navItemLabelClass(feedActive)}>{ui.navFeed}</span>
             </a>
 
-            <a href="/vocabulary/" class={navItemClass(vocabularyActive)} aria-current={vocabularyActive ? "page" : undefined}>
+            <a href="/vocabulary/" class={navItemClass(vocabularyActive)} aria-current={vocabularyActive ? "page" : undefined} onClick$={closeMobileMenu}>
               <span class="nav-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="presentation">
                   <path d="M5.25 5.25h9a2.25 2.25 0 0 1 2.25 2.25v11.25H7.5a2.25 2.25 0 0 0-2.25 2.25z" />
@@ -109,7 +165,7 @@ export default component$(() => {
               <span class={navItemLabelClass(vocabularyActive)}>{ui.navVocabulary}</span>
             </a>
 
-            <a href="/language-map/" class={navItemClass(mapActive)} aria-current={mapActive ? "page" : undefined}>
+            <a href="/language-map/" class={navItemClass(mapActive)} aria-current={mapActive ? "page" : undefined} onClick$={closeMobileMenu}>
               <span class="nav-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="presentation">
                   <circle cx="6.75" cy="6.75" r="2.1" />
@@ -123,7 +179,7 @@ export default component$(() => {
               <span class={navItemLabelClass(mapActive)}>{ui.navMap}</span>
             </a>
 
-            <a href="/quests/" class={navItemClass(questsActive)} aria-current={questsActive ? "page" : undefined}>
+            <a href="/quests/" class={navItemClass(questsActive)} aria-current={questsActive ? "page" : undefined} onClick$={closeMobileMenu}>
               <span class="nav-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="presentation">
                   <path d="M7.5 4.5h9l3 3v12a1.5 1.5 0 0 1-1.5 1.5h-12A1.5 1.5 0 0 1 4.5 19.5v-12z" />
@@ -138,6 +194,7 @@ export default component$(() => {
               href="/profile"
               class={navItemClass(profileActive)}
               aria-current={profileActive ? "page" : undefined}
+              onClick$={closeMobileMenu}
             >
               <span class="nav-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" role="presentation">
