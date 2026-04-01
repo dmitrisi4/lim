@@ -1,10 +1,8 @@
-import { $, component$, useSignal, useStylesScoped$, useVisibleTask$ } from "@builder.io/qwik";
+import { $, component$, useSignal, useStyles$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { Link, routeLoader$ } from "@builder.io/qwik-city";
+import { routeLoader$ } from "@builder.io/qwik-city";
 import type { VocabularyChatMessage, VocabularyChatMode, VocabularyChatResponse } from "~/features/vocabulary/model/chat";
 import {
-  VOCABULARY_PROGRESS_OPTIONS,
-  VOCABULARY_TYPE_OPTIONS,
   buildVocabularyHref,
   filterVocabularyWords,
   getVocabularySectionOptions,
@@ -17,6 +15,9 @@ import {
 } from "~/features/vocabulary/model/word-bank";
 import type { VerbTense } from "~/features/vocabulary/model/verb-insights";
 import { VocabularyDeck } from "~/features/vocabulary/ui/VocabularyDeck";
+import { VocabularyFilters } from "~/features/vocabulary/ui/VocabularyFilters";
+import { VocabularyChat } from "~/features/vocabulary/ui/VocabularyChat";
+import { buildExplainPrompt, buildProviderErrorMessage, buildSelectCardMessage } from "~/features/vocabulary/lib/chat-utils";
 import { httpPost } from "~/shared/api/client";
 import { endpoints } from "~/shared/api/endpoints";
 import { useI18n } from "~/shared/i18n/context";
@@ -43,33 +44,15 @@ interface ChatMessage {
   text: string;
 }
 
-function buildExplainPrompt(word: VocabularyWord, language: "en" | "es"): string {
-  return language === "es"
-    ? `Explica la palabra "${word.term}" y como usarla mientras estudio tarjetas.`
-    : `Explain the word "${word.term}" and how to use it while I study flashcards.`;
-}
-
-function buildSelectCardMessage(language: "en" | "es"): string {
-  return language === "es" ? "Primero abre una tarjeta y pulsa Explicar." : "Open a card and press Explain first.";
-}
-
-function buildProviderErrorMessage(language: "en" | "es"): string {
-  return language === "es"
-    ? "No pude obtener respuesta de Gemini. Revisa clave/API y vuelve a intentar."
-    : "Could not get a Gemini response. Check key/API settings and try again.";
-}
-
 export default component$(() => {
-  useStylesScoped$(styles);
+  useStyles$(styles);
   const { ui } = useI18n();
   const vocabulary = useVocabularyLoader();
   const chatMessages = useSignal<ChatMessage[]>([]);
   const activeWord = useSignal<VocabularyWord>();
-  const chatInput = useSignal("");
   const messageCounter = useSignal(0);
   const chatPending = useSignal(false);
   const chatCollapsed = useSignal(false);
-  const chatThreadRef = useSignal<HTMLElement>();
 
   const typeLabelMap: Record<VocabularyWordType, string> = {
     verb: ui.vocabTypeVerb,
@@ -111,101 +94,103 @@ export default component$(() => {
 
   const resetHref = buildVocabularyHref({ types: [], sections: [], progress: "all" }, vocabulary.value.language);
   const pageClass = chatCollapsed.value ? "vocabulary-page vocabulary-page-ai-collapsed" : "vocabulary-page";
-  const aiPanelClass = chatCollapsed.value ? "vocabulary-ai collapsed" : "vocabulary-ai";
 
-  useVisibleTask$(({ track }) => {
-    track(() => chatMessages.value.length);
-    track(() => chatPending.value);
-
-    const thread = chatThreadRef.value;
-    if (!thread) {
+  const handleSendMessage$ = $(async (question: string) => {
+    if (question.length === 0 || chatPending.value) {
       return;
     }
 
-    thread.scrollTo({ top: thread.scrollHeight, behavior: "smooth" });
+    const userId = messageCounter.value + 1;
+    const userMessage: ChatMessage = { id: `chat-${userId}`, role: "user", text: question };
+    chatMessages.value = [...chatMessages.value, userMessage];
+    messageCounter.value = userId;
+
+    if (activeWord.value) {
+      chatPending.value = true;
+      const currentWord = activeWord.value;
+      const historyPayload: VocabularyChatMessage[] = [...chatMessages.value].slice(-10).map((message) => ({
+        role: message.role,
+        text: message.text
+      }));
+
+      try {
+        const response = await httpPost<VocabularyChatResponse>(endpoints.vocabularyChat, {
+          language: vocabulary.value.language,
+          mode: "follow_up" satisfies VocabularyChatMode,
+          message: question,
+          word: {
+            id: currentWord.id,
+            term: currentWord.term,
+            translation: currentWord.translation,
+            type: currentWord.type,
+            sections: resolveWordSections(currentWord),
+            note: currentWord.note,
+            example: currentWord.example
+          },
+          history: historyPayload
+        });
+
+        const assistantId = messageCounter.value + 1;
+        chatMessages.value = [
+          ...chatMessages.value,
+          {
+            id: `chat-${assistantId}`,
+            role: "assistant",
+            text: response.ok && response.answer ? response.answer : buildProviderErrorMessage(vocabulary.value.language)
+          }
+        ];
+        messageCounter.value = assistantId;
+      } catch (_error) {
+        const assistantId = messageCounter.value + 1;
+        chatMessages.value = [
+          ...chatMessages.value,
+          {
+            id: `chat-${assistantId}`,
+            role: "assistant",
+            text: buildProviderErrorMessage(vocabulary.value.language)
+          }
+        ];
+        messageCounter.value = assistantId;
+      } finally {
+        chatPending.value = false;
+      }
+    } else {
+      const assistantId = messageCounter.value + 1;
+      chatMessages.value = [
+        ...chatMessages.value,
+        {
+          id: `chat-${assistantId}`,
+          role: "assistant",
+          text: buildSelectCardMessage(vocabulary.value.language)
+        }
+      ];
+      messageCounter.value = assistantId;
+    }
   });
 
   return (
     <section class={pageClass}>
-      <aside class="vocabulary-sidebar">
-        <div class="vocabulary-intro">
-          <h2 class="vocabulary-title">{ui.vocabTitle}</h2>
-          <p class="vocabulary-subtitle">{ui.vocabSubtitle}</p>
-          <p class="vocabulary-count">
-            {ui.vocabTotalLabel}: {vocabulary.value.words.length}
-          </p>
-        </div>
-
-        <details class="vocabulary-filters-shell" open>
-          <summary class="vocabulary-filters-summary">
-            <span class="vocabulary-filters-summary-title">{ui.vocabFiltersPanel}</span>
-            <span class="vocabulary-filters-summary-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" role="presentation">
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-            </span>
-          </summary>
-
-          <form method="get" class="vocabulary-filters">
-            <input type="hidden" name="lang" value={vocabulary.value.language} />
-
-            <div class="filter-group">
-              <p class="filter-title">{ui.vocabTypes}</p>
-              <div class="filter-grid">
-                {VOCABULARY_TYPE_OPTIONS.map((type) => (
-                  <label key={`type-${type}`} class="filter-chip">
-                    <input type="checkbox" name="type" value={type} checked={vocabulary.value.filters.types.includes(type)} />
-                    <span>{typeLabelMap[type]}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div class="filter-group">
-              <p class="filter-title">{ui.vocabSections}</p>
-              <div class="filter-grid filter-grid-sections">
-                {sectionOptions.map((section) => (
-                  <label key={`section-${section}`} class="filter-chip">
-                    <input
-                      type="checkbox"
-                      name="section"
-                      value={section}
-                      checked={vocabulary.value.filters.sections.includes(section)}
-                    />
-                    <span>{sectionLabelMap[section]}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div class="filter-group">
-              <p class="filter-title">{ui.vocabProgressTitle}</p>
-              <div class="filter-grid">
-                {VOCABULARY_PROGRESS_OPTIONS.map((progressOption) => (
-                  <label key={`progress-${progressOption}`} class="filter-chip">
-                    <input
-                      type="radio"
-                      name="progress"
-                      value={progressOption}
-                      checked={vocabulary.value.filters.progress === progressOption}
-                    />
-                    <span>{progressLabelMap[progressOption]}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div class="filter-actions">
-              <button type="submit" class="filter-apply">
-                {ui.vocabApplyFilters}
-              </button>
-              <Link href={resetHref} class="filter-reset">
-                {ui.vocabResetFilters}
-              </Link>
-            </div>
-          </form>
-        </details>
-      </aside>
+      <VocabularyFilters
+        language={vocabulary.value.language}
+        filters={vocabulary.value.filters}
+        totalWords={vocabulary.value.words.length}
+        sectionOptions={sectionOptions}
+        typeLabelMap={typeLabelMap}
+        sectionLabelMap={sectionLabelMap}
+        progressLabelMap={progressLabelMap}
+        resetHref={resetHref}
+        ui={{
+          vocabTitle: ui.vocabTitle,
+          vocabSubtitle: ui.vocabSubtitle,
+          vocabTotalLabel: ui.vocabTotalLabel,
+          vocabFiltersPanel: ui.vocabFiltersPanel,
+          vocabTypes: ui.vocabTypes,
+          vocabSections: ui.vocabSections,
+          vocabProgressTitle: ui.vocabProgressTitle,
+          vocabApplyFilters: ui.vocabApplyFilters,
+          vocabResetFilters: ui.vocabResetFilters
+        }}
+      />
 
       <div class="vocabulary-stage">
         <VocabularyDeck
@@ -295,162 +280,27 @@ export default component$(() => {
         />
       </div>
 
-      <aside class={aiPanelClass} aria-label={ui.vocabAiTitle}>
-        <button
-          type="button"
-          class="vocabulary-ai-toggle"
-          aria-expanded={!chatCollapsed.value}
-          aria-label={chatCollapsed.value ? ui.vocabAiExpand : ui.vocabAiCollapse}
-          title={chatCollapsed.value ? ui.vocabAiExpand : ui.vocabAiCollapse}
-          onClick$={() => {
-            chatCollapsed.value = !chatCollapsed.value;
-          }}
-        >
-          <span class="vocabulary-ai-toggle-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" role="presentation">
-              <path d="M8 6.5v11" />
-              <path d="m11 8.5 5 3.5-5 3.5" />
-            </svg>
-          </span>
-        </button>
-
-        <div class="vocabulary-ai-content" aria-hidden={chatCollapsed.value ? "true" : "false"}>
-          <header class="vocabulary-ai-head">
-            <h3 class="vocabulary-ai-title">{ui.vocabAiTitle}</h3>
-            <p class="vocabulary-ai-subtitle">{ui.vocabAiSubtitle}</p>
-            <p class="vocabulary-ai-context">
-              {activeWord.value ? `${activeWord.value.term} - ${activeWord.value.translation}` : ui.vocabAiEmptyState}
-            </p>
-          </header>
-
-          <div ref={chatThreadRef} class="vocabulary-ai-thread" aria-live="polite">
-            {chatMessages.value.length === 0 ? (
-              <p class="vocabulary-ai-empty">{ui.vocabAiEmptyState}</p>
-            ) : (
-              chatMessages.value.map((message) => (
-                <article
-                  key={message.id}
-                  class={message.role === "assistant" ? "vocabulary-ai-message assistant" : "vocabulary-ai-message user"}
-                >
-                  <p class="vocabulary-ai-role">{message.role === "assistant" ? ui.vocabAiAssistant : ui.vocabAiYou}</p>
-                  <p class="vocabulary-ai-text">{message.text}</p>
-                </article>
-              ))
-            )}
-
-            {chatPending.value ? (
-              <article class="vocabulary-ai-message assistant thinking" role="status" aria-live="polite">
-                <p class="vocabulary-ai-role">{ui.vocabAiAssistant}</p>
-                <div class="vocabulary-ai-thinking">
-                  <span class="vocabulary-ai-thinking-label">{ui.vocabAiThinking}</span>
-                  <span class="vocabulary-ai-thinking-dots" aria-hidden="true">
-                    <span class="vocabulary-ai-thinking-dot" />
-                    <span class="vocabulary-ai-thinking-dot" />
-                    <span class="vocabulary-ai-thinking-dot" />
-                  </span>
-                </div>
-              </article>
-            ) : null}
-          </div>
-
-          <form
-            class="vocabulary-ai-form"
-            preventdefault:submit
-            onSubmit$={$(async () => {
-              const question = chatInput.value.trim();
-              if (question.length === 0 || chatPending.value) {
-                return;
-              }
-
-              const userId = messageCounter.value + 1;
-              const userMessage: ChatMessage = { id: `chat-${userId}`, role: "user", text: question };
-              chatMessages.value = [...chatMessages.value, userMessage];
-              messageCounter.value = userId;
-              chatInput.value = "";
-
-              if (activeWord.value) {
-                chatPending.value = true;
-                const currentWord = activeWord.value;
-                const historyPayload: VocabularyChatMessage[] = [...chatMessages.value].slice(-10).map((message) => ({
-                  role: message.role,
-                  text: message.text
-                }));
-
-                try {
-                  const response = await httpPost<VocabularyChatResponse>(endpoints.vocabularyChat, {
-                    language: vocabulary.value.language,
-                    mode: "follow_up" satisfies VocabularyChatMode,
-                    message: question,
-                    word: {
-                      id: currentWord.id,
-                      term: currentWord.term,
-                      translation: currentWord.translation,
-                      type: currentWord.type,
-                      sections: resolveWordSections(currentWord),
-                      note: currentWord.note,
-                      example: currentWord.example
-                    },
-                    history: historyPayload
-                  });
-
-                  const assistantId = messageCounter.value + 1;
-                  chatMessages.value = [
-                    ...chatMessages.value,
-                    {
-                      id: `chat-${assistantId}`,
-                      role: "assistant",
-                      text: response.ok && response.answer ? response.answer : buildProviderErrorMessage(vocabulary.value.language)
-                    }
-                  ];
-                  messageCounter.value = assistantId;
-                } catch (_error) {
-                  const assistantId = messageCounter.value + 1;
-                  chatMessages.value = [
-                    ...chatMessages.value,
-                    {
-                      id: `chat-${assistantId}`,
-                      role: "assistant",
-                      text: buildProviderErrorMessage(vocabulary.value.language)
-                    }
-                  ];
-                  messageCounter.value = assistantId;
-                } finally {
-                  chatPending.value = false;
-                }
-              } else {
-                const assistantId = messageCounter.value + 1;
-                chatMessages.value = [
-                  ...chatMessages.value,
-                  {
-                    id: `chat-${assistantId}`,
-                    role: "assistant",
-                    text: buildSelectCardMessage(vocabulary.value.language)
-                  }
-                ];
-                messageCounter.value = assistantId;
-              }
-            })}
-          >
-            <input
-              type="text"
-              class="vocabulary-ai-input"
-              placeholder={ui.vocabAiInputPlaceholder}
-              value={chatInput.value}
-              onInput$={(event) => {
-                chatInput.value = (event.target as HTMLInputElement).value;
-              }}
-              disabled={chatPending.value || chatCollapsed.value}
-            />
-            <button
-              type="submit"
-              class="vocabulary-ai-send"
-              disabled={chatInput.value.trim().length === 0 || chatPending.value || chatCollapsed.value}
-            >
-              {chatPending.value ? "..." : ui.vocabAiSend}
-            </button>
-          </form>
-        </div>
-      </aside>
+      <VocabularyChat
+        language={vocabulary.value.language}
+        activeWord={activeWord}
+        chatMessages={chatMessages}
+        chatPending={chatPending}
+        chatCollapsed={chatCollapsed.value}
+        onToggleCollapse$={() => { chatCollapsed.value = !chatCollapsed.value; }}
+        onSendMessage$={handleSendMessage$}
+        ui={{
+          vocabAiTitle: ui.vocabAiTitle,
+          vocabAiSubtitle: ui.vocabAiSubtitle,
+          vocabAiEmptyState: ui.vocabAiEmptyState,
+          vocabAiAssistant: ui.vocabAiAssistant,
+          vocabAiYou: ui.vocabAiYou,
+          vocabAiThinking: ui.vocabAiThinking,
+          vocabAiInputPlaceholder: ui.vocabAiInputPlaceholder,
+          vocabAiSend: ui.vocabAiSend,
+          vocabAiExpand: ui.vocabAiExpand,
+          vocabAiCollapse: ui.vocabAiCollapse
+        }}
+      />
     </section>
   );
 });

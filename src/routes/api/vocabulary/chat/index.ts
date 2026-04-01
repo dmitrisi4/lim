@@ -54,7 +54,7 @@ function parseChatPayload(raw: unknown): VocabularyChatRequest | null {
       }
 
       return {
-        role: message.role,
+        role: message.role as import("~/features/vocabulary/model/chat").VocabularyChatRole,
         text: message.text
       };
     })
@@ -65,11 +65,11 @@ function parseChatPayload(raw: unknown): VocabularyChatRequest | null {
     mode: data.mode,
     message: data.message,
     word: {
-      id: word.id,
-      term: word.term,
-      translation: word.translation,
-      type: word.type,
-      sections,
+      id: word.id as string,
+      term: word.term as string,
+      translation: word.translation as string,
+      type: word.type as "verb" | "other",
+      sections: sections as import("~/features/vocabulary/model/word-bank").VocabularySection[],
       note: typeof word.note === "string" ? word.note : undefined,
       example: typeof word.example === "string" ? word.example : undefined
     },

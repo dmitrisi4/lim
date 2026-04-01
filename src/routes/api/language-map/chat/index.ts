@@ -91,7 +91,7 @@ function parseChatPayload(raw: unknown): LanguageMapChatRequest | null {
       }
 
       return {
-        role: message.role,
+        role: message.role as import("~/features/language-map/model/chat").LanguageMapChatRole,
         text: message.text
       };
     })

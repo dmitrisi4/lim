@@ -3,13 +3,14 @@ import type { PropFunction } from "@builder.io/qwik";
 import { CardRenderer } from "~/entities/card/ui/CardRenderer";
 import type { Card } from "~/entities/card/model/types";
 import {
-  CARD_ANSWER_OUTCOMES_STORAGE_KEY,
-  readCardAnswerOutcomes,
-  writeCardAnswerOutcome
+	CARD_ANSWER_OUTCOMES_STORAGE_KEY,
+	readCardAnswerOutcomes,
+	writeCardAnswerOutcome
 } from "~/features/feed/model/card-answer-outcomes";
 import type { CardCompletionInput } from "~/features/interactions/model/types";
 import type { FeedAnswerFilter } from "~/shared/lib/feed-filters";
 import styles from "~/features/feed/ui/FeedList.css?inline";
+import { SwiperContainer, SwiperSlide } from "~/shared/ui/Swiper";
 
 interface FeedListProps {
   cards: Card[];
@@ -22,12 +23,10 @@ interface FeedListProps {
 }
 
 export const FeedList = component$<FeedListProps>((props) => {
-  useStylesScoped$(styles);
+	useStylesScoped$(styles);
 
-  const SwiperContainer = "swiper-container" as unknown as any;
-  const SwiperSlide = "swiper-slide" as unknown as any;
-  const activeIndex = useSignal(0);
-  const swiperRef = useSignal<HTMLElement>();
+	const activeIndex = useSignal(0);
+	const swiperRef = useSignal<HTMLElement>();
   const answerOutcomes = useSignal<Record<string, FeedAnswerFilter>>({});
   const outcomesReady = useSignal(false);
 

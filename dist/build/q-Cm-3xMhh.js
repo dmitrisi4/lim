@@ -1,1 +1,0 @@
-import{v as r}from"./q-Dhsg9qQC.js";import{x as v}from"./q-Dhsg9qQC.js";const l=({track:o})=>{const[t,s,a]=r();o(()=>t.value.length),o(()=>s.value);const e=a.value;e&&e.scrollTo({top:e.scrollHeight,behavior:"smooth"})};export{v as _hW,l as s_HpnIBPGtAV8};

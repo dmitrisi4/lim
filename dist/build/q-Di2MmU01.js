@@ -1,1 +1,0 @@
-import{v as n}from"./q-Dhsg9qQC.js";import{x as w}from"./q-Dhsg9qQC.js";import{r as m,C as c}from"./q-DiMiLf0K.js";const u=({cleanup:s})=>{const[t,a]=n(),e=()=>{t.value=m(),a.value=!0};e();const o=r=>{(r.key===null||r.key===c)&&e()};window.addEventListener("storage",o),s(()=>{window.removeEventListener("storage",o)})};export{w as _hW,u as s_MXzZE0H2H0Q};

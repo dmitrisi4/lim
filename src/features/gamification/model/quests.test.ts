@@ -50,8 +50,8 @@ describe("quest readiness and status", () => {
   it("returns granular requirement progress", () => {
     const snapshot = createSnapshot({
       totalCompleted: 9,
-      byLevel: { a1: 7 },
-      byCategory: { grammar: 4 }
+      byLevel: { a1: 7 } as any,
+      byCategory: { grammar: 4 } as any
     });
 
     const progress = getQuestRequirementProgress(
@@ -98,7 +98,7 @@ describe("quest readiness and status", () => {
 
     const snapshot = createSnapshot({
       totalCompleted: 5,
-      byLevel: { a1: 4 }
+      byLevel: { a1: 4 } as any
     });
 
     expect(isQuestReady(quest.requirements, snapshot)).toBe(true);

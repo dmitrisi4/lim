@@ -209,7 +209,7 @@ export function getVocabularySectionOptions(language: LearningLanguage = "en"): 
 }
 
 export function normalizeVocabularyFilters(input: VocabularyFilterInput): VocabularyFilters {
-  const progress = isVocabularyProgressFilter(input.progress ?? "") ? input.progress : "all";
+  const progress = isVocabularyProgressFilter(input.progress ?? "") ? (input.progress as VocabularyProgressFilter) : "all";
 
   return {
     types: unique((input.types ?? []).filter(isVocabularyWordType)),
