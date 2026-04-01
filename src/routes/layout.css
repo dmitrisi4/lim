@@ -254,9 +254,7 @@
 
   .mobile-menu-trigger {
     list-style: none;
-    position: fixed;
-    top: max(0.85rem, env(safe-area-inset-top));
-    left: max(0.8rem, env(safe-area-inset-left));
+    position: relative;
     z-index: 95;
     display: inline-flex;
     align-items: center;
@@ -425,8 +423,17 @@
     padding: 0.82rem 0.82rem 0.82rem 4.3rem;
   }
 
-  .topbar-actions,
   .nav-desktop {
+    display:none;
+  }
+
+  .topbar-actions {
+    display:flex;
+    justify-self:end;
+    align-items:center;
+  }
+
+  .topbar-actions .language-inline {
     display:none;
   }
 
