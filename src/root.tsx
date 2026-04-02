@@ -1,7 +1,7 @@
 import { component$, useVisibleTask$ } from "@builder.io/qwik";
 import { QwikCityProvider, RouterOutlet } from "@builder.io/qwik-city";
 import "~/global.css";
-import "swiper/css/bundle";
+import "swiper/css";
 import { register } from "swiper/element/bundle";
 import { RouterHead } from "~/shared/ui/RouterHead";
 

@@ -40,48 +40,89 @@
   line-height: 1.5;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.72rem;
+.hero-actions-grid {
   margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.82rem;
 }
 
-.hero-link {
+.hero-action-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.32rem;
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 11px;
-  padding: 0.62rem 0.98rem;
-  font-size: 0.87rem;
-  font-weight: 700;
-  border: 1px solid transparent;
-  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
-}
-
-.hero-link:hover {
-  transform: translateY(-1px);
-}
-
-.hero-link-primary {
-  color: #ffffff;
-  background: linear-gradient(118deg, var(--accent-1), var(--accent-2) 50%, var(--accent-3));
-  box-shadow: 0 10px 22px -14px rgba(255, 47, 109, 0.9);
-}
-
-.hero-link-primary:hover {
-  filter: brightness(1.05);
-}
-
-.hero-link-secondary {
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--text-2);
-  border-color: var(--border);
-}
-
-.hero-link-secondary:hover {
+  min-height: 132px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text-1);
-  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem 1rem 1.06rem;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.hero-action-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.hero-action-card-primary {
+  background: linear-gradient(118deg, rgba(255, 122, 24, 0.2), rgba(255, 47, 109, 0.2) 50%, rgba(125, 85, 255, 0.2));
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 32px -24px rgba(255, 47, 109, 0.8);
+}
+
+.hero-action-kicker {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+}
+
+.hero-action-title {
+  font-size: 1.02rem;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #fff;
+}
+
+.hero-action-body {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--text-2);
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding: 1.15rem;
+    border-radius: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .hero-actions-grid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .hero-action-card {
+    min-height: 112px;
+    padding: 0.92rem 0.9rem 0.96rem;
+  }
+
+  .hero-action-title {
+    font-size: 0.96rem;
+  }
+
+  .hero-action-body {
+    font-size: 0.8rem;
+    line-height: 1.38;
+  }
 }
 
 @keyframes hero-in {

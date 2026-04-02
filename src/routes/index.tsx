@@ -23,21 +23,29 @@ export default component$(() => {
         <h2 class="hero-title">{ui.homeTitle}</h2>
         <p class="hero-subtitle">{ui.homeSubtitle}</p>
 
-        <div class="hero-actions">
-          <Link href="/feed" class="hero-link hero-link-primary">
-            {ui.homeOpenFeed}
+        <div class="hero-actions-grid">
+          <Link href="/profile" class="hero-action-card hero-action-card-primary">
+            <span class="hero-action-kicker">Placement</span>
+            <span class="hero-action-title">{ui.homeActionPlacementTitle}</span>
+            <span class="hero-action-body">{ui.homeActionPlacementBody}</span>
           </Link>
-          <Link href="/vocabulary/" class="hero-link hero-link-secondary">
-            {ui.homeOpenVocabulary}
+
+          <Link href="/feed" class="hero-action-card">
+            <span class="hero-action-kicker">Next step</span>
+            <span class="hero-action-title">{ui.homeActionContinueTitle}</span>
+            <span class="hero-action-body">{ui.homeActionContinueBody}</span>
           </Link>
-          <a href="/language-map/" class="hero-link hero-link-secondary">
-            {ui.homeOpenLanguageMap}
-          </a>
-          <a href="/quests/" class="hero-link hero-link-secondary">
-            {ui.homeOpenQuests}
-          </a>
-          <Link href="/profile" class="hero-link hero-link-secondary">
-            {ui.homeOpenProfile}
+
+          <Link href="/quests/" class="hero-action-card">
+            <span class="hero-action-kicker">Progress</span>
+            <span class="hero-action-title">{ui.homeActionQuestTitle}</span>
+            <span class="hero-action-body">{ui.homeActionQuestBody}</span>
+          </Link>
+
+          <Link href="/language-map/" class="hero-action-card">
+            <span class="hero-action-kicker">Focus</span>
+            <span class="hero-action-title">{ui.homeActionReviewTitle}</span>
+            <span class="hero-action-body">{ui.homeActionReviewBody}</span>
           </Link>
         </div>
       </section>
