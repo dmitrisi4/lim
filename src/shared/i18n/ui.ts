@@ -9,6 +9,9 @@ export interface UiCopy {
   navMap: string;
   navQuests: string;
   navProfile: string;
+  mobileMenuOpen: string;
+  mobileMenuClose: string;
+  mobileMenuLabel: string;
   languageControlTitle: string;
   languageControlShort: string;
   languageControlHint: string;
@@ -195,6 +198,9 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     navMap: "Map",
     navQuests: "Quests",
     navProfile: "Profile",
+    mobileMenuOpen: "Open menu",
+    mobileMenuClose: "Close menu",
+    mobileMenuLabel: "Main menu",
     languageControlTitle: "Study + Interface Language",
     languageControlShort: "Study + UI",
     languageControlHint: "This changes both learning and UI language.",
@@ -367,6 +373,9 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     navMap: "Mapa",
     navQuests: "Misiones",
     navProfile: "Perfil",
+    mobileMenuOpen: "Abrir menu",
+    mobileMenuClose: "Cerrar menu",
+    mobileMenuLabel: "Menu principal",
     languageControlTitle: "Idioma de estudio + interfaz",
     languageControlShort: "Estudio + UI",
     languageControlHint: "Esto cambia tanto el idioma de estudio como el de la UI.",
