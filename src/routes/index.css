@@ -68,6 +68,18 @@
   background: rgba(255, 255, 255, 0.07);
 }
 
+.hero-action-card,
+.hero-action-card:visited,
+.hero-action-card:hover,
+.hero-action-card:active,
+.hero-action-card * {
+  text-decoration: none;
+}
+
+.hero-action-card > span {
+  display: block;
+}
+
 .hero-action-card-primary {
   background: linear-gradient(118deg, rgba(255, 122, 24, 0.2), rgba(255, 47, 109, 0.2) 50%, rgba(125, 85, 255, 0.2));
   border-color: rgba(255, 255, 255, 0.18);
