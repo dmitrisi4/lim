@@ -20,32 +20,34 @@ export default component$(() => {
   return (
     <>
       <section class="hero">
-        <h2 class="hero-title">{ui.homeTitle}</h2>
-        <p class="hero-subtitle">{ui.homeSubtitle}</p>
+        <div class="hero-copy">
+          <h2 class="hero-title">{ui.homeTitle}</h2>
+          <p class="hero-subtitle">{ui.homeSubtitle}</p>
+        </div>
 
-        <div class="hero-actions-grid">
-          <Link href="/profile" class="hero-action-card hero-action-card-primary">
-            <span class="hero-action-kicker">Placement</span>
-            <span class="hero-action-title">{ui.homeActionPlacementTitle}</span>
-            <span class="hero-action-body">{ui.homeActionPlacementBody}</span>
+        <div class="hero-primary-action">
+          <span class="hero-primary-kicker">Recommended first step</span>
+          <h3 class="hero-primary-title">{ui.homeActionPlacementTitle}</h3>
+          <p class="hero-primary-body">{ui.homeActionPlacementBody}</p>
+          <Link href="/profile" class="hero-primary-link">
+            {ui.homeActionPlacementTitle}
+          </Link>
+        </div>
+
+        <div class="hero-secondary-actions">
+          <Link href="/feed" class="hero-mini-action">
+            <span class="hero-mini-title">{ui.homeActionContinueTitle}</span>
+            <span class="hero-mini-body">{ui.homeActionContinueBody}</span>
           </Link>
 
-          <Link href="/feed" class="hero-action-card">
-            <span class="hero-action-kicker">Next step</span>
-            <span class="hero-action-title">{ui.homeActionContinueTitle}</span>
-            <span class="hero-action-body">{ui.homeActionContinueBody}</span>
+          <Link href="/quests/" class="hero-mini-action">
+            <span class="hero-mini-title">{ui.homeActionQuestTitle}</span>
+            <span class="hero-mini-body">{ui.homeActionQuestBody}</span>
           </Link>
 
-          <Link href="/quests/" class="hero-action-card">
-            <span class="hero-action-kicker">Progress</span>
-            <span class="hero-action-title">{ui.homeActionQuestTitle}</span>
-            <span class="hero-action-body">{ui.homeActionQuestBody}</span>
-          </Link>
-
-          <Link href="/language-map/" class="hero-action-card">
-            <span class="hero-action-kicker">Focus</span>
-            <span class="hero-action-title">{ui.homeActionReviewTitle}</span>
-            <span class="hero-action-body">{ui.homeActionReviewBody}</span>
+          <Link href="/language-map/" class="hero-mini-action">
+            <span class="hero-mini-title">{ui.homeActionReviewTitle}</span>
+            <span class="hero-mini-body">{ui.homeActionReviewBody}</span>
           </Link>
         </div>
       </section>
