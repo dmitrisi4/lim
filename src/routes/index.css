@@ -154,6 +154,7 @@
 .hero-crawl-title,
 .hero-crawl-description {
   display: block;
+  text-decoration: none !important;
 }
 
 .hero-crawl-title {
