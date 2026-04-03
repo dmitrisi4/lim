@@ -117,30 +117,34 @@
   font-family: "Exo 2", "Segoe UI", sans-serif;
 }
 
-.hero-crawl-link {
-  text-decoration: none !important;
+.hero-crawl-row {
   display: grid;
   gap: 0.18rem;
-  color: inherit;
   transform-origin: left center;
 }
 
-.hero-crawl-link:nth-child(1) {
+.hero-crawl-row:nth-child(1) {
   padding-left: 0.1rem;
   transform: scale(1);
   opacity: 1;
 }
 
-.hero-crawl-link:nth-child(2) {
+.hero-crawl-row:nth-child(2) {
   padding-left: 1rem;
   transform: scale(0.94);
   opacity: 0.9;
 }
 
-.hero-crawl-link:nth-child(3) {
+.hero-crawl-row:nth-child(3) {
   padding-left: 1.9rem;
   transform: scale(0.88);
   opacity: 0.8;
+}
+
+.hero-crawl-link {
+  text-decoration: none !important;
+  display: block;
+  color: inherit;
 }
 
 .hero-crawl-link,
@@ -157,6 +161,10 @@
 .hero-crawl-description {
   display: block;
   text-decoration: none !important;
+}
+
+.hero-crawl-row p {
+  margin: 0;
 }
 
 .hero-crawl-title {
@@ -214,17 +222,17 @@
     gap: 0.38rem;
   }
 
-  .hero-crawl-link:nth-child(1) {
+  .hero-crawl-row:nth-child(1) {
     padding-left: 0.04rem;
     transform: scale(1);
   }
 
-  .hero-crawl-link:nth-child(2) {
+  .hero-crawl-row:nth-child(2) {
     padding-left: 0.36rem;
     transform: scale(0.96);
   }
 
-  .hero-crawl-link:nth-child(3) {
+  .hero-crawl-row:nth-child(3) {
     padding-left: 0.72rem;
     transform: scale(0.92);
   }

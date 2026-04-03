@@ -36,20 +36,26 @@ export default component$(() => {
 
         <div class="hero-secondary-crawl-shell">
           <div class="hero-secondary-crawl">
-            <Link href="/feed" class="hero-crawl-link">
-              <span class="hero-crawl-title">{ui.homeActionContinueTitle}</span>
-              <span class="hero-crawl-description">{ui.homeActionContinueBody}</span>
-            </Link>
+            <div class="hero-crawl-row">
+              <Link href="/feed" class="hero-crawl-link">
+                <span class="hero-crawl-title">{ui.homeActionContinueTitle}</span>
+              </Link>
+              <p class="hero-crawl-description">{ui.homeActionContinueBody}</p>
+            </div>
 
-            <Link href="/quests/" class="hero-crawl-link">
-              <span class="hero-crawl-title">{ui.homeActionQuestTitle}</span>
-              <span class="hero-crawl-description">{ui.homeActionQuestBody}</span>
-            </Link>
+            <div class="hero-crawl-row">
+              <Link href="/quests/" class="hero-crawl-link">
+                <span class="hero-crawl-title">{ui.homeActionQuestTitle}</span>
+              </Link>
+              <p class="hero-crawl-description">{ui.homeActionQuestBody}</p>
+            </div>
 
-            <Link href="/language-map/" class="hero-crawl-link">
-              <span class="hero-crawl-title">{ui.homeActionReviewTitle}</span>
-              <span class="hero-crawl-description">{ui.homeActionReviewBody}</span>
-            </Link>
+            <div class="hero-crawl-row">
+              <Link href="/language-map/" class="hero-crawl-link">
+                <span class="hero-crawl-title">{ui.homeActionReviewTitle}</span>
+              </Link>
+              <p class="hero-crawl-description">{ui.homeActionReviewBody}</p>
+            </div>
           </div>
         </div>
       </section>
