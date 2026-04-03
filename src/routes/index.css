@@ -118,7 +118,7 @@
 }
 
 .hero-crawl-link {
-  text-decoration: none;
+  text-decoration: none !important;
   display: grid;
   gap: 0.18rem;
   color: inherit;
@@ -147,8 +147,10 @@
 .hero-crawl-link:visited,
 .hero-crawl-link:hover,
 .hero-crawl-link:active,
+.hero-crawl-link:focus,
+.hero-crawl-link:focus-visible,
 .hero-crawl-link * {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .hero-crawl-title,
@@ -171,6 +173,8 @@
   font-size: 0.84rem;
   line-height: 1.38;
   color: rgba(232, 220, 185, 0.78);
+  padding-left: 1.2rem;
+  text-decoration: none !important;
 }
 
 @media (max-width: 760px) {
@@ -232,6 +236,7 @@
 
   .hero-crawl-description {
     font-size: 0.72rem;
+    padding-left: 0.82rem;
   }
 }
 
