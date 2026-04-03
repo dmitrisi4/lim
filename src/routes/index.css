@@ -87,7 +87,7 @@
 .hero-primary-link {
   margin-top: 0.25rem;
   width: fit-content;
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -97,6 +97,15 @@
   font-weight: 800;
   color: #111827;
   background: #ffffff;
+}
+
+.hero-primary-link,
+.hero-primary-link:visited,
+.hero-primary-link:hover,
+.hero-primary-link:active,
+.hero-primary-link:focus,
+.hero-primary-link:focus-visible {
+  text-decoration: none !important;
 }
 
 .hero-secondary-crawl-shell {
@@ -154,6 +163,10 @@
 .hero-crawl-link:focus,
 .hero-crawl-link:focus-visible,
 .hero-crawl-link * {
+  text-decoration: none !important;
+}
+
+.hero-crawl-link .hero-crawl-title {
   text-decoration: none !important;
 }
 
