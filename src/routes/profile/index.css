@@ -36,12 +36,6 @@
   gap: 0.8rem;
 }
 
-@media (max-width: 760px) {
-  .metrics-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .metric-card {
   position: relative;
   overflow: hidden;
@@ -74,7 +68,14 @@
   color: var(--text-1);
 }
 
-.activity-title {
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1rem;
+}
+
+.activity-title,
+.learned-title {
   margin: 0;
   font-size: 0.78rem;
   text-transform: uppercase;
@@ -83,20 +84,28 @@
   font-weight: 700;
 }
 
+.learned-columns {
+  margin-top: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.learned-panel {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.learned-list,
 .activity-list {
-  margin: 0.8rem 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   display: grid;
   gap: 0.6rem;
 }
 
-.activity-empty {
-  margin: 0;
-  color: var(--text-3);
-  font-size: 0.9rem;
-}
-
+.learned-item,
 .activity-item {
   border-radius: 10px;
   border: 1px solid var(--border-soft);
@@ -104,15 +113,46 @@
   padding: 0.72rem 0.82rem;
 }
 
+.learned-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.learned-item-title,
 .activity-item-title {
   margin: 0;
   font-size: 0.91rem;
   font-weight: 700;
   color: var(--text-1);
+  text-transform: capitalize;
 }
 
-.activity-item-meta {
+.learned-item-meta,
+.activity-item-meta,
+.activity-empty {
   margin: 0.24rem 0 0;
   font-size: 0.78rem;
   color: var(--text-3);
+}
+
+.learned-item-score {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--text-1);
+}
+
+.activity-empty {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 960px) {
+  .overview-grid,
+  .learned-columns,
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
 }

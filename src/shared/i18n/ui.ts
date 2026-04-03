@@ -162,7 +162,11 @@ export interface UiCopy {
   profileTitle: string;
   profileSubtitle: string;
   profileRecentActivity: string;
+  profileLearnedMaterial: string;
+  profileLevelOverview: string;
+  profileCategoryOverview: string;
   profileEmptyActivity: string;
+  profileEmptyLearned: string;
   profileDays: string;
   cardCheck: string;
   cardSubmitMatch: string;
@@ -359,7 +363,11 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     profileTitle: "Profile and progress",
     profileSubtitle: "Current learner state from mocked backend.",
     profileRecentActivity: "Recent activity",
+    profileLearnedMaterial: "Learned material",
+    profileLevelOverview: "Current level spread",
+    profileCategoryOverview: "Category mastery",
     profileEmptyActivity: "No activity yet.",
+    profileEmptyLearned: "No learned material recorded yet.",
     profileDays: "days",
     cardCheck: "Check",
     cardSubmitMatch: "Submit match",
@@ -542,7 +550,11 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     profileTitle: "Perfil y progreso",
     profileSubtitle: "Estado actual del usuario desde backend simulado.",
     profileRecentActivity: "Actividad reciente",
+    profileLearnedMaterial: "Material aprendido",
+    profileLevelOverview: "Distribucion por nivel",
+    profileCategoryOverview: "Dominio por categoria",
     profileEmptyActivity: "Sin actividad por ahora.",
+    profileEmptyLearned: "Todavia no hay material aprendido registrado.",
     profileDays: "dias",
     cardCheck: "Comprobar",
     cardSubmitMatch: "Enviar respuesta",
