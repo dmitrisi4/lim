@@ -41,47 +41,49 @@ export default component$(() => {
         </div>
       </div>
 
+      <div class="profile-identity-grid">
+        <div class="activity-panel">
+          <h3 class="activity-title">{ui.profileEstimatedLevel}</h3>
+          <div class="identity-row">
+            <p class="identity-value">{profile.value.learnerProfile.estimatedLevelLabel}</p>
+            <p class="identity-meta">XP {profile.value.progress.xp}</p>
+          </div>
+        </div>
+
+        <div class="activity-panel">
+          <h3 class="activity-title">{ui.profileUnlockedQuests}</h3>
+          <div class="identity-row">
+            <p class="identity-value">{profile.value.learnerProfile.unlockedQuestCount}</p>
+            <p class="identity-meta">{profile.value.learnerProfile.masteredCategories.join(" · ") || "—"}</p>
+          </div>
+        </div>
+      </div>
+
       <div class="overview-grid">
         <div class="activity-panel">
           <h3 class="activity-title">{ui.profileLearnedMaterial}</h3>
           <div class="learned-columns">
             <div class="learned-panel">
-              <p class="learned-title">{ui.profileLevelOverview}</p>
-              <ul class="learned-list">
-                {profile.value.learnedLevels.length === 0 ? (
+              <p class="learned-title">{ui.profileKnownTopics}</p>
+              <ul class="tag-list">
+                {profile.value.learnerProfile.knownTopics.length === 0 ? (
                   <li class="activity-empty">{ui.profileEmptyLearned}</li>
                 ) : (
-                  profile.value.learnedLevels.map((item) => (
-                    <li key={item.level} class="learned-item">
-                      <div>
-                        <p class="learned-item-title">{item.level.toUpperCase()}</p>
-                        <p class="learned-item-meta">
-                          {item.moduleCount} modules · {item.cardCount} cards
-                        </p>
-                      </div>
-                      <p class="learned-item-score">{item.quality ?? 0}%</p>
-                    </li>
+                  profile.value.learnerProfile.knownTopics.map((topic) => (
+                    <li key={topic} class="tag-chip">{topic}</li>
                   ))
                 )}
               </ul>
             </div>
 
             <div class="learned-panel">
-              <p class="learned-title">{ui.profileCategoryOverview}</p>
-              <ul class="learned-list">
-                {profile.value.learnedCategories.length === 0 ? (
+              <p class="learned-title">{ui.profileWeakAreas}</p>
+              <ul class="tag-list tag-list-weak">
+                {profile.value.learnerProfile.weakAreas.length === 0 ? (
                   <li class="activity-empty">{ui.profileEmptyLearned}</li>
                 ) : (
-                  profile.value.learnedCategories.map((item) => (
-                    <li key={item.category} class="learned-item">
-                      <div>
-                        <p class="learned-item-title">{item.category}</p>
-                        <p class="learned-item-meta">
-                          {item.moduleCount} modules · {item.cardCount} cards
-                        </p>
-                      </div>
-                      <p class="learned-item-score">{item.quality ?? 0}%</p>
-                    </li>
+                  profile.value.learnerProfile.weakAreas.map((topic) => (
+                    <li key={topic} class="tag-chip tag-chip-weak">{topic}</li>
                   ))
                 )}
               </ul>
@@ -105,6 +107,52 @@ export default component$(() => {
               ))
             )}
           </ul>
+        </div>
+      </div>
+
+      <div class="activity-panel">
+        <h3 class="activity-title">{ui.profileLevelOverview}</h3>
+        <div class="learned-columns">
+          <div class="learned-panel">
+            <ul class="learned-list">
+              {profile.value.learnedLevels.length === 0 ? (
+                <li class="activity-empty">{ui.profileEmptyLearned}</li>
+              ) : (
+                profile.value.learnedLevels.map((item) => (
+                  <li key={item.level} class="learned-item">
+                    <div>
+                      <p class="learned-item-title">{item.level.toUpperCase()}</p>
+                      <p class="learned-item-meta">
+                        {item.moduleCount} modules · {item.cardCount} cards
+                      </p>
+                    </div>
+                    <p class="learned-item-score">{item.quality ?? 0}%</p>
+                  </li>
+                ))
+              )}
+            </ul>
+          </div>
+
+          <div class="learned-panel">
+            <p class="learned-title">{ui.profileCategoryOverview}</p>
+            <ul class="learned-list">
+              {profile.value.learnedCategories.length === 0 ? (
+                <li class="activity-empty">{ui.profileEmptyLearned}</li>
+              ) : (
+                profile.value.learnedCategories.map((item) => (
+                  <li key={item.category} class="learned-item">
+                    <div>
+                      <p class="learned-item-title">{item.category}</p>
+                      <p class="learned-item-meta">
+                        {item.moduleCount} modules · {item.cardCount} cards
+                      </p>
+                    </div>
+                    <p class="learned-item-score">{item.quality ?? 0}%</p>
+                  </li>
+                ))
+              )}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

@@ -165,6 +165,10 @@ export interface UiCopy {
   profileLearnedMaterial: string;
   profileLevelOverview: string;
   profileCategoryOverview: string;
+  profileEstimatedLevel: string;
+  profileKnownTopics: string;
+  profileWeakAreas: string;
+  profileUnlockedQuests: string;
   profileEmptyActivity: string;
   profileEmptyLearned: string;
   profileDays: string;
@@ -366,6 +370,10 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     profileLearnedMaterial: "Learned material",
     profileLevelOverview: "Current level spread",
     profileCategoryOverview: "Category mastery",
+    profileEstimatedLevel: "Estimated level",
+    profileKnownTopics: "Known topics",
+    profileWeakAreas: "Weak areas",
+    profileUnlockedQuests: "Unlocked quests",
     profileEmptyActivity: "No activity yet.",
     profileEmptyLearned: "No learned material recorded yet.",
     profileDays: "days",
@@ -553,6 +561,10 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     profileLearnedMaterial: "Material aprendido",
     profileLevelOverview: "Distribucion por nivel",
     profileCategoryOverview: "Dominio por categoria",
+    profileEstimatedLevel: "Nivel estimado",
+    profileKnownTopics: "Temas conocidos",
+    profileWeakAreas: "Areas debiles",
+    profileUnlockedQuests: "Misiones desbloqueadas",
     profileEmptyActivity: "Sin actividad por ahora.",
     profileEmptyLearned: "Todavia no hay material aprendido registrado.",
     profileDays: "dias",
