@@ -101,21 +101,19 @@
 
 .hero-secondary-crawl-shell {
   margin-top: 1rem;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 0;
   border: 0;
   background:
     radial-gradient(120% 100% at 50% 0%, rgba(246, 196, 91, 0.08), transparent 56%),
-    linear-gradient(180deg, rgba(20, 18, 30, 0.32), rgba(11, 13, 22, 0));
+    linear-gradient(180deg, rgba(20, 18, 30, 0.2), rgba(11, 13, 22, 0));
   box-shadow: none;
-  padding: 1rem 0.55rem 0.3rem 0.4rem;
+  padding: 0.8rem 0 0.2rem;
 }
 
 .hero-secondary-crawl {
   display: grid;
-  gap: 0.78rem;
-  transform-origin: center top;
-  transform: perspective(780px) rotateX(32deg);
+  gap: 0.7rem;
   font-family: "Exo 2", "Segoe UI", sans-serif;
 }
 
@@ -124,18 +122,25 @@
   display: grid;
   gap: 0.18rem;
   color: inherit;
+  transform-origin: left center;
 }
 
 .hero-crawl-link:nth-child(1) {
-  padding-left: 0.2rem;
+  padding-left: 0.1rem;
+  transform: scale(1);
+  opacity: 1;
 }
 
 .hero-crawl-link:nth-child(2) {
   padding-left: 1rem;
+  transform: scale(0.94);
+  opacity: 0.9;
 }
 
 .hero-crawl-link:nth-child(3) {
   padding-left: 1.9rem;
+  transform: scale(0.88);
+  opacity: 0.8;
 }
 
 .hero-crawl-link,
@@ -197,24 +202,26 @@
 
   .hero-secondary-crawl-shell {
     margin-top: 0.82rem;
-    padding: 0.62rem 0.32rem 0.12rem 0.24rem;
+    padding: 0.52rem 0 0.06rem;
   }
 
   .hero-secondary-crawl {
-    gap: 0.42rem;
-    transform: perspective(640px) rotateX(22deg);
+    gap: 0.38rem;
   }
 
   .hero-crawl-link:nth-child(1) {
-    padding-left: 0.08rem;
+    padding-left: 0.04rem;
+    transform: scale(1);
   }
 
   .hero-crawl-link:nth-child(2) {
-    padding-left: 0.5rem;
+    padding-left: 0.36rem;
+    transform: scale(0.96);
   }
 
   .hero-crawl-link:nth-child(3) {
-    padding-left: 0.9rem;
+    padding-left: 0.72rem;
+    transform: scale(0.92);
   }
 
   .hero-crawl-title {
