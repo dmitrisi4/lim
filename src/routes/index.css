@@ -108,22 +108,34 @@
     radial-gradient(120% 100% at 50% 0%, rgba(246, 196, 91, 0.08), transparent 56%),
     linear-gradient(180deg, rgba(20, 18, 30, 0.32), rgba(11, 13, 22, 0));
   box-shadow: none;
-  padding: 1rem 0 0.2rem;
+  padding: 1rem 0.55rem 0.3rem 0.4rem;
 }
 
 .hero-secondary-crawl {
   display: grid;
-  gap: 0.62rem;
+  gap: 0.78rem;
   transform-origin: center top;
-  transform: perspective(780px) rotateX(26deg);
+  transform: perspective(780px) rotateX(32deg);
   font-family: "Exo 2", "Segoe UI", sans-serif;
 }
 
 .hero-crawl-link {
   text-decoration: none;
   display: grid;
-  gap: 0.14rem;
+  gap: 0.18rem;
   color: inherit;
+}
+
+.hero-crawl-link:nth-child(1) {
+  padding-left: 0.2rem;
+}
+
+.hero-crawl-link:nth-child(2) {
+  padding-left: 1rem;
+}
+
+.hero-crawl-link:nth-child(3) {
+  padding-left: 1.9rem;
 }
 
 .hero-crawl-link,
@@ -140,19 +152,19 @@
 }
 
 .hero-crawl-title {
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   line-height: 1.18;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.045em;
   text-transform: uppercase;
   color: rgba(255, 220, 132, 0.96);
   text-shadow: 0 0 18px rgba(246, 196, 91, 0.18);
 }
 
 .hero-crawl-description {
-  font-size: 0.76rem;
-  line-height: 1.36;
-  color: rgba(232, 220, 185, 0.72);
+  font-size: 0.84rem;
+  line-height: 1.38;
+  color: rgba(232, 220, 185, 0.78);
 }
 
 @media (max-width: 760px) {
@@ -185,21 +197,33 @@
 
   .hero-secondary-crawl-shell {
     margin-top: 0.82rem;
-    padding: 0.62rem 0 0.12rem;
+    padding: 0.62rem 0.32rem 0.12rem 0.24rem;
   }
 
   .hero-secondary-crawl {
-    gap: 0.46rem;
-    transform: perspective(640px) rotateX(18deg);
+    gap: 0.42rem;
+    transform: perspective(640px) rotateX(22deg);
+  }
+
+  .hero-crawl-link:nth-child(1) {
+    padding-left: 0.08rem;
+  }
+
+  .hero-crawl-link:nth-child(2) {
+    padding-left: 0.5rem;
+  }
+
+  .hero-crawl-link:nth-child(3) {
+    padding-left: 0.9rem;
   }
 
   .hero-crawl-title {
-    font-size: 0.78rem;
+    font-size: 0.84rem;
     letter-spacing: 0.035em;
   }
 
   .hero-crawl-description {
-    font-size: 0.68rem;
+    font-size: 0.72rem;
   }
 }
 
