@@ -162,7 +162,15 @@ export interface UiCopy {
   profileTitle: string;
   profileSubtitle: string;
   profileRecentActivity: string;
+  profileLearnedMaterial: string;
+  profileLevelOverview: string;
+  profileCategoryOverview: string;
+  profileEstimatedLevel: string;
+  profileKnownTopics: string;
+  profileWeakAreas: string;
+  profileUnlockedQuests: string;
   profileEmptyActivity: string;
+  profileEmptyLearned: string;
   profileDays: string;
   cardCheck: string;
   cardSubmitMatch: string;
@@ -359,7 +367,15 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     profileTitle: "Profile and progress",
     profileSubtitle: "Current learner state from mocked backend.",
     profileRecentActivity: "Recent activity",
+    profileLearnedMaterial: "Learned material",
+    profileLevelOverview: "Current level spread",
+    profileCategoryOverview: "Category mastery",
+    profileEstimatedLevel: "Estimated level",
+    profileKnownTopics: "Known topics",
+    profileWeakAreas: "Weak areas",
+    profileUnlockedQuests: "Unlocked quests",
     profileEmptyActivity: "No activity yet.",
+    profileEmptyLearned: "No learned material recorded yet.",
     profileDays: "days",
     cardCheck: "Check",
     cardSubmitMatch: "Submit match",
@@ -542,7 +558,15 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     profileTitle: "Perfil y progreso",
     profileSubtitle: "Estado actual del usuario desde backend simulado.",
     profileRecentActivity: "Actividad reciente",
+    profileLearnedMaterial: "Material aprendido",
+    profileLevelOverview: "Distribucion por nivel",
+    profileCategoryOverview: "Dominio por categoria",
+    profileEstimatedLevel: "Nivel estimado",
+    profileKnownTopics: "Temas conocidos",
+    profileWeakAreas: "Areas debiles",
+    profileUnlockedQuests: "Misiones desbloqueadas",
     profileEmptyActivity: "Sin actividad por ahora.",
+    profileEmptyLearned: "Todavia no hay material aprendido registrado.",
     profileDays: "dias",
     cardCheck: "Comprobar",
     cardSubmitMatch: "Enviar respuesta",
