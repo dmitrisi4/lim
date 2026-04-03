@@ -101,8 +101,11 @@
   margin-top: 1rem;
   overflow: hidden;
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(246, 196, 91, 0.18);
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(246, 196, 91, 0.08), transparent 56%),
+    linear-gradient(180deg, rgba(20, 18, 30, 0.62), rgba(11, 13, 22, 0.28));
+  box-shadow: inset 0 1px 0 rgba(255, 240, 204, 0.05);
   padding: 1rem 1rem 0.8rem;
 }
 
@@ -111,6 +114,7 @@
   gap: 0.62rem;
   transform-origin: center top;
   transform: perspective(780px) rotateX(26deg);
+  font-family: "Orbitron", "Rajdhani", "Exo 2", "Segoe UI", sans-serif;
 }
 
 .hero-crawl-link {
@@ -134,16 +138,19 @@
 }
 
 .hero-crawl-title {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   line-height: 1.18;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.86);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 220, 132, 0.96);
+  text-shadow: 0 0 18px rgba(246, 196, 91, 0.18);
 }
 
 .hero-crawl-description {
   font-size: 0.76rem;
-  line-height: 1.34;
-  color: rgba(188, 198, 220, 0.72);
+  line-height: 1.36;
+  color: rgba(232, 220, 185, 0.72);
 }
 
 @media (max-width: 760px) {
@@ -185,11 +192,12 @@
   }
 
   .hero-crawl-title {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.035em;
   }
 
   .hero-crawl-description {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
   }
 }
 
