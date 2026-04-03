@@ -29,7 +29,7 @@ export default component$(() => {
           <span class="hero-primary-kicker">Recommended first step</span>
           <h3 class="hero-primary-title">{ui.homeActionPlacementTitle}</h3>
           <p class="hero-primary-body">{ui.homeActionPlacementBody}</p>
-          <Link href="/profile" class="hero-primary-link">
+          <Link href="/profile" class="hero-primary-link" style={{ textDecoration: "none" }}>
             {ui.homeActionPlacementTitle}
           </Link>
         </div>
@@ -37,21 +37,21 @@ export default component$(() => {
         <div class="hero-secondary-crawl-shell">
           <div class="hero-secondary-crawl">
             <div class="hero-crawl-row">
-              <Link href="/feed" class="hero-crawl-link">
+              <Link href="/feed" class="hero-crawl-link" style={{ textDecoration: "none" }}>
                 <span class="hero-crawl-title">{ui.homeActionContinueTitle}</span>
               </Link>
               <p class="hero-crawl-description">{ui.homeActionContinueBody}</p>
             </div>
 
             <div class="hero-crawl-row">
-              <Link href="/quests/" class="hero-crawl-link">
+              <Link href="/quests/" class="hero-crawl-link" style={{ textDecoration: "none" }}>
                 <span class="hero-crawl-title">{ui.homeActionQuestTitle}</span>
               </Link>
               <p class="hero-crawl-description">{ui.homeActionQuestBody}</p>
             </div>
 
             <div class="hero-crawl-row">
-              <Link href="/language-map/" class="hero-crawl-link">
+              <Link href="/language-map/" class="hero-crawl-link" style={{ textDecoration: "none" }}>
                 <span class="hero-crawl-title">{ui.homeActionReviewTitle}</span>
               </Link>
               <p class="hero-crawl-description">{ui.homeActionReviewBody}</p>
