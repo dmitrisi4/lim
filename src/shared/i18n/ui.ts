@@ -22,6 +22,14 @@ export interface UiCopy {
   homeOpenLanguageMap: string;
   homeOpenQuests: string;
   homeOpenProfile: string;
+  homeActionPlacementTitle: string;
+  homeActionPlacementBody: string;
+  homeActionContinueTitle: string;
+  homeActionContinueBody: string;
+  homeActionQuestTitle: string;
+  homeActionQuestBody: string;
+  homeActionReviewTitle: string;
+  homeActionReviewBody: string;
   homeOverviewTitle: string;
   homeOverviewSubtitle: string;
   homeOverviewLevels: string;
@@ -211,6 +219,14 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     homeOpenLanguageMap: "Open language map",
     homeOpenQuests: "Open quests",
     homeOpenProfile: "Open profile",
+    homeActionPlacementTitle: "Start test",
+    homeActionPlacementBody: "Take a quick placement test so Lim can estimate your level and unlock relevant progress paths.",
+    homeActionContinueTitle: "Continue learning",
+    homeActionContinueBody: "Jump back into your feed with the next batch of cards and interactions.",
+    homeActionQuestTitle: "Resume quest",
+    homeActionQuestBody: "Open quests that match your current progress and the topics you already know.",
+    homeActionReviewTitle: "Review weak areas",
+    homeActionReviewBody: "Revisit vocabulary and language-map topics that need reinforcement.",
     homeOverviewTitle: "Learning map",
     homeOverviewSubtitle: "Levels and categories use the same data source as your feed, including answer quality.",
     homeOverviewLevels: "Levels",
@@ -386,6 +402,14 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     homeOpenLanguageMap: "Abrir mapa",
     homeOpenQuests: "Abrir misiones",
     homeOpenProfile: "Abrir perfil",
+    homeActionPlacementTitle: "Empezar test",
+    homeActionPlacementBody: "Haz una prueba corta para que Lim estime tu nivel y desbloquee rutas de progreso relevantes.",
+    homeActionContinueTitle: "Seguir aprendiendo",
+    homeActionContinueBody: "Vuelve al feed y continúa con la siguiente tanda de tarjetas e interacciones.",
+    homeActionQuestTitle: "Reanudar mision",
+    homeActionQuestBody: "Abre misiones alineadas con tu progreso actual y con lo que ya sabes.",
+    homeActionReviewTitle: "Repasar puntos debiles",
+    homeActionReviewBody: "Vuelve a vocabulario y mapa de idioma para reforzar temas flojos.",
     homeOverviewTitle: "Mapa de aprendizaje",
     homeOverviewSubtitle: "Niveles y categorias con la misma fuente de datos del feed y calidad de respuestas.",
     homeOverviewLevels: "Niveles",
