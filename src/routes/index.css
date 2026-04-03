@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -114,7 +116,7 @@
   gap: 0.62rem;
   transform-origin: center top;
   transform: perspective(780px) rotateX(26deg);
-  font-family: "Orbitron", "Rajdhani", "Exo 2", "Segoe UI", sans-serif;
+  font-family: "Exo 2", "Segoe UI", sans-serif;
 }
 
 .hero-crawl-link {
