@@ -34,21 +34,23 @@ export default component$(() => {
           </Link>
         </div>
 
-        <div class="hero-secondary-actions">
-          <Link href="/feed" class="hero-mini-action">
-            <span class="hero-mini-title">{ui.homeActionContinueTitle}</span>
-            <span class="hero-mini-body">{ui.homeActionContinueBody}</span>
-          </Link>
+        <div class="hero-secondary-crawl-shell">
+          <div class="hero-secondary-crawl">
+            <Link href="/feed" class="hero-crawl-link">
+              <span class="hero-crawl-title">{ui.homeActionContinueTitle}</span>
+              <span class="hero-crawl-description">{ui.homeActionContinueBody}</span>
+            </Link>
 
-          <Link href="/quests/" class="hero-mini-action">
-            <span class="hero-mini-title">{ui.homeActionQuestTitle}</span>
-            <span class="hero-mini-body">{ui.homeActionQuestBody}</span>
-          </Link>
+            <Link href="/quests/" class="hero-crawl-link">
+              <span class="hero-crawl-title">{ui.homeActionQuestTitle}</span>
+              <span class="hero-crawl-description">{ui.homeActionQuestBody}</span>
+            </Link>
 
-          <Link href="/language-map/" class="hero-mini-action">
-            <span class="hero-mini-title">{ui.homeActionReviewTitle}</span>
-            <span class="hero-mini-body">{ui.homeActionReviewBody}</span>
-          </Link>
+            <Link href="/language-map/" class="hero-crawl-link">
+              <span class="hero-crawl-title">{ui.homeActionReviewTitle}</span>
+              <span class="hero-crawl-description">{ui.homeActionReviewBody}</span>
+            </Link>
+          </div>
         </div>
       </section>
 

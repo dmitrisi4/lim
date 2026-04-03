@@ -25,7 +25,7 @@
 
 .hero-copy,
 .hero-primary-action,
-.hero-secondary-actions {
+.hero-secondary-crawl-shell {
   position: relative;
   z-index: 1;
 }
@@ -97,50 +97,53 @@
   background: #ffffff;
 }
 
-.hero-secondary-actions {
-  margin-top: 0.78rem;
-  display: grid;
-  gap: 0.18rem;
-  padding-top: 0.08rem;
+.hero-secondary-crawl-shell {
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  padding: 1rem 1rem 0.8rem;
 }
 
-.hero-mini-action {
+.hero-secondary-crawl {
+  display: grid;
+  gap: 0.62rem;
+  transform-origin: center top;
+  transform: perspective(780px) rotateX(26deg);
+}
+
+.hero-crawl-link {
   text-decoration: none;
   display: grid;
-  gap: 0.18rem;
-  padding: 0.42rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  color: var(--text-2);
-  opacity: 0.88;
+  gap: 0.14rem;
+  color: inherit;
 }
 
-.hero-mini-action,
-.hero-mini-action:visited,
-.hero-mini-action:hover,
-.hero-mini-action:active,
-.hero-mini-action * {
+.hero-crawl-link,
+.hero-crawl-link:visited,
+.hero-crawl-link:hover,
+.hero-crawl-link:active,
+.hero-crawl-link * {
   text-decoration: none;
 }
 
-.hero-mini-action > span {
+.hero-crawl-title,
+.hero-crawl-description {
   display: block;
 }
 
-.hero-mini-action:last-child {
-  border-bottom: 0;
+.hero-crawl-title {
+  font-size: 0.9rem;
+  line-height: 1.18;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.86);
 }
 
-.hero-mini-title {
-  font-size: 0.82rem;
-  line-height: 1.16;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-.hero-mini-body {
-  font-size: 0.74rem;
-  line-height: 1.3;
-  color: rgba(180, 190, 210, 0.72);
+.hero-crawl-description {
+  font-size: 0.76rem;
+  line-height: 1.34;
+  color: rgba(188, 198, 220, 0.72);
 }
 
 @media (max-width: 760px) {
@@ -171,21 +174,22 @@
     width: 100%;
   }
 
-  .hero-secondary-actions {
-    gap: 0.14rem;
+  .hero-secondary-crawl-shell {
+    margin-top: 0.82rem;
+    padding: 0.74rem 0.82rem 0.62rem;
   }
 
-  .hero-mini-action {
-    padding: 0.44rem 0;
-    gap: 0.16rem;
+  .hero-secondary-crawl {
+    gap: 0.46rem;
+    transform: perspective(640px) rotateX(18deg);
   }
 
-  .hero-mini-title {
-    font-size: 0.78rem;
+  .hero-crawl-title {
+    font-size: 0.8rem;
   }
 
-  .hero-mini-body {
-    font-size: 0.72rem;
+  .hero-crawl-description {
+    font-size: 0.7rem;
   }
 }
 
