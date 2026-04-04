@@ -19,13 +19,10 @@ export function calcRewardPreview(card: Card, answer?: string): RewardPreview {
   }
 
   if (!answer) {
-    return { xp: Math.max(5, Math.floor(base / 2)), correct: false };
+    return { xp: base, correct: false };
   }
 
   const correct = normalizeAnswer(answer) === normalizeAnswer(expected);
 
-  return {
-    xp: correct ? base : Math.max(5, Math.floor(base / 2)),
-    correct
-  };
+  return { xp: base, correct };
 }

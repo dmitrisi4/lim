@@ -10,6 +10,8 @@ import { toBeBasicsModule } from "~/slides/modules/a1/grammar/to-be-basics.modul
 import { classroomListeningModule } from "~/slides/modules/a1/listening/classroom.module";
 import { listeningNumbersModule } from "~/slides/modules/a1/listening/numbers.module";
 import { citySignsReadingModule } from "~/slides/modules/a1/reading/city-signs.module";
+import { storyDailyLifeModule } from "~/slides/modules/a1/reading/story-daily-life.module";
+import { conversationManagementModule } from "~/slides/modules/a1/speaking/conversation-management.module";
 import { introductionsSpeakingModule } from "~/slides/modules/a1/speaking/introductions.module";
 import { smallTalkModule } from "~/slides/modules/a1/speaking/small-talk.module";
 import { colorsFamilyVocabularyModule } from "~/slides/modules/a1/vocabulary/colors-family.module";
@@ -36,7 +38,9 @@ const slideModulesByLevel: Record<EnglishLevel, SlideModule[]> = {
     classroomListeningModule,
     smallTalkModule,
     introductionsSpeakingModule,
-    citySignsReadingModule
+    conversationManagementModule,
+    citySignsReadingModule,
+    storyDailyLifeModule
   ],
   a2: [],
   b1: [workVocabularyModule],
