@@ -19,7 +19,7 @@ export const tenerLlamarseModule: SlideModule = {
         focusMode: "rule_examples",
         slides: [
           "Tener: tengo, tienes, tiene, tenemos, tienen.||Базовые формы tener",
-          "Edad: Tengo 20 anos.||В испанском возраст выражают через tener",
+          "Edad: Tengo 20 años.||В испанском возраст выражают через tener",
           "Posesion: Tengo un libro nuevo.||У меня есть новая книга",
           "Estado fisico: Tengo hambre / Tengo sed.||Я голоден / хочу пить",
           "Llamarse: me llamo, te llamas, se llama, nos llamamos, se llaman.||Возвратный глагол для имени",
@@ -31,12 +31,12 @@ export const tenerLlamarseModule: SlideModule = {
       reward: { xp: 13 }
     },
     {
-      id: "quiz-tengo-anos",
+      id: "quiz-tengo-años",
       type: "quiz",
       title: "Hablar de edad",
       description: "Выбери правильную форму для возраста.",
       interaction: {
-        prompt: "Yo ___ 25 anos.||Мне 25 лет",
+        prompt: "Yo ___ 25 años.||Мне 25 лет",
         options: [
           "tengo||Верно: возраст выражаем через tener",
           "soy||Неверно: soy не для возраста",
@@ -86,11 +86,11 @@ export const tenerLlamarseModule: SlideModule = {
       interaction: {
         prompt: "Elige la mejor presentacion:||Выбери лучший вариант представления",
         options: [
-          "Me llamo Ivan y tengo 27 anos.||Верно: имя + возраст",
-          "Soy Ivan y estoy 27 anos.||Неверно: возраст",
+          "Me llamo Ivan y tengo 27 años.||Верно: имя + возраст",
+          "Soy Ivan y estoy 27 años.||Неверно: возраст",
           "Llamo Ivan y tengo de 27.||Неверная грамматика"
         ],
-        correctAnswer: "Me llamo Ivan y tengo 27 anos."
+        correctAnswer: "Me llamo Ivan y tengo 27 años."
       },
       reward: { xp: 24 }
     },

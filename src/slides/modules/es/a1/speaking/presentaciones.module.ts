@@ -4,7 +4,7 @@ export const presentacionesSpeakingModule: SlideModule = {
   meta: {
     id: "es.speaking.presentaciones",
     title: "Presentaciones",
-    description: "Dialogos cortos para presentarte en espanol",
+    description: "Diálogos cortos para presentarte en español",
     level: "a1",
     category: "speaking",
     ruleTags: ["presentaciones", "small_talk", "fluency"]
