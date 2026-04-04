@@ -33,7 +33,7 @@ export const presenteBasicoModule: SlideModule = {
       title: "Conjugacion de hablar",
       description: "Подбери форму для nosotros в привычном действии.",
       interaction: {
-        prompt: "Nosotros ___ espanol todos los dias.||Мы говорим по-испански каждый день",
+        prompt: "Nosotros ___ español todos los dias.||Мы говорим по-испански каждый день",
         options: [
           "hablamos||Верно: nosotros + -amos",
           "habla||Неверно: это форма el/ella",
@@ -49,7 +49,7 @@ export const presenteBasicoModule: SlideModule = {
       title: "Conjugacion de beber",
       description: "Проверь форму для tu в ежедневной рутине.",
       interaction: {
-        prompt: "Tu ___ cafe por la manana.||Ты пьешь кофе утром",
+        prompt: "Tu ___ cafe por la mañana.||Ты пьешь кофе утром",
         options: [
           "bebo||Неверно: это форма yo",
           "bebes||Верно: tu + -es",

@@ -3,8 +3,8 @@ import type { SlideModule } from "~/slides/core/types";
 export const coloresDiasTiempoVocabularyModule: SlideModule = {
   meta: {
     id: "es.vocabulary.colores-dias-tiempo",
-    title: "Vocabulario: Colores, Dias y Tiempo",
-    description: "Palabras esenciales A1 para colores, dias de la semana y expresiones de tiempo",
+    title: "Vocabulario: Colores, Días y Tiempo",
+    description: "Palabras esenciales A1 para colores, días de la semana y expresiones de tiempo",
     level: "a1",
     category: "vocabulary",
     ruleTags: ["colores", "dias_semana", "tiempo", "vocabulario_basico"]
@@ -20,11 +20,11 @@ export const coloresDiasTiempoVocabularyModule: SlideModule = {
         slides: [
           "Colores: rojo, azul, verde, blanco, negro, amarillo.||Базовые цвета",
           "Ejemplo: Tengo una camisa azul.||У меня синяя рубашка",
-          "Dias: lunes, martes, miercoles, jueves, viernes, sabado, domingo.||Дни недели",
-          "Hoy es lunes. Manana es martes.||Сегодня понедельник, завтра вторник",
-          "Tiempo: hoy, manana, ayer, ahora, tarde, temprano.||Маркер времени",
+          "Días: lunes, martes, miércoles, jueves, viernes, sábado, domingo.||Дни недели",
+          "Hoy es lunes. Mañana es martes.||Сегодня понедельник, завтра вторник",
+          "Tiempo: hoy, mañana, ayer, ahora, tarde, temprano.||Маркер времени",
           "Hora: a las ocho, a las cinco y media.||Как говорить время встречи",
-          "Rutina: El viernes estudio y el sabado descanso.||Пример с днями и планом"
+          "Rutina: El viernes estudio y el sábado descanso.||Пример с днями и планом"
         ]
       },
       reward: { xp: 13 }
@@ -32,10 +32,10 @@ export const coloresDiasTiempoVocabularyModule: SlideModule = {
     {
       id: "quiz-manana-martes",
       type: "quiz",
-      title: "Dias consecutivos",
+      title: "Días consecutivos",
       description: "Проверь базовый порядок дней недели.",
       interaction: {
-        prompt: "Hoy es lunes. Manana es ___.||Сегодня понедельник. Завтра ___",
+        prompt: "Hoy es lunes. Mañana es ___.||Сегодня понедельник. Завтра ___",
         options: [
           "martes||Верно",
           "domingo||Это не следующий день",
@@ -55,7 +55,7 @@ export const coloresDiasTiempoVocabularyModule: SlideModule = {
         options: [
           "azul||Верно",
           "lunes||Это день, не цвет",
-          "manana||Это маркер времени"
+          "mañana||Это маркер времени"
         ],
         correctAnswer: "azul"
       },
@@ -69,11 +69,11 @@ export const coloresDiasTiempoVocabularyModule: SlideModule = {
       interaction: {
         prompt: "Quieres decir que estudias el jueves por la tarde.||Нужно сказать, что ты учишься в четверг днем",
         options: [
-          "El jueves por la tarde estudio espanol.||Верно",
+          "El jueves por la tarde estudio español.||Верно",
           "Jueves estudiar tarde yo.||Неверный порядок слов",
           "El color jueves es azul.||Не по смыслу"
         ],
-        correctAnswer: "El jueves por la tarde estudio espanol."
+        correctAnswer: "El jueves por la tarde estudio español."
       },
       reward: { xp: 24 }
     },
@@ -99,10 +99,10 @@ export const coloresDiasTiempoVocabularyModule: SlideModule = {
       title: "Orden de la semana",
       description: "Понимание последовательности дней в речи.",
       interaction: {
-        prompt: "Que dia viene despues de jueves?||Какой день идет после четверга?",
+        prompt: "¿Qué día viene después de jueves?||Какой день идет после четверга?",
         options: [
           "viernes||Верно",
-          "miercoles||Это день до четверга",
+          "miércoles||Это день до четверга",
           "martes||Это еще раньше"
         ],
         correctAnswer: "viernes"

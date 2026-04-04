@@ -32,7 +32,7 @@ export const smallTalkModule: SlideModule = {
       interaction: {
         prompt: "Colleague: 'How was your weekend?'",
         options: [
-          "I was completing mandatory household operations.",
+          "I stayed home and didn't really do much.",
           "It was great, I finally watched that movie everyone talks about.",
           "Weekend is a social construct."
         ],

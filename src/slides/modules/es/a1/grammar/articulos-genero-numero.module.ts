@@ -20,7 +20,7 @@ export const articulosGeneroNumeroModule: SlideModule = {
         slides: [
           "Regla: usa el/la/los/las para algo especifico.||Определенный артикль: говорим о конкретном объекте",
           "El libro esta en la mochila.||Конкретная книга уже понятна собеседнику",
-          "La mesa de la cocina es pequena.||Конкретный стол на кухне",
+          "La mesa de la cocina es pequeña.||Конкретный стол на кухне",
           "Los libros de Ana son nuevos.||Конкретные книги Аны"
         ]
       },
@@ -93,7 +93,7 @@ export const articulosGeneroNumeroModule: SlideModule = {
       payload: {
         focusMode: "rule_examples",
         slides: [
-          "Regla: +s despues de vocal, +es despues de consonante.||Главное правило множественного числа",
+          "Regla: +s después de vocal, +es después de consonante.||Главное правило множественного числа",
           "casa -> casas, libro -> libros.||После гласной добавляем -s",
           "papel -> papeles, color -> colores.||После согласной добавляем -es",
           "Articulo tambien cambia: el -> los, la -> las.||Артикль должен согласоваться"
@@ -146,7 +146,7 @@ export const articulosGeneroNumeroModule: SlideModule = {
           "Regla: sustantivo y adjetivo deben coincidir.||Согласуем род и число",
           "el libro rojo / la casa roja.||Мужской и женский род",
           "los libros rojos / las casas rojas.||Множественное число",
-          "Primero el sustantivo, despues el adjetivo.||Базовый порядок в A1"
+          "Primero el sustantivo, después el adjetivo.||Базовый порядок в A1"
         ]
       },
       interaction: {

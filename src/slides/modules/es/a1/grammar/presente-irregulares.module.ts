@@ -23,11 +23,11 @@ export const presenteIrregularesModule: SlideModule = {
           "Marco: Presente de indicativo. Cambia por persona gramatical (yo/tu/el/nosotros/ellos), no por genero.||Это изменение по лицам, а не по роду",
           "Querer: quiero, quieres, quiere, queremos, quieren.||e -> ie (кроме nosotros)",
           "Poder: puedo, puedes, puede, podemos, pueden.||o -> ue (кроме nosotros)",
-          "Quiero aprender espanol.||Я хочу учить испанский",
+          "Quiero aprender español.||Я хочу учить испанский",
           "No puedo venir hoy.||Я не могу прийти сегодня",
           "Nosotros queremos / podemos.||Форма nosotros без изменения корня",
           "Quieres tomar cafe?||Ты хочешь выпить кофе?",
-          "Podemos hablar despues?||Мы можем поговорить позже?",
+          "Podemos hablar después?||Мы можем поговорить позже?",
           "No quieren estudiar hoy.||Они не хотят учиться сегодня"
         ]
       },
@@ -55,7 +55,7 @@ export const presenteIrregularesModule: SlideModule = {
       title: "Uso de poder",
       description: "Подбери форму для ellos.",
       interaction: {
-        prompt: "Ellos ___ estudiar manana.||Они могут учиться завтра",
+        prompt: "Ellos ___ estudiar mañana.||Они могут учиться завтра",
         options: [
           "pueden||Верно: ellos + pueden",
           "podemos||Форма nosotros",

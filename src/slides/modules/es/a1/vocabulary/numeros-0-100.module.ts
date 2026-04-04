@@ -3,8 +3,8 @@ import type { SlideModule } from "~/slides/core/types";
 export const numeros0100VocabularyModule: SlideModule = {
   meta: {
     id: "es.vocabulary.numeros-0-100",
-    title: "Vocabulario: Numeros 0-100",
-    description: "Sistema base de numeros para A1 (edad, precio, hora, telefono)",
+    title: "Vocabulario: Números 0-100",
+    description: "Sistema base de números para A1 (edad, precio, hora, teléfono)",
     level: "a1",
     category: "vocabulary",
     ruleTags: ["numeros", "0_100", "vocabulario_basico", "tiempo"]
@@ -20,12 +20,12 @@ export const numeros0100VocabularyModule: SlideModule = {
         slides: [
           "0-10: cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez.||База, с которой начинается все",
           "11-15: once, doce, trece, catorce, quince.||Часто встречаются в возрасте и времени",
-          "16-19: dieciseis, diecisiete, dieciocho, diecinueve.||Формы через dieci-",
-          "20: veinte; 21-29: veintiuno, veintidos, veintitres...||Диапазон 20-29 имеет слитное написание",
+          "16-19: dieciséis, diecisiete, dieciocho, diecinueve.||Формы через dieci-",
+          "20: veinte; 21-29: veintiuno, veintidós, veintitrés...||Диапазон 20-29 имеет слитное написание",
           "Decenas: treinta, cuarenta, cincuenta, sesenta, setenta, ochenta, noventa.||Десятки",
           "31-99: treinta y uno, cuarenta y cinco, noventa y nueve.||После 30: десяток + y + единицы",
           "100: cien.||Сто",
-          "Contexto: Tengo 24 anos / Cuesta 58 euros / Son las 9:30.||Возраст, цена и время"
+          "Contexto: Tengo 24 años / Cuesta 58 euros / Son las 9:30.||Возраст, цена и время"
         ]
       },
       reward: { xp: 14 }
@@ -84,7 +84,7 @@ export const numeros0100VocabularyModule: SlideModule = {
       title: "Edad en contexto",
       description: "Используй число в фразе про возраст.",
       interaction: {
-        prompt: "Tengo ___ anos. (32)||Мне 32 года",
+        prompt: "Tengo ___ años. (32)||Мне 32 года",
         options: [
           "treinta y dos||Верно",
           "trece y dos||Неверная форма",
