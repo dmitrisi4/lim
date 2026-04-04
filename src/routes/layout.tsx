@@ -59,9 +59,23 @@ export default component$(() => {
     mobileMenuOpen.value = false;
   });
 
-  useVisibleTask$(({ track }) => {
+  useVisibleTask$(({ track, cleanup }) => {
     track(() => mobileMenuOpen.value);
+
+    const MOBILE_BREAKPOINT = 780;
+
+    const onResize = () => {
+      if (window.innerWidth > MOBILE_BREAKPOINT && mobileMenuOpen.value) {
+        mobileMenuOpen.value = false;
+      }
+    };
+
     document.body.style.overflow = mobileMenuOpen.value ? "hidden" : "";
+    window.addEventListener("resize", onResize);
+    cleanup(() => {
+      window.removeEventListener("resize", onResize);
+      document.body.style.overflow = "";
+    });
   });
 
   const homeActive = location.url.pathname === "/";
