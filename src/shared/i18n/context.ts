@@ -1,8 +1,9 @@
 import { createContextId, useContext } from "@builder.io/qwik";
-import type { LearningLanguage, UiCopy } from "~/shared/i18n/ui";
+import type { LearningLanguage, UiCopy, UiLanguage } from "~/shared/i18n/ui";
 
 export interface I18nContextValue {
   language: LearningLanguage;
+  uiLanguage: UiLanguage;
   ui: UiCopy;
 }
 

@@ -69,7 +69,7 @@ export default component$(() => {
 		};
 		window.addEventListener("storage", onStorage);
 		cleanup(() => window.removeEventListener("storage", onStorage));
-	});
+	}, { strategy: "document-ready" });
 
 	useVisibleTask$(({ cleanup }) => {
 		completedCardProgress.value = readCompletedCardProgress();
@@ -81,7 +81,7 @@ export default component$(() => {
 		};
 		window.addEventListener("storage", onStorage);
 		cleanup(() => window.removeEventListener("storage", onStorage));
-	});
+	}, { strategy: "document-ready" });
 
 	useVisibleTask$(({ track }) => {
 		track(() => showUnlearnedOnly.value);
@@ -175,7 +175,8 @@ export default component$(() => {
 			});
 
 			return response;
-		} catch (_error) {
+		} catch (error) {
+			console.error("[language-map chat]", error);
 			return null;
 		} finally {
 			chatPending.value = false;

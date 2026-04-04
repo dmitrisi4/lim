@@ -1,11 +1,15 @@
-import { $, component$, Slot, useContextProvider, useSignal, useStylesScoped$ } from "@builder.io/qwik";
+import { $, component$, Slot, useContextProvider, useSignal, useStylesScoped$, useVisibleTask$ } from "@builder.io/qwik";
 import { Link, routeLoader$, useLocation } from "@builder.io/qwik-city";
 import { I18N_CONTEXT } from "~/shared/i18n/context";
 import {
   LEARNING_LANGUAGE_COOKIE,
   LEARNING_LANGUAGE_OPTIONS,
+  UI_LANGUAGE_COOKIE,
+  UI_LANGUAGE_OPTIONS,
   buildLanguageHref,
+  buildUiLanguageHref,
   detectLearningLanguage,
+  detectUiLanguage,
   getUiCopy
 } from "~/shared/i18n/ui";
 import styles from "~/routes/layout.css?inline";
@@ -19,17 +23,20 @@ const mobileMenuLabelClass = (active: boolean) => (active ? "mobile-menu-item-la
 export const useLanguageLoader = routeLoader$(({ cookie, url }) => {
   const cookieLanguage = cookie.get(LEARNING_LANGUAGE_COOKIE)?.value;
   const language = detectLearningLanguage(url, cookieLanguage);
-
   if (cookieLanguage !== language) {
-    cookie.set(LEARNING_LANGUAGE_COOKIE, language, {
-      path: "/",
-      maxAge: 60 * 60 * 24 * 365
-    });
+    cookie.set(LEARNING_LANGUAGE_COOKIE, language, { path: "/", maxAge: 60 * 60 * 24 * 365 });
+  }
+
+  const cookieUiLanguage = cookie.get(UI_LANGUAGE_COOKIE)?.value;
+  const uiLanguage = detectUiLanguage(url, cookieUiLanguage);
+  if (cookieUiLanguage !== uiLanguage) {
+    cookie.set(UI_LANGUAGE_COOKIE, uiLanguage, { path: "/", maxAge: 60 * 60 * 24 * 365 });
   }
 
   return {
     language,
-    ui: getUiCopy(language)
+    uiLanguage,
+    ui: getUiCopy(uiLanguage)
   };
 });
 
@@ -41,6 +48,7 @@ export default component$(() => {
 
   const ui = i18n.value.ui;
   const currentLanguage = i18n.value.language;
+  const currentUiLanguage = i18n.value.uiLanguage;
   const mobileMenuOpen = useSignal(false);
 
   const openMobileMenu = $(() => {
@@ -49,6 +57,11 @@ export default component$(() => {
 
   const closeMobileMenu = $(() => {
     mobileMenuOpen.value = false;
+  });
+
+  useVisibleTask$(({ track }) => {
+    track(() => mobileMenuOpen.value);
+    document.body.style.overflow = mobileMenuOpen.value ? "hidden" : "";
   });
 
   const homeActive = location.url.pathname === "/";
@@ -96,6 +109,24 @@ export default component$(() => {
             </div>
           </div>
 
+          <div class="mobile-menu-language" aria-label={ui.uiLanguageControlTitle}>
+            <span class="mobile-menu-language-label">{ui.uiLanguageControlShort}</span>
+            <div class="mobile-menu-language-row">
+              {UI_LANGUAGE_OPTIONS.map((option) => (
+                <Link
+                  key={`mobile-ui-lang-${option.code}`}
+                  href={buildUiLanguageHref(location.url, option.code)}
+                  class={languageChipClass(option.code === currentUiLanguage)}
+                  aria-current={option.code === currentUiLanguage ? "page" : undefined}
+                  onClick$={closeMobileMenu}
+                >
+                  <span class="language-chip-code">{option.code.toUpperCase()}</span>
+                  <span>{option.nativeName}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
           <nav class="mobile-menu-list" aria-label="Main">
             <a href="/" class={mobileMenuItemClass(homeActive)} aria-current={homeActive ? "page" : undefined} onClick$={closeMobileMenu}><span class="mobile-menu-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="presentation"><path d="M3.75 10.5 12 3.75l8.25 6.75v8.25a1.5 1.5 0 0 1-1.5 1.5h-4.5v-6h-4.5v6h-4.5a1.5 1.5 0 0 1-1.5-1.5z" /></svg></span><span class={mobileMenuLabelClass(homeActive)}>{ui.navHome}</span></a>
             <a href="/feed" class={mobileMenuItemClass(feedActive)} aria-current={feedActive ? "page" : undefined} onClick$={closeMobileMenu}><span class="mobile-menu-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="presentation"><rect x="4.5" y="4.5" width="15" height="15" rx="4" ry="4" /><circle cx="12" cy="12" r="2.25" /><path d="M16.875 7.125h.01" /></svg></span><span class={mobileMenuLabelClass(feedActive)}>{ui.navFeed}</span></a>
@@ -118,20 +149,39 @@ export default component$(() => {
           </div>
 
           <div class="topbar-actions">
-            <div class="language-inline" aria-label={ui.languageControlTitle} title={ui.languageControlHint}>
-              <span class="language-inline-label">{ui.languageControlShort}</span>
-              <div class="language-chip-row">
-                {LEARNING_LANGUAGE_OPTIONS.map((option) => (
-                  <Link
-                    key={`lang-${option.code}`}
-                    href={buildLanguageHref(location.url, option.code)}
-                    class={languageChipClass(option.code === currentLanguage)}
-                    aria-current={option.code === currentLanguage ? "page" : undefined}
-                  >
-                    <span class="language-chip-code">{option.code.toUpperCase()}</span>
-                    <span>{option.nativeName}</span>
-                  </Link>
-                ))}
+            <div class="topbar-languages">
+              <div class="language-inline" aria-label={ui.languageControlTitle} title={ui.languageControlHint}>
+                <span class="language-inline-label">{ui.languageControlShort}</span>
+                <div class="language-chip-row">
+                  {LEARNING_LANGUAGE_OPTIONS.map((option) => (
+                    <Link
+                      key={`lang-${option.code}`}
+                      href={buildLanguageHref(location.url, option.code)}
+                      class={languageChipClass(option.code === currentLanguage)}
+                      aria-current={option.code === currentLanguage ? "page" : undefined}
+                    >
+                      <span class="language-chip-code">{option.code.toUpperCase()}</span>
+                      <span>{option.nativeName}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <div class="language-inline" aria-label={ui.uiLanguageControlTitle}>
+                <span class="language-inline-label">{ui.uiLanguageControlShort}</span>
+                <div class="language-chip-row">
+                  {UI_LANGUAGE_OPTIONS.map((option) => (
+                    <Link
+                      key={`ui-lang-${option.code}`}
+                      href={buildUiLanguageHref(location.url, option.code)}
+                      class={languageChipClass(option.code === currentUiLanguage)}
+                      aria-current={option.code === currentUiLanguage ? "page" : undefined}
+                    >
+                      <span class="language-chip-code">{option.code.toUpperCase()}</span>
+                      <span>{option.nativeName}</span>
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
 

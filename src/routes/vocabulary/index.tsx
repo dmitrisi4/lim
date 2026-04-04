@@ -140,7 +140,8 @@ export default component$(() => {
           }
         ];
         messageCounter.value = assistantId;
-      } catch (_error) {
+      } catch (error) {
+        console.error("[vocab chat]", error);
         const assistantId = messageCounter.value + 1;
         chatMessages.value = [
           ...chatMessages.value,
@@ -262,7 +263,8 @@ export default component$(() => {
                 }
               ];
               messageCounter.value = assistantId;
-            } catch (_error) {
+            } catch (error) {
+              console.error("[vocab explain]", error);
               const assistantId = messageCounter.value + 1;
               chatMessages.value = [
                 ...chatMessages.value,
