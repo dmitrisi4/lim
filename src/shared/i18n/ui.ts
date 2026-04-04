@@ -1,4 +1,5 @@
 export type LearningLanguage = "en" | "es";
+export type UiLanguage = "ru" | "en" | "es";
 
 export interface UiCopy {
   appName: string;
@@ -190,6 +191,10 @@ export interface UiCopy {
   messageCardCompleted: string;
   recapTitle: string;
   recapDescriptionPrefix: string;
+  feedTitle: string;
+  feedSubtitle: string;
+  uiLanguageControlTitle: string;
+  uiLanguageControlShort: string;
 }
 
 export interface LearningLanguageOption {
@@ -204,7 +209,7 @@ export const LEARNING_LANGUAGE_OPTIONS: readonly LearningLanguageOption[] = [
   { code: "es", nativeName: "Espanol" }
 ];
 
-const uiByLanguage: Record<LearningLanguage, UiCopy> = {
+const uiByLanguage: Record<UiLanguage, UiCopy> = {
   en: {
     appName: "Lim MVP",
     appTagline: "Scroll. Learn. Level up.",
@@ -217,9 +222,9 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     mobileMenuOpen: "Open menu",
     mobileMenuClose: "Close menu",
     mobileMenuLabel: "Main menu",
-    languageControlTitle: "Study + Interface Language",
-    languageControlShort: "Study + UI",
-    languageControlHint: "This changes both learning and UI language.",
+    languageControlTitle: "Study language",
+    languageControlShort: "Study",
+    languageControlHint: "Changes the language you are learning.",
     homeTitle: "Instagram x Duolingo",
     homeSubtitle: "Web MVP on Qwik City: short learning cards, interactive tasks and progress in one loop.",
     homeOpenFeed: "Open feed",
@@ -394,7 +399,11 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     messageAcceptedCouldBeBetter: "Answer accepted, but it can be improved",
     messageCardCompleted: "Card completed",
     recapTitle: "Recap",
-    recapDescriptionPrefix: "Quick revision"
+    recapDescriptionPrefix: "Quick revision",
+    feedTitle: "Feed",
+    feedSubtitle: "Cards, interactive exercises and tracked progress.",
+    uiLanguageControlTitle: "Interface language",
+    uiLanguageControlShort: "UI lang"
   },
   es: {
     appName: "Lim MVP",
@@ -408,9 +417,9 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     mobileMenuOpen: "Abrir menu",
     mobileMenuClose: "Cerrar menu",
     mobileMenuLabel: "Menu principal",
-    languageControlTitle: "Idioma de estudio + interfaz",
-    languageControlShort: "Estudio + UI",
-    languageControlHint: "Esto cambia tanto el idioma de estudio como el de la UI.",
+    languageControlTitle: "Idioma de estudio",
+    languageControlShort: "Estudio",
+    languageControlHint: "Cambia el idioma que estás aprendiendo.",
     homeTitle: "Instagram x Duolingo",
     homeSubtitle: "MVP web en Qwik City: tarjetas cortas, interacciones y progreso en un solo ciclo.",
     homeOpenFeed: "Abrir feed",
@@ -585,7 +594,206 @@ const uiByLanguage: Record<LearningLanguage, UiCopy> = {
     messageAcceptedCouldBeBetter: "Respuesta aceptada, pero se puede mejorar",
     messageCardCompleted: "Tarjeta completada",
     recapTitle: "Repaso",
-    recapDescriptionPrefix: "Revision rapida"
+    recapDescriptionPrefix: "Revision rapida",
+    feedTitle: "Feed",
+    feedSubtitle: "Tarjetas, ejercicios interactivos y progreso registrado.",
+    uiLanguageControlTitle: "Idioma de interfaz",
+    uiLanguageControlShort: "UI"
+  },
+  ru: {
+    appName: "Lim MVP",
+    appTagline: "Листай. Учись. Прокачивайся.",
+    navHome: "Главная",
+    navFeed: "Лента",
+    navVocabulary: "Словарь",
+    navMap: "Карта",
+    navQuests: "Квесты",
+    navProfile: "Профиль",
+    mobileMenuOpen: "Открыть меню",
+    mobileMenuClose: "Закрыть меню",
+    mobileMenuLabel: "Главное меню",
+    languageControlTitle: "Язык обучения",
+    languageControlShort: "Учу",
+    languageControlHint: "Язык, который ты изучаешь.",
+    homeTitle: "Instagram x Duolingo",
+    homeSubtitle: "Веб-MVP на Qwik City: короткие карточки, интерактивы и прогресс в одной ленте.",
+    homeOpenFeed: "Открыть ленту",
+    homeOpenVocabulary: "Открыть словарь",
+    homeOpenLanguageMap: "Открыть карту языка",
+    homeOpenQuests: "Открыть квесты",
+    homeOpenProfile: "Открыть профиль",
+    homeActionPlacementTitle: "Начать тест",
+    homeActionPlacementBody: "Пройди короткий тест размещения, чтобы Lim оценил твой уровень и открыл нужные пути прогресса.",
+    homeActionContinueTitle: "Продолжить обучение",
+    homeActionContinueBody: "Вернись в ленту со следующей партией карточек и интерактивов.",
+    homeActionQuestTitle: "Продолжить квест",
+    homeActionQuestBody: "Открой квесты, соответствующие твоему текущему прогрессу и уже известным темам.",
+    homeActionReviewTitle: "Повторить слабые места",
+    homeActionReviewBody: "Вернись к словарю и карте языка, чтобы закрепить слабые темы.",
+    homeOverviewTitle: "Карта обучения",
+    homeOverviewSubtitle: "Уровни и категории используют те же данные, что и лента, включая качество ответов.",
+    homeOverviewLevels: "Уровни",
+    homeOverviewCategories: "Категории",
+    homeOverviewModules: "модулей",
+    homeOverviewCards: "карточек",
+    homeOverviewQuality: "качество",
+    homeOverviewNoQuality: "данных пока нет",
+    homeMetaDescription: "Полезная лента с интерактивными карточками",
+    feedMetricLevel: "Уровень",
+    feedMetricStreak: "Серия",
+    feedNewPack: "Следующий пак",
+    feedFiltersPanel: "Фильтры ленты",
+    feedLevels: "Уровни",
+    feedCategories: "Категории",
+    feedAnswers: "Результат ответа",
+    feedAnswerCorrect: "Верные",
+    feedAnswerIncorrect: "Ошибочные",
+    feedAnswerUnanswered: "Без ответа",
+    feedNoCards: "Нет карточек в этом паке.",
+    feedNoAnswerMatches: "Карточек с таким результатом пока нет.",
+    feedApplyFilters: "Применить фильтры",
+    feedResetFilters: "Сбросить",
+    vocabTitle: "Словарная колода",
+    vocabSubtitle: "Листай карточки слов, фильтруй по разделам и типам, добавляй свои фото.",
+    vocabTotalLabel: "Слова",
+    vocabFiltersPanel: "Фильтры словаря",
+    vocabTypes: "Тип слова",
+    vocabSections: "Разделы",
+    vocabTypeVerb: "Глаголы",
+    vocabTypeOther: "Другие слова",
+    vocabSectionBaseVerbs: "Базовые глаголы",
+    vocabSectionDailyActions: "Повседневные действия",
+    vocabSectionMovementLife: "Движение и жизнь",
+    vocabSectionCommunicationThoughts: "Общение и мысли",
+    vocabSectionModalsConstructions: "Модальные и конструкции",
+    vocabSectionAdditionalVerbs: "Дополнительные глаголы",
+    vocabSectionStateVerbs: "Глаголы состояния",
+    vocabSectionActionVerbs: "Базовые глаголы действия",
+    vocabSectionMovementVerbs: "Глаголы движения",
+    vocabSectionCommunicationVerbs: "Глаголы общения",
+    vocabSectionThinkingDecisionVerbs: "Мышление и решения",
+    vocabSectionModalAuxiliaryVerbs: "Модальные и вспомогательные",
+    vocabSectionOtherWords: "Другие слова",
+    vocabProgressTitle: "Статус изучения",
+    vocabProgressAll: "Все слова",
+    vocabProgressLearned: "Изученные",
+    vocabProgressUnlearned: "Не изученные",
+    vocabPhotoPlaceholder: "Место для фото",
+    vocabPhotoHint: "Добавь imageUrl в данные словаря (папка: /images/vocabulary).",
+    vocabExampleLabel: "Пример",
+    vocabMarkLearned: "Отметить изученным",
+    vocabLearned: "Изучено",
+    vocabVerbFormsButton: "Формы",
+    vocabVerbExamplesButton: "Употребление",
+    vocabVerbFormsTitle: "Формы глагола",
+    vocabVerbTensePresentSimple: "Present Simple",
+    vocabVerbTensePastSimple: "Past Simple",
+    vocabVerbTenseFutureSimple: "Future Simple",
+    vocabVerbTensePresentContinuous: "Present Continuous",
+    vocabVerbTensePastContinuous: "Past Continuous",
+    vocabVerbTensePresentPerfect: "Present Perfect",
+    vocabVerbTensePastPerfect: "Past Perfect",
+    vocabVerbExamplesTitle: "Примеры употребления",
+    vocabVerbClose: "Закрыть",
+    vocabVerbPerson: "Лицо",
+    vocabVerbForm: "Форма",
+    vocabVerbUsage: "Когда использовать",
+    vocabNoCards: "Нет слов для текущих фильтров.",
+    vocabApplyFilters: "Применить фильтры",
+    vocabResetFilters: "Сбросить",
+    vocabExplainButton: "Объяснить",
+    vocabAiTitle: "AI-чат",
+    vocabAiSubtitle: "Нажми «Объяснить» на карточке, затем задавай уточняющие вопросы здесь.",
+    vocabAiEmptyState: "Выбери любую карточку слова и нажми «Объяснить».",
+    vocabAiInputPlaceholder: "Задай уточняющий вопрос...",
+    vocabAiSend: "Отправить",
+    vocabAiYou: "Ты",
+    vocabAiAssistant: "AI",
+    vocabAiThinking: "Думает",
+    vocabAiCollapse: "Свернуть чат",
+    vocabAiExpand: "Развернуть чат",
+    mapTitle: "Карта языка",
+    mapSubtitle: "Графовый вид структуры времён, ключевых глаголов и паттернов неправильных глаголов.",
+    mapProgressTitle: "Прогресс узлов",
+    mapProgressLearnedSuffix: "изучено",
+    mapFilterUnlearnedOnly: "Показать только неизученные",
+    mapLegendTitle: "Категории узлов",
+    mapGraphAriaLabel: "Интерактивная карта языка",
+    mapNoVisibleNodes: "Нет узлов, подходящих под фильтр.",
+    mapShowAllNodes: "Показать все узлы",
+    mapCategoryCore: "Основное",
+    mapCategoryTimeline: "Хронология",
+    mapCategoryTense: "Времена",
+    mapCategoryVerbSystem: "Система глаголов",
+    mapCategoryIrregular: "Неправильные глаголы",
+    mapFormulaTitle: "Формула",
+    mapKeyVerbsTitle: "Ключевые глаголы",
+    mapIrregularTableTitle: "Неправильные формы",
+    mapRelatedNodesTitle: "Связанные узлы",
+    mapRelatedCardsTitle: "Связанные карточки",
+    mapRelatedCardsOpenGrammar: "Открыть карточки грамматики",
+    mapRelatedCardsOpenVocabulary: "Открыть ленту словаря",
+    mapRelatedCardsOpenVerbDeck: "Открыть колоду глаголов",
+    mapRelatedCardsOpenIrregular: "Открыть карточки неправильных глаголов",
+    mapRelatedCardsOpenAuxiliary: "Открыть карточки вспомогательных глаголов",
+    mapNodeCardsProgressTitle: "Изученных карточек в узле",
+    mapNodeCardsProgressSuffix: "карточек изучено",
+    mapNodeCardsProgressEmpty: "Связанных карточек для этого узла пока не найдено.",
+    mapStatusTitle: "Статус изучения",
+    mapStatusNew: "Новый",
+    mapStatusLearning: "Изучается",
+    mapStatusLearned: "Изучен",
+    mapDiscussButton: "Обсудить в чате",
+    mapChatTitle: "Чат по узлу",
+    mapChatSubtitle: "Открой узел и задавай вопросы с контекстом узла.",
+    mapChatContext: "Текущая тема",
+    mapChatNoContext: "Выбери узел и нажми «Обсудить в чате».",
+    mapChatEmptyState: "Сообщений пока нет. Начни с карточки узла.",
+    mapChatInputPlaceholder: "Спроси об этом узле...",
+    mapChatSend: "Отправить",
+    mapChatYou: "Ты",
+    mapChatAssistant: "AI",
+    mapChatThinking: "Думает...",
+    categoryGrammar: "Грамматика",
+    categoryVocabulary: "Словарь",
+    categorySpeaking: "Говорение",
+    categoryListening: "Аудирование",
+    categoryReading: "Чтение",
+    profileTitle: "Профиль и прогресс",
+    profileSubtitle: "Текущее состояние обучающегося из мок-бэкенда.",
+    profileRecentActivity: "Недавняя активность",
+    profileLearnedMaterial: "Изученный материал",
+    profileLevelOverview: "Распределение по уровням",
+    profileCategoryOverview: "Освоение категорий",
+    profileEstimatedLevel: "Расчётный уровень",
+    profileKnownTopics: "Известные темы",
+    profileWeakAreas: "Слабые места",
+    profileUnlockedQuests: "Открытые квесты",
+    profileEmptyActivity: "Активности пока нет.",
+    profileEmptyLearned: "Изученного материала пока нет.",
+    profileDays: "дней",
+    cardCheck: "Проверить",
+    cardSubmitMatch: "Отправить сопоставление",
+    cardFinishMiniGame: "Завершить мини-игру",
+    cardMarkDone: "Отметить выполненным",
+    cardMiniChallenge: "Мини-задание",
+    cardShowRule: "Правило",
+    cardShowExamples: "Примеры",
+    cardHintsShow: "Подсказки RU",
+    cardHintsHide: "Скрыть RU",
+    cardOpenDetails: "Развернуть",
+    cardCloseDetails: "Закрыть",
+    cardRecapNote: "Recap-карточки закрепляют недавние темы.",
+    cardRewardPrefix: "Награда",
+    messageCardNotFound: "Карточка не найдена",
+    messageAcceptedCouldBeBetter: "Ответ принят, но можно лучше",
+    messageCardCompleted: "Карточка завершена",
+    recapTitle: "Recap",
+    recapDescriptionPrefix: "Быстрое повторение",
+    feedTitle: "Лента",
+    feedSubtitle: "Карточки, интерактивы и фиксируемый прогресс.",
+    uiLanguageControlTitle: "Язык интерфейса",
+    uiLanguageControlShort: "Интерфейс"
   }
 };
 
@@ -606,13 +814,49 @@ export function detectLearningLanguage(url: URL, cookieLanguage?: string | null)
   return resolveLearningLanguage(cookieLanguage);
 }
 
-export function getUiCopy(language: LearningLanguage): UiCopy {
-  return uiByLanguage[language];
+export function getUiCopy(uiLanguage: UiLanguage): UiCopy {
+  return uiByLanguage[uiLanguage];
 }
 
 export function buildLanguageHref(url: URL, language: LearningLanguage): string {
   const params = new URLSearchParams(url.search);
   params.set("lang", language);
+  const query = params.toString();
+  return query.length > 0 ? `${url.pathname}?${query}` : url.pathname;
+}
+
+export interface UiLanguageOption {
+  code: UiLanguage;
+  nativeName: string;
+}
+
+export const UI_LANGUAGE_COOKIE = "lim_ui_lang";
+
+export const UI_LANGUAGE_OPTIONS: readonly UiLanguageOption[] = [
+  { code: "ru", nativeName: "Русский" },
+  { code: "en", nativeName: "English" },
+  { code: "es", nativeName: "Español" }
+];
+
+export function isUiLanguage(value: string | null | undefined): value is UiLanguage {
+  return value === "ru" || value === "en" || value === "es";
+}
+
+export function resolveUiLanguage(value: string | null | undefined): UiLanguage {
+  return isUiLanguage(value) ? value : "ru";
+}
+
+export function detectUiLanguage(url: URL, cookieLanguage?: string | null): UiLanguage {
+  const queryLanguage = url.searchParams.get("ui_lang");
+  if (isUiLanguage(queryLanguage)) {
+    return queryLanguage;
+  }
+  return resolveUiLanguage(cookieLanguage);
+}
+
+export function buildUiLanguageHref(url: URL, uiLanguage: UiLanguage): string {
+  const params = new URLSearchParams(url.search);
+  params.set("ui_lang", uiLanguage);
   const query = params.toString();
   return query.length > 0 ? `${url.pathname}?${query}` : url.pathname;
 }
