@@ -12,7 +12,9 @@ import { serEstarModule } from "~/slides/modules/es/a1/grammar/ser-estar.module"
 import { tenerLlamarseModule } from "~/slides/modules/es/a1/grammar/tener-llamarse.module";
 import { verbosReflexivosModule } from "~/slides/modules/es/a1/grammar/verbos-reflexivos.module";
 import { numerosTiempoListeningModule } from "~/slides/modules/es/a1/listening/numeros-tiempo.module";
+import { historiaVidaDiariaModule } from "~/slides/modules/es/a1/reading/historia-vida-diaria.module";
 import { senalesReadingModule } from "~/slides/modules/es/a1/reading/senales.module";
+import { gestionConversacionModule } from "~/slides/modules/es/a1/speaking/gestion-conversacion.module";
 import { presentacionesSpeakingModule } from "~/slides/modules/es/a1/speaking/presentaciones.module";
 import { coloresDiasTiempoVocabularyModule } from "~/slides/modules/es/a1/vocabulary/colores-dias-tiempo.module";
 import { familiaComidaVocabularyModule } from "~/slides/modules/es/a1/vocabulary/familia-comida.module";
@@ -40,7 +42,9 @@ const spanishSlideModules: SlideModule[] = [
   viajesVocabularyModule,
   numerosTiempoListeningModule,
   presentacionesSpeakingModule,
-  senalesReadingModule
+  gestionConversacionModule,
+  senalesReadingModule,
+  historiaVidaDiariaModule
 ];
 
 const slideModulesByLanguage: Record<LearningLanguage, SlideModule[]> = {
