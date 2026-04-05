@@ -1,4 +1,4 @@
-export type CardType = "video" | "carousel" | "quiz" | "match" | "mini_game" | "recap";
+export type CardType = "video" | "carousel" | "quiz" | "match" | "mini_game" | "recap" | "story";
 
 export interface CardInteraction {
   prompt?: string;
@@ -27,6 +27,7 @@ export interface Card {
   payload?: {
     mediaUrl?: string;
     slides?: string[];
+    text?: string[];
     focusMode?: "list" | "rule_examples";
     ruleSlidesCount?: number;
   };

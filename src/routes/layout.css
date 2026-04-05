@@ -82,6 +82,12 @@
   gap: 0.55rem;
 }
 
+.topbar-languages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+}
+
 .language-inline {
   justify-self: center;
   display: inline-flex;
@@ -410,7 +416,7 @@
     align-items:center;
   }
 
-  .topbar-actions .language-inline {
+  .topbar-actions .topbar-languages {
     display:none;
   }
 

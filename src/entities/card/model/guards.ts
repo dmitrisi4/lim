@@ -1,7 +1,7 @@
 import type { Card, CardType } from "~/entities/card/model/types";
 
-const INTERACTIVE_TYPES: CardType[] = ["quiz", "match", "mini_game"];
-const VALID_TYPES: CardType[] = ["video", "carousel", "quiz", "match", "mini_game", "recap"];
+const INTERACTIVE_TYPES: CardType[] = ["quiz", "match", "mini_game", "story"];
+const VALID_TYPES: CardType[] = ["video", "carousel", "quiz", "match", "mini_game", "recap", "story"];
 
 export function isCardType(value: string): value is CardType {
   return VALID_TYPES.includes(value as CardType);

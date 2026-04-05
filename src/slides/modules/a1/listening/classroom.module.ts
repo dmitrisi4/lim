@@ -39,7 +39,7 @@ export const classroomListeningModule: SlideModule = {
       description: "Выбери корректную реакцию ученика.",
       interaction: {
         prompt: "Teacher: 'Can you repeat, please?'",
-        options: ["Sorry?", "Yes, I'll say it again.", "I am page ten."],
+        options: ["Sorry?", "Yes, I'll say it again.", "I'll write it down."],
         correctAnswer: "Yes, I'll say it again."
       },
       reward: { xp: 22 }

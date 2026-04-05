@@ -54,7 +54,7 @@ export const travelVocabularyModule: SlideModule = {
         options: [
           "I need my room immediately.",
           "I have a reservation under Ivan Petrov.",
-          "Where is breakfast and why late?"
+          "Is breakfast included in the room price?"
         ],
         correctAnswer: "I have a reservation under Ivan Petrov."
       },

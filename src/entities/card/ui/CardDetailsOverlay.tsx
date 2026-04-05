@@ -1,4 +1,4 @@
-import { $, component$, useSignal, useStylesScoped$, useVisibleTask$ } from "@builder.io/qwik";
+import { $, component$, useVisibleTask$ } from "@builder.io/qwik";
 import type { PropFunction } from "@builder.io/qwik";
 import type { Card } from "~/entities/card/model/types";
 import styles from "~/entities/card/ui/CardDetailsOverlay.css?inline";
@@ -12,108 +12,29 @@ type PropsType = {
 };
 
 export const CardDetailsOverlay = component$<PropsType>((props) => {
-	useStylesScoped$(styles);
-	const scrollAreaRef = useSignal<HTMLElement>();
-	const scrollbarRef = useSignal<HTMLElement>();
-	const scrollbarDragging = useSignal(false);
-	const scrollbarState = useSignal({ thumbHeight: 100, thumbTop: 0, canScroll: false });
+	const handleClose$ = $(() => props.onClose$());
 
-	useVisibleTask$(({ track, cleanup }) => {
-		track(() => props.card.id);
-		track(() => scrollAreaRef.value);
+	useVisibleTask$(({ cleanup }) => {
+		const panel = document.querySelector<HTMLElement>(".card-details-panel");
+		const closeBtn = panel?.querySelector<HTMLButtonElement>(".card-details-close");
+		closeBtn?.focus();
 
-		const element = scrollAreaRef.value;
-		if (!element) {
-			scrollbarState.value = { thumbHeight: 100, thumbTop: 0, canScroll: false };
-			return;
-		}
-
-		const updateScrollbarState = () => {
-			const visibleHeight = Math.max(element.clientHeight, 1);
-			const totalHeight = Math.max(element.scrollHeight, visibleHeight);
-			const maxScrollTop = Math.max(totalHeight - visibleHeight, 0);
-			const canScroll = maxScrollTop > 8;
-			const rawThumbHeight = (visibleHeight / totalHeight) * 100;
-			const thumbHeight = Math.min(100, Math.max(rawThumbHeight, canScroll ? 16 : 100));
-			const thumbTravel = Math.max(100 - thumbHeight, 0);
-			const progress = maxScrollTop > 0 ? element.scrollTop / maxScrollTop : 0;
-			const thumbTop = thumbTravel * progress;
-
-			scrollbarState.value = {
-				thumbHeight,
-				thumbTop: Number.isFinite(thumbTop) ? thumbTop : 0,
-				canScroll,
-			};
+		const onKey = (e: KeyboardEvent) => {
+			if (e.key === "Escape") props.onClose$();
 		};
-
-		updateScrollbarState();
-
-		element.addEventListener("scroll", updateScrollbarState, { passive: true });
-		window.addEventListener("resize", updateScrollbarState);
-		const resizeObserver = new ResizeObserver(() => updateScrollbarState());
-		resizeObserver.observe(element);
-		const rafId = window.requestAnimationFrame(() => updateScrollbarState());
-
-		cleanup(() => {
-			window.cancelAnimationFrame(rafId);
-			resizeObserver.disconnect();
-			element.removeEventListener("scroll", updateScrollbarState);
-			window.removeEventListener("resize", updateScrollbarState);
-		});
-	});
-
-	const onScrollbarPointerDown$ = $(async (event: PointerEvent) => {
-		const scrollArea = scrollAreaRef.value;
-		const scrollbar = scrollbarRef.value;
-		if (!scrollArea || !scrollbar) return;
-
-		event.preventDefault();
-		scrollbarDragging.value = true;
-
-		const scrollbarRect = scrollbar.getBoundingClientRect();
-		const trackHeight = Math.max(scrollbarRect.height, 1);
-		const maxScrollTop = Math.max(scrollArea.scrollHeight - scrollArea.clientHeight, 0);
-		const thumbHeightPx = (scrollbarState.value.thumbHeight / 100) * trackHeight;
-		const maxThumbTopPx = Math.max(trackHeight - thumbHeightPx, 0);
-
-		const syncScrollByClientY = (clientY: number) => {
-			if (maxScrollTop <= 0 || maxThumbTopPx <= 0) {
-				scrollArea.scrollTo({ top: 0, behavior: "auto" });
-				return;
-			}
-
-			const thumbTopPx = Math.min(
-				Math.max(clientY - scrollbarRect.top - thumbHeightPx * 0.5, 0),
-				maxThumbTopPx,
-			);
-			scrollArea.scrollTo({ top: (thumbTopPx / maxThumbTopPx) * maxScrollTop, behavior: "auto" });
-		};
-
-		syncScrollByClientY(event.clientY);
-
-		const onPointerMove = (moveEvent: PointerEvent) => {
-			moveEvent.preventDefault();
-			syncScrollByClientY(moveEvent.clientY);
-		};
-
-		const stopDragging = () => {
-			scrollbarDragging.value = false;
-			window.removeEventListener("pointermove", onPointerMove);
-			window.removeEventListener("pointerup", stopDragging);
-			window.removeEventListener("pointercancel", stopDragging);
-		};
-
-		window.addEventListener("pointermove", onPointerMove, { passive: false });
-		window.addEventListener("pointerup", stopDragging);
-		window.addEventListener("pointercancel", stopDragging);
+		document.addEventListener("keydown", onKey);
+		cleanup(() => document.removeEventListener("keydown", onKey));
 	});
 
 	return (
 		<div
 			class="card-details-overlay"
-			onClick$={() => props.onClose$()}
+			onClick$={handleClose$}
 		>
 			<div
+				role="dialog"
+				aria-modal="true"
+				aria-labelledby="card-details-title"
 				class="card-details-panel"
 				onClick$={(event) => event.stopPropagation()}
 				role="dialog"
@@ -121,8 +42,8 @@ export const CardDetailsOverlay = component$<PropsType>((props) => {
 				aria-label={props.title}
 			>
 				<div class="card-details-head">
-					<h4 class="card-details-title">{props.title}</h4>
-					<button type="button" class="card-details-close" onClick$={() => props.onClose$()}>
+					<h4 id="card-details-title" class="card-details-title">{props.title}</h4>
+					<button type="button" class="card-details-close" onClick$={handleClose$}>
 						{props.closeLabel}
 					</button>
 				</div>

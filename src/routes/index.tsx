@@ -20,25 +20,43 @@ export default component$(() => {
   return (
     <>
       <section class="hero">
-        <h2 class="hero-title">{ui.homeTitle}</h2>
-        <p class="hero-subtitle">{ui.homeSubtitle}</p>
+        <div class="hero-copy">
+          <h2 class="hero-title">{ui.homeTitle}</h2>
+          <p class="hero-subtitle">{ui.homeSubtitle}</p>
+        </div>
 
-        <div class="hero-actions">
-          <Link href="/feed" class="hero-link hero-link-primary">
-            {ui.homeOpenFeed}
+        <div class="hero-primary-action">
+          <span class="hero-primary-kicker">Recommended first step</span>
+          <h3 class="hero-primary-title">{ui.homeActionPlacementTitle}</h3>
+          <p class="hero-primary-body">{ui.homeActionPlacementBody}</p>
+          <Link href="/profile" class="hero-primary-link" style={{ textDecoration: "none" }}>
+            {ui.homeActionPlacementTitle}
           </Link>
-          <Link href="/vocabulary/" class="hero-link hero-link-secondary">
-            {ui.homeOpenVocabulary}
-          </Link>
-          <a href="/language-map/" class="hero-link hero-link-secondary">
-            {ui.homeOpenLanguageMap}
-          </a>
-          <a href="/quests/" class="hero-link hero-link-secondary">
-            {ui.homeOpenQuests}
-          </a>
-          <Link href="/profile" class="hero-link hero-link-secondary">
-            {ui.homeOpenProfile}
-          </Link>
+        </div>
+
+        <div class="hero-secondary-crawl-shell">
+          <div class="hero-secondary-crawl">
+            <div class="hero-crawl-row">
+              <Link href="/feed" class="hero-crawl-link" style={{ textDecoration: "none" }}>
+                <span class="hero-crawl-title">{ui.homeActionContinueTitle}</span>
+              </Link>
+              <p class="hero-crawl-description">{ui.homeActionContinueBody}</p>
+            </div>
+
+            <div class="hero-crawl-row">
+              <Link href="/quests/" class="hero-crawl-link" style={{ textDecoration: "none" }}>
+                <span class="hero-crawl-title">{ui.homeActionQuestTitle}</span>
+              </Link>
+              <p class="hero-crawl-description">{ui.homeActionQuestBody}</p>
+            </div>
+
+            <div class="hero-crawl-row">
+              <Link href="/language-map/" class="hero-crawl-link" style={{ textDecoration: "none" }}>
+                <span class="hero-crawl-title">{ui.homeActionReviewTitle}</span>
+              </Link>
+              <p class="hero-crawl-description">{ui.homeActionReviewBody}</p>
+            </div>
+          </div>
         </div>
       </section>
 

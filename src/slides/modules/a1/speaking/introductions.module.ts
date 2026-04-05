@@ -46,8 +46,8 @@ export const introductionsSpeakingModule: SlideModule = {
         prompt: "New colleague: 'Tell me a bit about yourself.'",
         options: [
           "I am Katya. I live in Lviv and I like photography.",
-          "Identity details are unavailable.",
-          "Myself person from city."
+          "Oh, I don't really have much to say.",
+          "I'm just here for work, nothing interesting."
         ],
         correctAnswer: "I am Katya. I live in Lviv and I like photography."
       },

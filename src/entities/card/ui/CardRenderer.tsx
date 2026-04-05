@@ -227,6 +227,16 @@ export const CardRenderer = component$<PropsType>((props) => {
 					</ul>
 				) : null}
 
+				{props.card.type === "story" && props.card.payload?.text ? (
+					<div class="story-text">
+						{props.card.payload.text.map((para, i) => (
+							<p key={`${props.card.id}-para-${i}`} class="story-paragraph">
+								{para}
+							</p>
+						))}
+					</div>
+				) : null}
+
 				{hasInlineInteraction ? <p class="micro-title">{ui.cardMiniChallenge}</p> : null}
 
 				{props.card.interaction?.prompt ? (

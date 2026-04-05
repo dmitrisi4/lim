@@ -81,7 +81,7 @@ export const VocabularyDeck = component$<PropsType>((props) => {
 		};
 		window.addEventListener("storage", onStorage);
 		cleanup(() => window.removeEventListener("storage", onStorage));
-	});
+	}, { strategy: "document-ready" });
 
 	useVisibleTask$(({ track, cleanup }) => {
 		track(() => props.words.length);

@@ -20,9 +20,9 @@ export const irAInfinitivoModule: SlideModule = {
         slides: [
           "Estructura: sujeto + ir (conjugado) + a + infinitivo.||Формула: кто + идти + делать",
           "Yo voy a estudiar esta noche.||Я буду учиться сегодня вечером",
-          "Tu vas a cocinar manana.||Ты собираешься готовить завтра",
+          "Tu vas a cocinar mañana.||Ты собираешься готовить завтра",
           "El/Ella va a trabajar temprano.||Он/она собирается работать рано",
-          "Nosotros vamos a viajar el sabado.||Мы собираемся поехать в субботу",
+          "Nosotros vamos a viajar el sábado.||Мы собираемся поехать в субботу",
           "Ellos van a descansar en casa.||Они собираются отдыхать дома",
           "Negacion: No voy a salir hoy.||Отрицание ставим перед ir",
           "Pregunta: Vas a venir conmigo?||Вопрос о намерении/плане"
@@ -68,7 +68,7 @@ export const irAInfinitivoModule: SlideModule = {
       title: "Plan para el fin de semana",
       description: "Выбери естественную фразу о планах.",
       interaction: {
-        prompt: "Quieres contar un plan para manana. Que dices?||Нужно сказать план на завтра",
+        prompt: "Quieres contar un plan para mañana. Que dices?||Нужно сказать план на завтра",
         options: [
           "Manana voy a visitar a mi abuela.||Верно: естественный план",
           "Manana visito a mi abuela ir.||Неверная структура",
@@ -102,11 +102,11 @@ export const irAInfinitivoModule: SlideModule = {
       interaction: {
         prompt: "Quieres preguntar: 'Ты собираешься учиться завтра?'",
         options: [
-          "Vas a estudiar manana?||Верно",
-          "Estas estudiar manana?||Неверная конструкция",
-          "Vas estudiar a manana?||Порядок слов неверный"
+          "Vas a estudiar mañana?||Верно",
+          "Estas estudiar mañana?||Неверная конструкция",
+          "Vas estudiar a mañana?||Порядок слов неверный"
         ],
-        correctAnswer: "Vas a estudiar manana?"
+        correctAnswer: "Vas a estudiar mañana?"
       },
       reward: { xp: 25 }
     }

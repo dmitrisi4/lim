@@ -1,6 +1,7 @@
 import type { Card } from "~/entities/card/model/types";
 import type { Streak } from "~/entities/streak/model/types";
 import type { UserProgress } from "~/entities/user-progress/model/types";
+import { buildLearnerProfileSnapshot } from "~/entities/user-progress/model/learner-profile";
 import { calcRewardPreview } from "~/features/gamification/model/calc-reward-preview";
 import type {
   InteractionSubmissionInput,
@@ -344,17 +345,26 @@ export function getMockProgressSnapshot(userId: string): { progress: UserProgres
   };
 }
 
-export function getMockProfileSnapshot(userId: string): {
+export function getMockProfileSnapshot(userId: string, languageCode: LearningLanguage = "en"): {
   progress: UserProgress;
   streak: Streak;
   recent: RecentActivity[];
+  overview: LearningOverviewSnapshot;
+  learnedLevels: LevelOverviewItem[];
+  learnedCategories: CategoryOverviewItem[];
+  learnerProfile: ReturnType<typeof buildLearnerProfileSnapshot>;
 } {
   const state = ensureUserState(userId);
+  const overview = getMockLearningOverview(userId, languageCode);
 
   return {
     progress: { ...state.progress },
     streak: { ...state.streak },
-    recent: [...state.recent]
+    recent: [...state.recent],
+    overview,
+    learnedLevels: overview.levels.filter((item) => item.attempts > 0 || item.quality !== null),
+    learnedCategories: overview.categories.filter((item) => item.attempts > 0 || item.quality !== null),
+    learnerProfile: buildLearnerProfileSnapshot(overview)
   };
 }
 

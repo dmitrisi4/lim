@@ -85,7 +85,7 @@ export const FeedList = component$<FeedListProps>((props) => {
     cleanup(() => {
       window.removeEventListener("storage", onStorage);
     });
-  });
+  }, { strategy: "document-ready" });
 
   const handleComplete$ = $(async (payload: CardCompletionInput) => {
     if (typeof payload.correct === "boolean") {
