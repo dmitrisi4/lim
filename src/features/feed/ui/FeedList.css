@@ -7,6 +7,7 @@
 }
 
 .feed-swiper {
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 22px;
@@ -14,6 +15,58 @@
   box-shadow: var(--shadow-lg);
   overflow: hidden;
   touch-action: pan-y;
+  background:
+    radial-gradient(110% 120% at 12% -20%, rgba(255, 122, 24, 0.22), transparent 55%),
+    radial-gradient(130% 120% at 92% -10%, rgba(255, 47, 109, 0.24), transparent 58%),
+    radial-gradient(140% 140% at 50% 120%, rgba(125, 85, 255, 0.2), transparent 62%),
+    linear-gradient(180deg, #0f1422, #0b111d 62%, #0a0f19);
+  transition: opacity 180ms ease, visibility 180ms ease;
+}
+
+.feed-swiper-pending {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.feed-swiper-ready {
+  visibility: visible;
+  opacity: 1;
+}
+
+.feed-swiper-loader {
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(180deg, rgba(11, 17, 29, 0.94), rgba(10, 15, 25, 0.97)),
+    radial-gradient(circle at top, rgba(255, 122, 24, 0.18), transparent 42%);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10px);
+}
+
+.feed-swiper-loader-ring {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  border-top-color: var(--accent-1);
+  border-right-color: var(--accent-2);
+  animation: feed-loader-spin 900ms linear infinite;
+}
+
+.feed-swiper-loader-text {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-2);
 }
 
 .feed-slide {
@@ -21,11 +74,7 @@
   display: block;
   user-select: text;
   -webkit-user-select: text;
-  background:
-    radial-gradient(110% 120% at 12% -20%, rgba(255, 122, 24, 0.22), transparent 55%),
-    radial-gradient(130% 120% at 92% -10%, rgba(255, 47, 109, 0.24), transparent 58%),
-    radial-gradient(140% 140% at 50% 120%, rgba(125, 85, 255, 0.2), transparent 62%),
-    linear-gradient(180deg, #0f1422, #0b111d 62%, #0a0f19);
+  background: transparent;
 }
 
 .slide-inner {
@@ -123,5 +172,15 @@
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes feed-loader-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

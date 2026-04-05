@@ -18,6 +18,7 @@ type PropsType = {
 	cardPosition?: number;
 	totalCards?: number;
 	onComplete$: PropFunction<(payload: CardCompletionInput) => void | Promise<void>>;
+	onDetailsOpenChange$?: PropFunction<(open: boolean) => void | Promise<void>>;
 };
 
 export const CardRenderer = component$<PropsType>((props) => {
@@ -48,6 +49,11 @@ export const CardRenderer = component$<PropsType>((props) => {
 
 	const toggleHint$ = $((hintId: string) => {
 		openedHintId.value = openedHintId.value === hintId ? null : hintId;
+	});
+
+	const setDetailsOpen$ = $((open: boolean) => {
+		detailsOpen.value = open;
+		void props.onDetailsOpenChange$?.(open);
 	});
 
 	const interactionOptions = props.card.interaction?.options ?? [];
@@ -145,9 +151,7 @@ export const CardRenderer = component$<PropsType>((props) => {
 							<button
 								type="button"
 								class="details-toggle"
-								onClick$={() => {
-									detailsOpen.value = true;
-								}}
+								onClick$={() => setDetailsOpen$(true)}
 							>
 								{ui.cardOpenDetails}
 							</button>
@@ -292,9 +296,7 @@ export const CardRenderer = component$<PropsType>((props) => {
 					title={props.card.title}
 					closeLabel={ui.cardCloseDetails}
 					slides={rawSlides}
-					onClose$={() => {
-						detailsOpen.value = false;
-					}}
+					onClose$={() => setDetailsOpen$(false)}
 				/>
 			) : null}
 		</CardShell>
