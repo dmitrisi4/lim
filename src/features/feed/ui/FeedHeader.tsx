@@ -27,15 +27,23 @@ export const FeedHeader = component$<FeedHeaderProps>((props) => {
           level={props.progress.level}
           dailyCompleted={props.progress.dailyCompleted}
           dailyGoal={props.progress.dailyGoal}
+          label={ui.progressLabel}
+          levelLabel={ui.progressLevelLabel}
+          dailyGoalLabel={ui.progressDailyGoalLabel}
         />
-        <StreakBadge days={props.progress.streakDays} />
+        <StreakBadge
+          days={props.progress.streakDays}
+          label={ui.streakLabel}
+          daysSuffix={ui.streakDaysSuffix}
+          motivation={ui.streakMotivation}
+        />
       </div>
 
       {props.lastSubmit ? (
         <div class="submit-note">
           <p class="submit-title">{props.lastSubmit.message}</p>
           <p class="submit-meta">
-            +{props.lastSubmit.xpDelta} XP{props.lastSubmit.streakDelta !== 0 ? ` · streak ${props.lastSubmit.streakDelta > 0 ? "+" : ""}${props.lastSubmit.streakDelta}` : ""}
+            +{props.lastSubmit.xpDelta} XP{props.lastSubmit.streakDelta !== 0 ? ` · ${ui.streakLabel} ${props.lastSubmit.streakDelta > 0 ? "+" : ""}${props.lastSubmit.streakDelta}` : ""}
           </p>
         </div>
       ) : null}

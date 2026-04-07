@@ -1,4 +1,4 @@
-import { $, component$, Slot, useContextProvider, useSignal, useStylesScoped$, useVisibleTask$ } from "@builder.io/qwik";
+import { $, component$, Slot, useContextProvider, useSignal, useStore, useStylesScoped$, useTask$, useVisibleTask$ } from "@builder.io/qwik";
 import { Link, routeLoader$, useLocation } from "@builder.io/qwik-city";
 import { I18N_CONTEXT } from "~/shared/i18n/context";
 import {
@@ -44,12 +44,21 @@ export default component$(() => {
   useStylesScoped$(styles);
   const location = useLocation();
   const i18n = useLanguageLoader();
-  useContextProvider(I18N_CONTEXT, i18n.value);
+  // Reactive store so child components update when language changes via SPA navigation
+  const i18nStore = useStore({ ...i18n.value });
+  useTask$(({ track }) => {
+    const value = track(() => i18n.value);
+    i18nStore.language = value.language;
+    i18nStore.uiLanguage = value.uiLanguage;
+    i18nStore.ui = value.ui;
+  });
+  useContextProvider(I18N_CONTEXT, i18nStore);
 
-  const ui = i18n.value.ui;
-  const currentLanguage = i18n.value.language;
-  const currentUiLanguage = i18n.value.uiLanguage;
+  const ui = i18nStore.ui;
+  const currentLanguage = i18nStore.language;
+  const currentUiLanguage = i18nStore.uiLanguage;
   const mobileMenuOpen = useSignal(false);
+  const langPopupOpen = useSignal(false);
 
   const openMobileMenu = $(() => {
     mobileMenuOpen.value = true;
@@ -59,9 +68,22 @@ export default component$(() => {
     mobileMenuOpen.value = false;
   });
 
+  const openLangPopup = $(() => {
+    langPopupOpen.value = true;
+  });
+
+  const closeLangPopup = $(() => {
+    langPopupOpen.value = false;
+  });
+
   useVisibleTask$(({ track }) => {
     track(() => mobileMenuOpen.value);
     document.body.style.overflow = mobileMenuOpen.value ? "hidden" : "";
+  });
+
+  useVisibleTask$(({ track }) => {
+    track(() => location.url.href);
+    langPopupOpen.value = false;
   });
 
   const homeActive = location.url.pathname === "/";
@@ -73,6 +95,15 @@ export default component$(() => {
 
   return (
     <div class="page-wrap page-wrap-fluid">
+      {langPopupOpen.value && (
+        <button
+          type="button"
+          class="lang-popup-backdrop"
+          aria-label="Close language settings"
+          onClick$={closeLangPopup}
+        />
+      )}
+
       <div class={mobileMenuOpen.value ? "mobile-menu-layer open" : "mobile-menu-layer"}>
         <button type="button" class="mobile-menu-backdrop" aria-label={ui.mobileMenuClose} onClick$={closeMobileMenu} />
 
@@ -149,40 +180,73 @@ export default component$(() => {
           </div>
 
           <div class="topbar-actions">
-            <div class="topbar-languages">
-              <div class="language-inline" aria-label={ui.languageControlTitle} title={ui.languageControlHint}>
-                <span class="language-inline-label">{ui.languageControlShort}</span>
-                <div class="language-chip-row">
-                  {LEARNING_LANGUAGE_OPTIONS.map((option) => (
-                    <Link
-                      key={`lang-${option.code}`}
-                      href={buildLanguageHref(location.url, option.code)}
-                      class={languageChipClass(option.code === currentLanguage)}
-                      aria-current={option.code === currentLanguage ? "page" : undefined}
-                    >
-                      <span class="language-chip-code">{option.code.toUpperCase()}</span>
-                      <span>{option.nativeName}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
+            <div class="lang-popup-wrap">
+              <button
+                type="button"
+                class={langPopupOpen.value ? "lang-popup-btn open" : "lang-popup-btn"}
+                aria-expanded={langPopupOpen.value ? "true" : "false"}
+                aria-haspopup="dialog"
+                aria-label={ui.languageControlTitle}
+                onClick$={openLangPopup}
+              >
+                <span class="lang-popup-btn-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="presentation">
+                    <circle cx="12" cy="12" r="8.25" />
+                    <path d="M12 3.75C10.5 6 9 9 9 12s1.5 6 3 8.25" />
+                    <path d="M12 3.75C13.5 6 15 9 15 12s-1.5 6-3 8.25" />
+                    <path d="M3.75 12h16.5" />
+                    <path d="M4.88 8.25h14.24" />
+                    <path d="M4.88 15.75h14.24" />
+                  </svg>
+                </span>
+                <span class="lang-popup-btn-chips" aria-hidden="true">
+                  <span class="lang-popup-btn-code">{currentLanguage.toUpperCase()}</span>
+                  <span class="lang-popup-btn-sep">·</span>
+                  <span class="lang-popup-btn-code">{currentUiLanguage.toUpperCase()}</span>
+                </span>
+              </button>
 
-              <div class="language-inline" aria-label={ui.uiLanguageControlTitle}>
-                <span class="language-inline-label">{ui.uiLanguageControlShort}</span>
-                <div class="language-chip-row">
-                  {UI_LANGUAGE_OPTIONS.map((option) => (
-                    <Link
-                      key={`ui-lang-${option.code}`}
-                      href={buildUiLanguageHref(location.url, option.code)}
-                      class={languageChipClass(option.code === currentUiLanguage)}
-                      aria-current={option.code === currentUiLanguage ? "page" : undefined}
-                    >
-                      <span class="language-chip-code">{option.code.toUpperCase()}</span>
-                      <span>{option.nativeName}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              {langPopupOpen.value && (
+                <>
+                  <div class="lang-popup-panel" role="dialog" aria-label={ui.languageControlTitle}>
+                    <div class="lang-popup-section">
+                      <span class="lang-popup-section-label">{ui.languageControlTitle}</span>
+                      <div class="lang-popup-chips">
+                        {LEARNING_LANGUAGE_OPTIONS.map((option) => (
+                          <Link
+                            key={`popup-lang-${option.code}`}
+                            href={buildLanguageHref(location.url, option.code)}
+                            class={languageChipClass(option.code === currentLanguage)}
+                            aria-current={option.code === currentLanguage ? "page" : undefined}
+                          >
+                            <span class="language-chip-code">{option.code.toUpperCase()}</span>
+                            <span>{option.nativeName}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div class="lang-popup-divider" aria-hidden="true" />
+
+                    <div class="lang-popup-section">
+                      <span class="lang-popup-section-label">{ui.uiLanguageControlTitle}</span>
+                      <div class="lang-popup-chips">
+                        {UI_LANGUAGE_OPTIONS.map((option) => (
+                          <Link
+                            key={`popup-ui-lang-${option.code}`}
+                            href={buildUiLanguageHref(location.url, option.code)}
+                            class={languageChipClass(option.code === currentUiLanguage)}
+                            aria-current={option.code === currentUiLanguage ? "page" : undefined}
+                          >
+                            <span class="language-chip-code">{option.code.toUpperCase()}</span>
+                            <span>{option.nativeName}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
 
             <button type="button" class="mobile-menu-trigger" aria-label={ui.mobileMenuOpen} onClick$={openMobileMenu}>

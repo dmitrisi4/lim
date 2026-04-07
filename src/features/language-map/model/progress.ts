@@ -1,4 +1,15 @@
-export const LANGUAGE_MAP_PROGRESS_STORAGE_KEY = "lim.language-map-node-progress.v1";
+const LANGUAGE_MAP_PROGRESS_STORAGE_KEY_BASE = "lim.language-map-node-progress.v1";
+
+/** Returns a per-language storage key so progress is tracked separately per learning language. */
+export function getLanguageMapProgressStorageKey(language?: string): string {
+  if (language && language !== "en") {
+    return `${LANGUAGE_MAP_PROGRESS_STORAGE_KEY_BASE}.${language}`;
+  }
+  return LANGUAGE_MAP_PROGRESS_STORAGE_KEY_BASE;
+}
+
+/** @deprecated Use getLanguageMapProgressStorageKey(language) */
+export const LANGUAGE_MAP_PROGRESS_STORAGE_KEY = LANGUAGE_MAP_PROGRESS_STORAGE_KEY_BASE;
 
 export type LanguageMapNodeStatus = "new" | "learning" | "learned";
 
@@ -35,15 +46,16 @@ export function getLanguageMapNodeStatus(nodeId: string, progress: LanguageMapPr
   return isLanguageMapNodeStatus(value) ? value : "new";
 }
 
-export function readLanguageMapProgress(storage?: Storage): LanguageMapProgress {
+export function readLanguageMapProgress(storage?: Storage, language?: string): LanguageMapProgress {
   const resolvedStorage = resolveStorage(storage);
   if (!resolvedStorage) {
     return {};
   }
 
+  const key = getLanguageMapProgressStorageKey(language);
   let raw: string | null = null;
   try {
-    raw = resolvedStorage.getItem(LANGUAGE_MAP_PROGRESS_STORAGE_KEY);
+    raw = resolvedStorage.getItem(key);
   } catch {
     return {};
   }
@@ -74,10 +86,11 @@ export function readLanguageMapProgress(storage?: Storage): LanguageMapProgress 
 export function setLanguageMapNodeStatus(
   nodeId: string,
   status: LanguageMapNodeStatus,
-  storage?: Storage
+  storage?: Storage,
+  language?: string
 ): LanguageMapProgress {
   const resolvedStorage = resolveStorage(storage);
-  const next = readLanguageMapProgress(resolvedStorage ?? undefined);
+  const next = readLanguageMapProgress(resolvedStorage ?? undefined, language);
 
   if (!nodeId) {
     return next;
@@ -85,9 +98,10 @@ export function setLanguageMapNodeStatus(
 
   next[nodeId] = status;
 
+  const key = getLanguageMapProgressStorageKey(language);
   if (resolvedStorage) {
     try {
-      resolvedStorage.setItem(LANGUAGE_MAP_PROGRESS_STORAGE_KEY, JSON.stringify(next));
+      resolvedStorage.setItem(key, JSON.stringify(next));
     } catch {
       return next;
     }
@@ -96,10 +110,10 @@ export function setLanguageMapNodeStatus(
   return next;
 }
 
-export function cycleLanguageMapNodeStatus(nodeId: string, storage?: Storage): LanguageMapProgress {
-  const current = readLanguageMapProgress(storage);
+export function cycleLanguageMapNodeStatus(nodeId: string, storage?: Storage, language?: string): LanguageMapProgress {
+  const current = readLanguageMapProgress(storage, language);
   const currentStatus = getLanguageMapNodeStatus(nodeId, current);
   const index = STATUS_SEQUENCE.indexOf(currentStatus);
   const nextStatus = STATUS_SEQUENCE[(index + 1) % STATUS_SEQUENCE.length] ?? "new";
-  return setLanguageMapNodeStatus(nodeId, nextStatus, storage);
+  return setLanguageMapNodeStatus(nodeId, nextStatus, storage, language);
 }

@@ -1,7 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { PropFunction } from "@builder.io/qwik";
 import {
-	LANGUAGE_MAP_NODE_BY_ID,
 	LANGUAGE_MAP_VIEWBOX,
 	type LanguageMapEdge,
 	type LanguageMapNode,
@@ -13,6 +12,7 @@ import { getCurvedEdgeGeometry, getNodeLines } from "~/features/language-map/lib
 type PropsType = {
 	visibleNodes: readonly LanguageMapNode[];
 	visibleEdges: readonly LanguageMapEdge[];
+	nodeById: Record<string, LanguageMapNode>;
 	selectedNodeId: string;
 	nodeProgress: LanguageMapProgress;
 	graphAriaLabel: string;
@@ -36,8 +36,8 @@ export const LanguageMapGraph = component$<PropsType>((props) => {
 				</defs>
 
 				{props.visibleEdges.map((edge) => {
-					const fromNode = LANGUAGE_MAP_NODE_BY_ID[edge.from];
-					const toNode = LANGUAGE_MAP_NODE_BY_ID[edge.to];
+					const fromNode = props.nodeById[edge.from];
+					const toNode = props.nodeById[edge.to];
 					if (!fromNode || !toNode) return null;
 
 					const isSelectedEdge =

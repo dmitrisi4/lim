@@ -195,6 +195,14 @@ export interface UiCopy {
   feedSubtitle: string;
   uiLanguageControlTitle: string;
   uiLanguageControlShort: string;
+  homeKickerLabel: string;
+  questsEyebrow: string;
+  streakLabel: string;
+  streakDaysSuffix: string;
+  streakMotivation: string;
+  progressLabel: string;
+  progressLevelLabel: string;
+  progressDailyGoalLabel: string;
 }
 
 export interface LearningLanguageOption {
@@ -403,14 +411,22 @@ const uiByLanguage: Record<UiLanguage, UiCopy> = {
     feedTitle: "Feed",
     feedSubtitle: "Cards, interactive exercises and tracked progress.",
     uiLanguageControlTitle: "Interface language",
-    uiLanguageControlShort: "UI lang"
+    uiLanguageControlShort: "UI lang",
+    homeKickerLabel: "Recommended first step",
+    questsEyebrow: "Journal",
+    streakLabel: "Streak",
+    streakDaysSuffix: "days",
+    streakMotivation: "Keep your streak to earn bonus cards.",
+    progressLabel: "Progress",
+    progressLevelLabel: "Level",
+    progressDailyGoalLabel: "Daily goal"
   },
   es: {
     appName: "Lim MVP",
     appTagline: "Desliza. Aprende. Sube de nivel.",
     navHome: "Inicio",
     navFeed: "Feed",
-    navVocabulary: "Vocab",
+    navVocabulary: "Vocabulario",
     navMap: "Mapa",
     navQuests: "Misiones",
     navProfile: "Perfil",
@@ -531,7 +547,7 @@ const uiByLanguage: Record<UiLanguage, UiCopy> = {
     mapCategoryTense: "Tiempos",
     mapCategoryVerbSystem: "Sistema verbal",
     mapCategoryIrregular: "Verbos irregulares",
-    mapFormulaTitle: "Formula",
+    mapFormulaTitle: "Fórmula",
     mapKeyVerbsTitle: "Verbos clave",
     mapIrregularTableTitle: "Formas irregulares",
     mapRelatedNodesTitle: "Nodos conectados",
@@ -598,7 +614,15 @@ const uiByLanguage: Record<UiLanguage, UiCopy> = {
     feedTitle: "Feed",
     feedSubtitle: "Tarjetas, ejercicios interactivos y progreso registrado.",
     uiLanguageControlTitle: "Idioma de interfaz",
-    uiLanguageControlShort: "UI"
+    uiLanguageControlShort: "UI",
+    homeKickerLabel: "Primer paso recomendado",
+    questsEyebrow: "Diario",
+    streakLabel: "Racha",
+    streakDaysSuffix: "días",
+    streakMotivation: "Mantén tu racha para ganar tarjetas extra.",
+    progressLabel: "Progreso",
+    progressLevelLabel: "Nivel",
+    progressDailyGoalLabel: "Meta diaria"
   },
   ru: {
     appName: "Lim MVP",
@@ -783,17 +807,25 @@ const uiByLanguage: Record<UiLanguage, UiCopy> = {
     cardHintsHide: "Скрыть RU",
     cardOpenDetails: "Развернуть",
     cardCloseDetails: "Закрыть",
-    cardRecapNote: "Recap-карточки закрепляют недавние темы.",
+    cardRecapNote: "Карточки повторения закрепляют недавние темы.",
     cardRewardPrefix: "Награда",
     messageCardNotFound: "Карточка не найдена",
     messageAcceptedCouldBeBetter: "Хорошая попытка! Продолжай.",
     messageCardCompleted: "Карточка завершена",
-    recapTitle: "Recap",
+    recapTitle: "Повторение",
     recapDescriptionPrefix: "Быстрое повторение",
     feedTitle: "Лента",
     feedSubtitle: "Карточки, интерактивы и фиксируемый прогресс.",
     uiLanguageControlTitle: "Язык интерфейса",
-    uiLanguageControlShort: "Интерфейс"
+    uiLanguageControlShort: "Интерфейс",
+    homeKickerLabel: "Рекомендованный первый шаг",
+    questsEyebrow: "Журнал",
+    streakLabel: "Серия",
+    streakDaysSuffix: "дней",
+    streakMotivation: "Держи серию, чтобы получать бонусные карточки.",
+    progressLabel: "Прогресс",
+    progressLevelLabel: "Уровень",
+    progressDailyGoalLabel: "Дневная цель"
   }
 };
 

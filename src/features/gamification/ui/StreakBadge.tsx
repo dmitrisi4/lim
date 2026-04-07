@@ -3,6 +3,9 @@ import styles from "~/features/gamification/ui/StreakBadge.css?inline";
 
 interface StreakBadgeProps {
   days: number;
+  label: string;
+  daysSuffix: string;
+  motivation: string;
 }
 
 export const StreakBadge = component$<StreakBadgeProps>((props) => {
@@ -10,9 +13,9 @@ export const StreakBadge = component$<StreakBadgeProps>((props) => {
 
   return (
     <div class="badge">
-      <p class="badge-label">Streak</p>
-      <p class="badge-days">{props.days} days</p>
-      <p class="badge-text">Держи серию, чтобы получать бонусные карточки.</p>
+      <p class="badge-label">{props.label}</p>
+      <p class="badge-days">{props.days} {props.daysSuffix}</p>
+      <p class="badge-text">{props.motivation}</p>
     </div>
   );
 });

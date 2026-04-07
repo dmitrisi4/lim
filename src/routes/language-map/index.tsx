@@ -7,15 +7,15 @@ import {
 	type CompletedCardProgress,
 } from "~/entities/card/model/completed-progress";
 import {
-	LANGUAGE_MAP_EDGES,
-	LANGUAGE_MAP_NODE_BY_ID,
-	LANGUAGE_MAP_NODES,
+	getLanguageMapEdgesForLang,
+	getLanguageMapNodeByIdForLang,
+	getLanguageMapNodesForLang,
 	type LanguageMapNode,
 	type LanguageMapNodeCategory,
 } from "~/features/language-map/model/graph";
 import { getNodeRelatedCardIds } from "~/features/language-map/model/node-related-cards";
 import {
-	LANGUAGE_MAP_PROGRESS_STORAGE_KEY,
+	getLanguageMapProgressStorageKey,
 	getLanguageMapNodeStatus,
 	readLanguageMapProgress,
 	setLanguageMapNodeStatus,
@@ -42,28 +42,35 @@ import type {
 	LanguageMapChatResponse,
 } from "~/features/language-map/model/chat";
 
-function getNodeById(nodeId: string | undefined): LanguageMapNode | null {
-	if (!nodeId) return null;
-	return LANGUAGE_MAP_NODE_BY_ID[nodeId] ?? null;
-}
-
 export default component$(() => {
 	useStyles$(styles);
-	const { ui, language } = useI18n();
+	const i18n = useI18n();
+	const { ui, language } = i18n;
 
-	const selectedNodeId = useSignal(LANGUAGE_MAP_NODES[0]?.id ?? "");
+	const allNodes = getLanguageMapNodesForLang(language);
+	const selectedNodeId = useSignal(allNodes[0]?.id ?? "");
 	const nodeProgress = useSignal<LanguageMapProgress>({});
 	const completedCardProgress = useSignal<CompletedCardProgress>({});
 	const showUnlearnedOnly = useSignal(false);
 	const chatNodeId = useSignal<string>();
-	const activeChatNode = useComputed$(() => getNodeById(chatNodeId.value) || undefined);
+	const activeChatNode = useComputed$(() =>
+		getLanguageMapNodeByIdForLang(chatNodeId.value ?? "", i18n.language) ?? undefined
+	);
 	const chatPending = useSignal(false);
 
-	useVisibleTask$(({ cleanup }) => {
-		nodeProgress.value = readLanguageMapProgress();
+	// Reload progress and reset selection whenever the learning language changes
+	useVisibleTask$(({ track, cleanup }) => {
+		const lang = track(() => i18n.language);
+		const storageKey = getLanguageMapProgressStorageKey(lang);
+
+		nodeProgress.value = readLanguageMapProgress(undefined, lang);
+		const nodes = getLanguageMapNodesForLang(lang);
+		if (!nodes.some((n) => n.id === selectedNodeId.value)) {
+			selectedNodeId.value = nodes[0]?.id ?? "";
+		}
 
 		const onStorage = (event: StorageEvent) => {
-			if (event.key === null || event.key === LANGUAGE_MAP_PROGRESS_STORAGE_KEY) {
+			if (event.key === null || event.key === storageKey) {
 				nodeProgress.value = readLanguageMapProgress();
 			}
 		};
@@ -87,12 +94,12 @@ export default component$(() => {
 		track(() => showUnlearnedOnly.value);
 		track(() => JSON.stringify(nodeProgress.value));
 		track(() => selectedNodeId.value);
+		const lang = track(() => i18n.language);
 
+		const nodes = getLanguageMapNodesForLang(lang);
 		const visibleNodes = showUnlearnedOnly.value
-			? LANGUAGE_MAP_NODES.filter(
-					(node) => getLanguageMapNodeStatus(node.id, nodeProgress.value) !== "learned",
-				)
-			: LANGUAGE_MAP_NODES;
+			? nodes.filter((node) => getLanguageMapNodeStatus(node.id, nodeProgress.value) !== "learned")
+			: nodes;
 
 		if (visibleNodes.length === 0) return;
 		if (!visibleNodes.some((node) => node.id === selectedNodeId.value)) {
@@ -114,15 +121,16 @@ export default component$(() => {
 		learned: ui.mapStatusLearned,
 	};
 
+	const nodes = getLanguageMapNodesForLang(language);
+	const edges = getLanguageMapEdgesForLang(language);
+
 	const visibleNodes = showUnlearnedOnly.value
-		? LANGUAGE_MAP_NODES.filter(
-				(node) => getLanguageMapNodeStatus(node.id, nodeProgress.value) !== "learned",
-			)
-		: LANGUAGE_MAP_NODES;
+		? nodes.filter((node) => getLanguageMapNodeStatus(node.id, nodeProgress.value) !== "learned")
+		: nodes;
 
 	const visibleNodeIds = new Set(visibleNodes.map((node) => node.id));
 
-	const visibleEdges = LANGUAGE_MAP_EDGES.filter(
+	const visibleEdges = edges.filter(
 		(edge) => visibleNodeIds.has(edge.from) && visibleNodeIds.has(edge.to),
 	).filter(
 		(edge) =>
@@ -133,21 +141,22 @@ export default component$(() => {
 
 	const selectedNode =
 		visibleNodes.find((node) => node.id === selectedNodeId.value) ??
-		LANGUAGE_MAP_NODES.find((node) => node.id === selectedNodeId.value) ??
+		nodes.find((node) => node.id === selectedNodeId.value) ??
 		visibleNodes[0] ??
-		LANGUAGE_MAP_NODES[0] ??
+		nodes[0] ??
 		null;
 
-	const learnedCount = LANGUAGE_MAP_NODES.filter(
+	const learnedCount = nodes.filter(
 		(node) => getLanguageMapNodeStatus(node.id, nodeProgress.value) === "learned",
 	).length;
-	const learningCount = LANGUAGE_MAP_NODES.filter(
+	const learningCount = nodes.filter(
 		(node) => getLanguageMapNodeStatus(node.id, nodeProgress.value) === "learning",
 	).length;
-	const newCount = LANGUAGE_MAP_NODES.length - learnedCount - learningCount;
+	const newCount = nodes.length - learnedCount - learningCount;
 
+	const nodeById = Object.fromEntries(nodes.map((n) => [n.id, n])) as Record<string, LanguageMapNode>;
 	const connectedNodes = selectedNode
-		? collectConnectedNodes(selectedNode.id, LANGUAGE_MAP_EDGES, LANGUAGE_MAP_NODE_BY_ID)
+		? collectConnectedNodes(selectedNode.id, edges, nodeById)
 		: [];
 	const relatedCardLinks = selectedNode ? buildNodeRelatedCardLinks(selectedNode, language, ui) : [];
 	const relatedCardIds = selectedNode ? getNodeRelatedCardIds(selectedNode.id, language) : [];
@@ -156,7 +165,7 @@ export default component$(() => {
 	const handleDiscuss$ = $(async () => {
 		if (chatPending.value) return;
 
-		const currentNode = getNodeById(selectedNodeId.value);
+		const currentNode = getLanguageMapNodeByIdForLang(selectedNodeId.value, i18n.language);
 		if (!currentNode) return;
 
 		chatNodeId.value = currentNode.id;
@@ -195,7 +204,7 @@ export default component$(() => {
 					<div class="language-map-progress-card" aria-live="polite">
 						<p class="language-map-progress-title">{ui.mapProgressTitle}</p>
 						<p class="language-map-progress-value">
-							{learnedCount} / {LANGUAGE_MAP_NODES.length} {ui.mapProgressLearnedSuffix}
+							{learnedCount} / {nodes.length} {ui.mapProgressLearnedSuffix}
 						</p>
 						<div class="language-map-progress-breakdown">
 							<span class="progress-chip status-new">
@@ -236,6 +245,7 @@ export default component$(() => {
 					<LanguageMapGraph
 						visibleNodes={visibleNodes}
 						visibleEdges={visibleEdges}
+						nodeById={nodeById}
 						selectedNodeId={selectedNodeId.value}
 						nodeProgress={nodeProgress.value}
 						graphAriaLabel={ui.mapGraphAriaLabel}
@@ -284,7 +294,7 @@ export default component$(() => {
 							mapStatusTitle: ui.mapStatusTitle,
 						}}
 						onStatusChange$={(nodeId, status) => {
-							nodeProgress.value = setLanguageMapNodeStatus(nodeId, status);
+							nodeProgress.value = setLanguageMapNodeStatus(nodeId, status, undefined, i18n.language);
 						}}
 						onDiscuss$={handleDiscuss$}
 						onRelatedNodeClick$={(nodeId) => {

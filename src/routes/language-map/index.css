@@ -789,10 +789,6 @@
   .language-map-page {
     grid-template-columns: minmax(0, 1fr) clamp(300px, 34vw, 390px);
   }
-
-  .language-map-edge-label {
-    display: none;
-  }
 }
 
 @media (max-width: 980px) {

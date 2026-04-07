@@ -7,6 +7,9 @@ interface ProgressPillProps {
   level: number;
   dailyCompleted: number;
   dailyGoal: number;
+  label: string;
+  levelLabel: string;
+  dailyGoalLabel: string;
 }
 
 export const ProgressPill = component$<ProgressPillProps>((props) => {
@@ -16,12 +19,12 @@ export const ProgressPill = component$<ProgressPillProps>((props) => {
 
   return (
     <div class="pill">
-      <p class="pill-label">Прогресс</p>
+      <p class="pill-label">{props.label}</p>
       <p class="pill-title">
-        XP {props.xp} · Level {props.level}
+        XP {props.xp} · {props.levelLabel} {props.level}
       </p>
       <p class="pill-meta">
-        Daily goal: {props.dailyCompleted}/{props.dailyGoal} ({completionPercent}%)
+        {props.dailyGoalLabel}: {props.dailyCompleted}/{props.dailyGoal} ({completionPercent}%)
       </p>
     </div>
   );

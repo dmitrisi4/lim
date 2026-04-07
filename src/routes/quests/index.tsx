@@ -191,7 +191,7 @@ export default component$(() => {
   return (
     <section class="quests-page">
       <header class="quests-hero">
-        <p class="quests-eyebrow">Journal</p>
+        <p class="quests-eyebrow">{ui.questsEyebrow}</p>
         <h2 class="quests-title">{copy.title}</h2>
         <p class="quests-subtitle">{copy.subtitle}</p>
       </header>

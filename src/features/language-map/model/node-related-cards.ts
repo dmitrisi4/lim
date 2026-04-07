@@ -45,21 +45,22 @@ const NODE_VOCAB_SECTIONS_BY_LANGUAGE: Record<LearningLanguage, Record<string, V
     "irregular-verbs": ["action_verbs", "movement_verbs", "communication_verbs"]
   },
   es: {
-    "language-core": ["base_verbs", "daily_actions", "modals_constructions"],
-    "time-axis": ["base_verbs", "daily_actions", "modals_constructions"],
-    "past-zone": ["daily_actions", "movement_life"],
-    "present-zone": ["base_verbs", "daily_actions", "communication_thoughts"],
-    "future-zone": ["movement_life", "modals_constructions"],
-    "present-simple": ["base_verbs", "daily_actions"],
-    "present-continuous": ["daily_actions", "movement_life"],
-    "present-perfect": ["daily_actions", "movement_life"],
-    "past-simple": ["daily_actions", "movement_life"],
-    "past-continuous": ["daily_actions", "movement_life"],
-    "past-perfect": ["daily_actions", "movement_life"],
-    "future-simple": ["movement_life", "modals_constructions"],
-    "core-verbs": ["base_verbs", "communication_thoughts", "modals_constructions", "additional_verbs"],
-    "auxiliary-verbs": ["base_verbs", "modals_constructions"],
-    "irregular-verbs": ["base_verbs", "additional_verbs", "movement_life"]
+    // Spanish map node IDs
+    "nucleo-idioma":          ["base_verbs", "daily_actions", "modals_constructions"],
+    "eje-temporal":           ["base_verbs", "daily_actions", "modals_constructions"],
+    "zona-pasado":            ["daily_actions", "movement_life"],
+    "zona-presente":          ["base_verbs", "daily_actions", "communication_thoughts"],
+    "zona-futuro":            ["movement_life", "modals_constructions"],
+    "presente-indicativo":    ["base_verbs", "daily_actions"],
+    "presente-continuo":      ["daily_actions", "movement_life"],
+    "preterito-perfecto":     ["daily_actions", "movement_life"],
+    "preterito-indefinido":   ["daily_actions", "movement_life"],
+    "preterito-imperfecto":   ["daily_actions", "movement_life"],
+    "pluscuamperfecto":       ["daily_actions", "movement_life"],
+    "futuro-simple":          ["movement_life", "modals_constructions"],
+    "verbos-clave":           ["base_verbs", "communication_thoughts", "modals_constructions", "additional_verbs"],
+    "ser-estar":              ["base_verbs", "modals_constructions"],
+    "verbos-irregulares":     ["base_verbs", "additional_verbs", "movement_life"]
   }
 };
 

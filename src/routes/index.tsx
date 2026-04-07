@@ -26,7 +26,7 @@ export default component$(() => {
         </div>
 
         <div class="hero-primary-action">
-          <span class="hero-primary-kicker">Recommended first step</span>
+          <span class="hero-primary-kicker">{ui.homeKickerLabel}</span>
           <h3 class="hero-primary-title">{ui.homeActionPlacementTitle}</h3>
           <p class="hero-primary-body">{ui.homeActionPlacementBody}</p>
           <Link href="/profile" class="hero-primary-link" style={{ textDecoration: "none" }}>
