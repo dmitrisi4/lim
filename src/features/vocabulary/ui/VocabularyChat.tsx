@@ -4,8 +4,7 @@ import type { PropFunction } from "@builder.io/qwik";
 import type { VocabularyChatMessage, VocabularyChatMode, VocabularyChatResponse } from "~/features/vocabulary/model/chat";
 import type { VocabularyWord } from "~/features/vocabulary/model/word-bank";
 import { resolveWordSections } from "~/features/vocabulary/model/word-bank";
-import { httpPost } from "~/shared/api/client";
-import { endpoints } from "~/shared/api/endpoints";
+
 import { buildProviderErrorMessage, buildSelectCardMessage } from "~/features/vocabulary/lib/chat-utils";
 
 type ChatRole = "assistant" | "user";

@@ -32,7 +32,7 @@ import {
 import { LanguageMapGraph } from "~/features/language-map/ui/LanguageMapGraph";
 import { LanguageMapNodeCard } from "~/features/language-map/ui/LanguageMapNodeCard";
 import { LanguageMapChat } from "~/features/language-map/ui/LanguageMapChat";
-import { httpPost } from "~/shared/api/client";
+import { dataProvider } from "~/shared/providers";
 import { endpoints } from "~/shared/api/endpoints";
 import { useI18n } from "~/shared/i18n/context";
 import styles from "~/routes/language-map/index.css?inline";
@@ -175,7 +175,7 @@ export default component$(() => {
 		const historyPayload: LanguageMapChatMessage[] = [];
 
 		try {
-			const response = await httpPost<LanguageMapChatResponse>(endpoints.languageMapChat, {
+			const response = await dataProvider.post<LanguageMapChatResponse>(endpoints.languageMapChat, {
 				language,
 				mode: "node_overview" satisfies LanguageMapChatMode,
 				message: userText,

@@ -1,76 +1,75 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
-import { Link, routeLoader$ } from "@builder.io/qwik-city";
-import { LearningOverview } from "~/features/home/ui/LearningOverview";
-import { DEMO_USER_ID, getMockLearningOverview } from "~/shared/api/mock-db";
-import { useI18n } from "~/shared/i18n/context";
-import { LEARNING_LANGUAGE_COOKIE, detectLearningLanguage } from "~/shared/i18n/ui";
-import styles from "~/routes/index.css?inline";
+import { type DocumentHead, routeAction$, routeLoader$, Form, z, zod$ } from "@builder.io/qwik-city";
+import { GoogleAuthButton } from "~/features/auth/ui/GoogleAuthButton";
+import styles from "./login.css?inline";
 
-export const useHomeOverviewLoader = routeLoader$(({ url, cookie }) => {
-  const language = detectLearningLanguage(url, cookie.get(LEARNING_LANGUAGE_COOKIE)?.value);
-  return getMockLearningOverview(DEMO_USER_ID, language);
+export const useAuthLoader = routeLoader$(({ cookie, redirect }) => {
+	const isAuth = cookie.get("mock_auth_token")?.value === "true";
+	if (isAuth) {
+		throw redirect(302, "/path");
+	}
+	return { isAuth };
 });
 
+export const useLoginAction = routeAction$((data, { cookie, redirect }) => {
+	if (data.login === "admin" && data.password === "admin") {
+		cookie.set("mock_auth_token", "true", { path: "/", maxAge: 60 * 60 * 24 * 7 });
+		throw redirect(302, "/path");
+	}
+	return {
+		success: false,
+		message: "Invalid login or password",
+	};
+}, zod$({
+	login: z.string(),
+	password: z.string()
+}));
+
 export default component$(() => {
-  useStylesScoped$(styles);
-  const { ui } = useI18n();
-  const overview = useHomeOverviewLoader();
+	useStylesScoped$(styles);
+	const loginAction = useLoginAction();
 
-  return (
-    <>
-      <section class="hero">
-        <div class="hero-copy">
-          <h2 class="hero-title">{ui.homeTitle}</h2>
-          <p class="hero-subtitle">{ui.homeSubtitle}</p>
-        </div>
+	return (
+		<div class="login-page">
+			<div class="login-container">
+				<h1 class="login-title">Welcome</h1>
+				<p class="login-subtitle">Sign in or register to continue your learning journey.</p>
+				
+				<Form action={loginAction} class="login-form">
+					<div class="form-group">
+						<label for="login">Login</label>
+						<input id="login" name="login" type="text" placeholder="Enter admin" />
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input id="password" name="password" type="password" placeholder="Enter admin" />
+					</div>
+					
+					{loginAction.value?.message && (
+						<p class="error-message">{loginAction.value.message}</p>
+					)}
+					
+					<button type="submit" class="submit-button">Sign In</button>
+				</Form>
 
-        <div class="hero-primary-action">
-          <span class="hero-primary-kicker">{ui.homeKickerLabel}</span>
-          <h3 class="hero-primary-title">{ui.homeActionPlacementTitle}</h3>
-          <p class="hero-primary-body">{ui.homeActionPlacementBody}</p>
-          <Link href="/profile" class="hero-primary-link" style={{ textDecoration: "none" }}>
-            {ui.homeActionPlacementTitle}
-          </Link>
-        </div>
+				<div class="divider">
+					<span class="divider-text">Or</span>
+				</div>
 
-        <div class="hero-secondary-crawl-shell">
-          <div class="hero-secondary-crawl">
-            <div class="hero-crawl-row">
-              <Link href="/feed" class="hero-crawl-link" style={{ textDecoration: "none" }}>
-                <span class="hero-crawl-title">{ui.homeActionContinueTitle}</span>
-              </Link>
-              <p class="hero-crawl-description">{ui.homeActionContinueBody}</p>
-            </div>
-
-            <div class="hero-crawl-row">
-              <Link href="/quests/" class="hero-crawl-link" style={{ textDecoration: "none" }}>
-                <span class="hero-crawl-title">{ui.homeActionQuestTitle}</span>
-              </Link>
-              <p class="hero-crawl-description">{ui.homeActionQuestBody}</p>
-            </div>
-
-            <div class="hero-crawl-row">
-              <Link href="/language-map/" class="hero-crawl-link" style={{ textDecoration: "none" }}>
-                <span class="hero-crawl-title">{ui.homeActionReviewTitle}</span>
-              </Link>
-              <p class="hero-crawl-description">{ui.homeActionReviewBody}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <LearningOverview overview={overview.value} />
-    </>
-  );
+				<div class="login-actions">
+					<GoogleAuthButton />
+				</div>
+			</div>
+		</div>
+	);
 });
 
 export const head: DocumentHead = {
-  title: "Lim | Home",
-  meta: [
-    {
-      name: "description",
-      content: "Useful scroll with interactive cards"
-    }
-  ]
+	title: "Login - Lim",
+	meta: [
+		{
+			name: "description",
+			content: "Login to Lim to track your progress and access exclusive features",
+		},
+	],
 };

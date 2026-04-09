@@ -7,7 +7,7 @@ import type {
 	LanguageMapChatResponse,
 } from "~/features/language-map/model/chat";
 import type { LanguageMapNode } from "~/features/language-map/model/graph";
-import { httpPost } from "~/shared/api/client";
+import { dataProvider } from "~/shared/providers";
 import { endpoints } from "~/shared/api/endpoints";
 import { toChatNodeContext, buildSelectNodeMessage, buildProviderErrorMessage } from "~/features/language-map/lib/chat-utils";
 
@@ -86,7 +86,7 @@ export const LanguageMapChat = component$<PropsType>((props) => {
 		}));
 
 		try {
-			const response = await httpPost<LanguageMapChatResponse>(endpoints.languageMapChat, {
+			const response = await dataProvider.post<LanguageMapChatResponse>(endpoints.languageMapChat, {
 				language,
 				mode: "follow_up" satisfies LanguageMapChatMode,
 				message: question,
