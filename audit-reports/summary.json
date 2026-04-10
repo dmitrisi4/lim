@@ -1,0 +1,16 @@
+{
+  "desktop": {
+    "lcp": 93,
+    "accessibility": 94,
+    "seo": 91
+  },
+  "mobile": {
+    "lcp": 1231,
+    "accessibility": 94,
+    "seo": 91
+  },
+  "errors": {
+    "favicon": 404
+  },
+  "priority": "HIGH: html[lang], favicon, meta[description]"
+}

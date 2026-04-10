@@ -1,0 +1,22 @@
+{
+  "desktop": {
+    "lcp": 93,
+    "cls": 0,
+    "ttfb": 26,
+    "budget": {
+      "lcp": 2500,
+      "cls": 0.1
+    },
+    "result": "PASS"
+  },
+  "mobile": {
+    "lcp": 1231,
+    "cls": 0,
+    "ttfb": 28,
+    "budget": {
+      "lcp": 3000,
+      "cls": 0.1
+    },
+    "result": "PASS"
+  }
+}
