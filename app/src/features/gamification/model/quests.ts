@@ -7,9 +7,9 @@ import { buildAllSlideCards } from "~/slides/engine/select-slides";
 
 const QUEST_LEVEL_ORDER: readonly EnglishLevel[] = ["a1", "a2", "b1", "b2", "c1"];
 const QUEST_CATEGORY_ORDER: readonly SlideCategory[] = ["grammar", "vocabulary", "speaking", "listening", "reading"];
-const SUPPORTED_LANGUAGES: readonly LearningLanguage[] = ["en", "es"];
+const SUPPORTED_LANGUAGES: readonly LearningLanguage[] = ["en", "es", "ru"];
 
-type QuestLocalizedCopy = Record<LearningLanguage, string>;
+type QuestLocalizedCopy = Partial<Record<LearningLanguage, string>>;
 
 export interface QuestRequirements {
   totalCompleted?: number;

@@ -45,6 +45,7 @@ interface UserState {
   streak: Streak;
   recent: RecentActivity[];
   performanceByLanguage: Partial<Record<LearningLanguage, LanguagePerformance>>;
+  isTestPassed: boolean;
 }
 
 interface FeedSlice {
@@ -112,7 +113,8 @@ function createInitialUserState(userId: string): UserState {
       lastActiveDate: yesterdayIso()
     },
     recent: [],
-    performanceByLanguage: {}
+    performanceByLanguage: {},
+    isTestPassed: false
   };
 }
 
