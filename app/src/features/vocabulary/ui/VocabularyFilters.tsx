@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import type { PropFunction } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
 import { VOCABULARY_PROGRESS_OPTIONS, VOCABULARY_TYPE_OPTIONS } from "~/features/vocabulary/model/word-bank";
 import type { VocabularyProgressFilter, VocabularySection, VocabularyWordType } from "~/features/vocabulary/model/word-bank";
@@ -17,6 +18,8 @@ type PropsType = {
 	sectionLabelMap: Record<VocabularySection, string>;
 	progressLabelMap: Record<VocabularyProgressFilter, string>;
 	resetHref: string;
+	isStudyMode: boolean;
+	onToggleStudyMode$: PropFunction<() => void>;
 	ui: {
 		vocabTitle: string;
 		vocabSubtitle: string;
@@ -41,6 +44,17 @@ export const VocabularyFilters = component$<PropsType>((props) => {
 				<p class="vocabulary-count">
 					{ui.vocabTotalLabel}: {props.totalWords}
 				</p>
+			</div>
+
+			<div class="view-mode-selector">
+				<button
+					type="button"
+					class={["view-mode-btn", props.isStudyMode ? "active" : ""]}
+					onClick$={props.onToggleStudyMode$}
+				>
+					<span class="view-mode-icon">🎴</span>
+					<span>Flashcards Mode</span>
+				</button>
 			</div>
 
 			<details class="vocabulary-filters-shell" open>

@@ -1,4 +1,4 @@
-import { $, component$, useSignal, useStylesScoped$, useVisibleTask$ } from "@builder.io/qwik";
+import { $, component$, useSignal, useStyles$, useVisibleTask$ } from "@builder.io/qwik";
 import type { PropFunction } from "@builder.io/qwik";
 import { writeCompletedCardProgress } from "~/entities/card/model/completed-progress";
 import { VERB_TENSE_OPTIONS, getVerbInsight, type VerbTense } from "~/features/vocabulary/model/verb-insights";
@@ -42,10 +42,11 @@ type PropsType = {
 	sectionLabelMap: Record<VocabularySection, string>;
 	explainButtonLabel: string;
 	onExplainWord$?: PropFunction<(word: VocabularyWord) => void>;
+	isStudyMode?: boolean;
 };
 
 export const VocabularyDeck = component$<PropsType>((props) => {
-	useStylesScoped$(styles);
+	useStyles$(styles);
 
 	const activeIndex = useSignal(0);
 	const swiperRef = useSignal<HTMLElement>();
@@ -223,6 +224,7 @@ export const VocabularyDeck = component$<PropsType>((props) => {
 								onCloseMenu$={() => {
 									cardContextMenu.value = null;
 								}}
+								isStudyMode={props.isStudyMode}
 							/>
 
 							{isPanelOpen && insight && panelState ? (

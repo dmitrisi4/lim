@@ -56,7 +56,8 @@ export default component$(() => {
   const activeWord = useSignal<VocabularyWord>();
   const messageCounter = useSignal(0);
   const chatPending = useSignal(false);
-  const chatCollapsed = useSignal(false);
+  const chatCollapsed = useSignal(true);
+  const isStudyMode = useSignal(false);
   const wordProgress = useSignal<Record<string, boolean>>({});
 
   useVisibleTask$(({ cleanup }) => {
@@ -258,6 +259,8 @@ export default component$(() => {
         sectionLabelMap={sectionLabelMap}
         progressLabelMap={progressLabelMap}
         resetHref={resetHref}
+        isStudyMode={isStudyMode.value}
+        onToggleStudyMode$={$(() => isStudyMode.value = !isStudyMode.value)}
         ui={{
           vocabTitle: ui.vocabTitle,
           vocabSubtitle: ui.vocabSubtitle,
@@ -294,6 +297,7 @@ export default component$(() => {
           typeLabelMap={typeLabelMap}
           sectionLabelMap={sectionLabelMap}
           explainButtonLabel={ui.vocabExplainButton}
+          isStudyMode={isStudyMode.value}
           onExplainWord$={$(async (word: VocabularyWord) => {
             if (chatPending.value) {
               return;

@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import type { PropFunction } from "@builder.io/qwik";
 import type { VocabularyWord, VocabularyWordType, VocabularySection } from "~/features/vocabulary/model/word-bank";
 import { getPrimaryWordSection } from "~/features/vocabulary/model/word-bank";
@@ -32,11 +32,52 @@ type PropsType = {
 	menuX: number;
 	menuY: number;
 	onCloseMenu$: PropFunction<() => void>;
+	isStudyMode?: boolean;
 };
 
 export const VocabularyCard = component$<PropsType>((props) => {
-	const { word, insight, isLearned, labels } = props;
+	const { word, insight, isLearned, labels, isStudyMode } = props;
+	const isFlipped = useSignal(false);
 	const primarySection = getPrimaryWordSection(word);
+
+	if (isStudyMode) {
+		return (
+			<div
+				class={["vocab-card-flipper", isFlipped.value ? "is-flipped" : ""]}
+				onClick$={() => (isFlipped.value = !isFlipped.value)}
+			>
+				{/* FRONT: The Word */}
+				<article class="vocab-card vocab-card-front">
+					<header class="vocab-card-head">
+						<span class="vocab-chip vocab-chip-type">{props.typeLabelMap[word.type]}</span>
+						<span class="vocab-chip vocab-chip-section">{props.sectionLabelMap[primarySection]}</span>
+					</header>
+					<div class="vocab-flashcard-content">
+						<p class="vocab-flashcard-hint">Front</p>
+						<h3 class="vocab-flashcard-term">{word.term}</h3>
+					</div>
+				</article>
+
+				{/* BACK: Translation + Extras */}
+				<article class="vocab-card vocab-card-back">
+					<header class="vocab-card-head">
+						<span class="vocab-chip vocab-chip-type">{props.typeLabelMap[word.type]}</span>
+						<span class="vocab-chip vocab-chip-section">{props.sectionLabelMap[primarySection]}</span>
+					</header>
+					<div class="vocab-flashcard-content">
+						<p class="vocab-flashcard-hint">Back</p>
+						<p class="vocab-flashcard-translation">{word.translation}</p>
+						{word.imageUrl && <img class="vocab-flashcard-photo" src={word.imageUrl} alt={word.term} />}
+						{word.example && (
+							<p class="vocab-example">
+								<span class="vocab-example-label">{labels.exampleLabel}:</span> {word.example}
+							</p>
+						)}
+					</div>
+				</article>
+			</div>
+		);
+	}
 
 	return (
 		<article
