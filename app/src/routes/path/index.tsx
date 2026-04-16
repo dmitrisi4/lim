@@ -8,7 +8,7 @@ import { LEARNING_LANGUAGE_COOKIE, detectLearningLanguage } from "~/shared/i18n/
 import styles from "./index.css?inline";
 
 export const useHomeOverviewLoader = routeLoader$(({ url, cookie, redirect }) => {
-  const isAuth = cookie.get("mock_auth_token")?.value === "true";
+  const isAuth = !!cookie.get("token")?.value;
   if (!isAuth) {
     throw redirect(302, "/");
   }

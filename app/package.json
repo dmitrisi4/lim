@@ -17,6 +17,7 @@
   "dependencies": {
     "@builder.io/qwik": "^1.8.0",
     "@builder.io/qwik-city": "^1.8.0",
+    "@tanstack/query-core": "^5.99.0",
     "axios": "^1.15.0",
     "swiper": "^12.1.3"
   },

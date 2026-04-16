@@ -5,6 +5,7 @@ export type UserType = {
 	email: string;
 	name: string;
 	avatarUrl?: string;
+	isTestPassed?: boolean;
 };
 
 export type SessionStateType = {
