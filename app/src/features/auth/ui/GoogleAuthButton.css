@@ -2,33 +2,37 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #ffffff;
-	color: #3c4043;
-	border: 1px solid #dadce0;
-	border-radius: 4px;
-	padding: 0 16px;
-	height: 40px;
-	font-family: 'Roboto', 'Inter', sans-serif;
-	font-size: 14px;
-	font-weight: 500;
+	background: rgba(255, 255, 255, 0.05);
+	color: var(--text-1);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 12px;
+	padding: 0 1.25rem;
+	height: 48px;
+	font-family: inherit;
+	font-size: 0.95rem;
+	font-weight: 700;
 	text-decoration: none;
 	cursor: pointer;
-	transition: background-color 0.2s, box-shadow 0.2s;
-	box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+	transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .google-auth-button:hover {
-	background-color: #f8f9fa;
-	box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+	background: rgba(255, 255, 255, 0.08);
+	border-color: rgba(255, 255, 255, 0.2);
+	transform: translateY(-1px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .google-auth-button:active {
-	background-color: #e8eaed;
-	box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+	transform: translateY(0);
 }
 
 .google-icon {
 	margin-right: 12px;
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
 }
 
 .button-text {
